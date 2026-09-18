@@ -1,0 +1,551 @@
+{
+  "document": "0005_4079232a7f3a712aa8b3d905175c3017f1d3b8373e16e37bcfb87eff4c96fbc5_two_column",
+  "image_width": 1025,
+  "image_height": 1025,
+  "layout_region_count": 13,
+  "pii_prediction_count": 16,
+  "pii_layout_mapped_count": 16,
+  "layout_mapping_rate": 1.0,
+  "layout_regions": [
+    {
+      "region_id": 0,
+      "label": "text",
+      "score": 0.9827288389205933,
+      "bbox": [
+        547.521240234375,
+        752.9124755859375,
+        901.1886596679688,
+        921.1637573242188
+      ]
+    },
+    {
+      "region_id": 1,
+      "label": "text",
+      "score": 0.9803962111473083,
+      "bbox": [
+        177.66488647460938,
+        667.9176635742188,
+        531.712646484375,
+        801.746826171875
+      ]
+    },
+    {
+      "region_id": 2,
+      "label": "text",
+      "score": 0.9780924320220947,
+      "bbox": [
+        177.40725708007812,
+        90.77799987792969,
+        531.4905395507812,
+        225.99209594726562
+      ]
+    },
+    {
+      "region_id": 3,
+      "label": "text",
+      "score": 0.9769133925437927,
+      "bbox": [
+        177.6036834716797,
+        440.1848449707031,
+        448.4157409667969,
+        645.08935546875
+      ]
+    },
+    {
+      "region_id": 4,
+      "label": "text",
+      "score": 0.9766134023666382,
+      "bbox": [
+        547.682861328125,
+        630.4871826171875,
+        901.4108276367188,
+        730.3939819335938
+      ]
+    },
+    {
+      "region_id": 5,
+      "label": "text",
+      "score": 0.9762660264968872,
+      "bbox": [
+        547.9985961914062,
+        178.31581115722656,
+        901.5940551757812,
+        312.73712158203125
+      ]
+    },
+    {
+      "region_id": 6,
+      "label": "text",
+      "score": 0.9676687121391296,
+      "bbox": [
+        547.8802490234375,
+        91.11764526367188,
+        901.0905151367188,
+        155.95135498046875
+      ]
+    },
+    {
+      "region_id": 7,
+      "label": "text",
+      "score": 0.9574291110038757,
+      "bbox": [
+        177.6756591796875,
+        874.40283203125,
+        532.0007934570312,
+        921.9306030273438
+      ]
+    },
+    {
+      "region_id": 8,
+      "label": "chart",
+      "score": 0.9401438236236572,
+      "bbox": [
+        468.966064453125,
+        351.0093688964844,
+        899.4984130859375,
+        600.3670654296875
+      ]
+    },
+    {
+      "region_id": 9,
+      "label": "paragraph_title",
+      "score": 0.8926061391830444,
+      "bbox": [
+        178.93077087402344,
+        838.0153198242188,
+        295.51776123046875,
+        851.2428588867188
+      ]
+    },
+    {
+      "region_id": 10,
+      "label": "text",
+      "score": 0.732284426689148,
+      "bbox": [
+        176.64852905273438,
+        248.04869079589844,
+        532.5568237304688,
+        416.10205078125
+      ]
+    },
+    {
+      "region_id": 11,
+      "label": "aside_text",
+      "score": 0.6618884205818176,
+      "bbox": [
+        64.2535171508789,
+        58.87407302856445,
+        113.36639404296875,
+        463.01727294921875
+      ]
+    },
+    {
+      "region_id": 12,
+      "label": "number",
+      "score": 0.6406764984130859,
+      "bbox": [
+        498.5025634765625,
+        978.4302368164062,
+        522.8868408203125,
+        995.3713989257812
+      ]
+    }
+  ],
+  "pii_mappings": [
+    {
+      "pii_text": "Joseph Marie de Maistre",
+      "pii_type": "full_name",
+      "confidence": 0.9613853096961975,
+      "pii_bbox": [
+        270.0,
+        772.0,
+        426.0,
+        785.0
+      ],
+      "ocr_words": [
+        "Joseph",
+        "Marie",
+        "de",
+        "Maistre"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9803962111473083,
+      "layout_region_bbox": [
+        177.66488647460938,
+        667.9176635742188,
+        531.712646484375,
+        801.746826171875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "smiller@example.net",
+      "pii_type": "email",
+      "confidence": 0.9998370409011841,
+      "pii_bbox": [
+        245.0,
+        463.0,
+        397.0,
+        480.0
+      ],
+      "ocr_words": [
+        "smiller",
+        "example",
+        "net"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9769133925437927,
+      "layout_region_bbox": [
+        177.6036834716797,
+        440.1848449707031,
+        448.4157409667969,
+        645.08935546875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "+1-659-931-0341x316r",
+      "pii_type": "phone_number",
+      "confidence": 0.9999830722808838,
+      "pii_bbox": [
+        250.0,
+        103.0,
+        417.0,
+        122.0
+      ],
+      "ocr_words": [
+        "1-659-931-0341x316r"
+      ],
+      "layout_region_id": 2,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9780924320220947,
+      "layout_region_bbox": [
+        177.40725708007812,
+        90.77799987792969,
+        531.4905395507812,
+        225.99209594726562
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "55341 Amanda Gardens Apt, 764",
+      "pii_type": "street_address",
+      "confidence": 0.9599772691726685,
+      "pii_bbox": [
+        552.0,
+        363.0,
+        790.0,
+        377.0
+      ],
+      "ocr_words": [
+        "55341",
+        "Amanda",
+        "Gardens",
+        "Apt",
+        "764"
+      ],
+      "layout_region_id": 8,
+      "layout_region_type": "chart",
+      "layout_region_score": 0.9401438236236572,
+      "layout_region_bbox": [
+        468.966064453125,
+        351.0093688964844,
+        899.4984130859375,
+        600.3670654296875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "New Orleans",
+      "pii_type": "city",
+      "confidence": 0.9032009243965149,
+      "pii_bbox": [
+        649.0,
+        807.0,
+        719.0,
+        817.0
+      ],
+      "ocr_words": [
+        "New",
+        "Orleans"
+      ],
+      "layout_region_id": 0,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9827288389205933,
+      "layout_region_bbox": [
+        547.521240234375,
+        752.9124755859375,
+        901.1886596679688,
+        921.1637573242188
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "ZK83503002",
+      "pii_type": "passport_number",
+      "confidence": 0.9895583391189575,
+      "pii_bbox": [
+        624.0,
+        766.0,
+        711.0,
+        784.0
+      ],
+      "ocr_words": [
+        "ZK83503002"
+      ],
+      "layout_region_id": 0,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9827288389205933,
+      "layout_region_bbox": [
+        547.521240234375,
+        752.9124755859375,
+        901.1886596679688,
+        921.1637573242188
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "IBERIABANK Corporation",
+      "pii_type": "iban",
+      "confidence": 0.9347956776618958,
+      "pii_bbox": [
+        746.0,
+        109.0,
+        900.0,
+        122.0
+      ],
+      "ocr_words": [
+        "IBERIABANK",
+        "Corporation"
+      ],
+      "layout_region_id": 6,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9676687121391296,
+      "layout_region_bbox": [
+        547.8802490234375,
+        91.11764526367188,
+        901.0905151367188,
+        155.95135498046875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2002",
+      "pii_type": "transaction_date",
+      "confidence": 0.89369136095047,
+      "pii_bbox": [
+        830.0,
+        248.0,
+        856.0,
+        261.0
+      ],
+      "ocr_words": [
+        "2002"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9762660264968872,
+      "layout_region_bbox": [
+        547.9985961914062,
+        178.31581115722656,
+        901.5940551757812,
+        312.73712158203125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2001",
+      "pii_type": "transaction_date",
+      "confidence": 0.8708784580230713,
+      "pii_bbox": [
+        715.0,
+        248.0,
+        739.0,
+        261.0
+      ],
+      "ocr_words": [
+        "2001"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9762660264968872,
+      "layout_region_bbox": [
+        547.9985961914062,
+        178.31581115722656,
+        901.5940551757812,
+        312.73712158203125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2002",
+      "pii_type": "transaction_date",
+      "confidence": 0.8591206669807434,
+      "pii_bbox": [
+        830.0,
+        248.0,
+        856.0,
+        261.0
+      ],
+      "ocr_words": [
+        "2002"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9762660264968872,
+      "layout_region_bbox": [
+        547.9985961914062,
+        178.31581115722656,
+        901.5940551757812,
+        312.73712158203125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2001",
+      "pii_type": "transaction_date",
+      "confidence": 0.8317066431045532,
+      "pii_bbox": [
+        715.0,
+        248.0,
+        739.0,
+        261.0
+      ],
+      "ocr_words": [
+        "2001"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9762660264968872,
+      "layout_region_bbox": [
+        547.9985961914062,
+        178.31581115722656,
+        901.5940551757812,
+        312.73712158203125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2002",
+      "pii_type": "transaction_date",
+      "confidence": 0.8274984955787659,
+      "pii_bbox": [
+        830.0,
+        248.0,
+        856.0,
+        261.0
+      ],
+      "ocr_words": [
+        "2002"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9762660264968872,
+      "layout_region_bbox": [
+        547.9985961914062,
+        178.31581115722656,
+        901.5940551757812,
+        312.73712158203125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2002",
+      "pii_type": "transaction_date",
+      "confidence": 0.7956089973449707,
+      "pii_bbox": [
+        830.0,
+        248.0,
+        856.0,
+        261.0
+      ],
+      "ocr_words": [
+        "2002"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9762660264968872,
+      "layout_region_bbox": [
+        547.9985961914062,
+        178.31581115722656,
+        901.5940551757812,
+        312.73712158203125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2001",
+      "pii_type": "transaction_date",
+      "confidence": 0.7847464084625244,
+      "pii_bbox": [
+        715.0,
+        248.0,
+        739.0,
+        261.0
+      ],
+      "ocr_words": [
+        "2001"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9762660264968872,
+      "layout_region_bbox": [
+        547.9985961914062,
+        178.31581115722656,
+        901.5940551757812,
+        312.73712158203125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2001",
+      "pii_type": "transaction_date",
+      "confidence": 0.6997647881507874,
+      "pii_bbox": [
+        715.0,
+        248.0,
+        739.0,
+        261.0
+      ],
+      "ocr_words": [
+        "2001"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9762660264968872,
+      "layout_region_bbox": [
+        547.9985961914062,
+        178.31581115722656,
+        901.5940551757812,
+        312.73712158203125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2001",
+      "pii_type": "transaction_date",
+      "confidence": 0.6833478808403015,
+      "pii_bbox": [
+        715.0,
+        248.0,
+        739.0,
+        261.0
+      ],
+      "ocr_words": [
+        "2001"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9762660264968872,
+      "layout_region_bbox": [
+        547.9985961914062,
+        178.31581115722656,
+        901.5940551757812,
+        312.73712158203125
+      ],
+      "mapping_method": "center_inside"
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "lcprs_version": "2.0",
+  "document": "0009_99ec49a91523b06062803243de5eeff9bc6cf388f584523b786785e922f9691a_scattered",
+  "image_width": 1025,
+  "image_height": 1025,
+  "formula": {
+    "region_weight": 0.6,
+    "distance_weight": 0.4,
+    "distance_function": "exponential",
+    "distance_decay_ratio": 0.15
+  },
+  "number_of_usable_pii": 5,
+  "number_of_excluded_pii": 0,
+  "excluded_pii": [],
+  "standalone_risk": 9.0,
+  "pair_risk_total": 2.1137087604659266,
+  "document_risk": 11.113708760465926,
+  "maximum_possible_risk": 45.0,
+  "normalized_lcprs_score": 24.697130578813166,
+  "risk_category": "Low",
+  "governance_action": "Normal handling; standard document controls.",
+  "pii_items_used": [
+    {
+      "pii_text": "Austin Gentryodel",
+      "pii_type": "full_name",
+      "confidence": 0.9861928820610046,
+      "pii_bbox": [
+        587.0,
+        342.0,
+        718.0,
+        355.0
+      ],
+      "ocr_words": [
+        "Austin",
+        "Gentryodel"
+      ],
+      "layout_region_id": 0,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9867944121360779,
+      "layout_region_bbox": [
+        525.2098999023438,
+        326.7271728515625,
+        940.2560424804688,
+        592.6508178710938
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "16 February 1960ns",
+      "pii_type": "date_of_birth",
+      "confidence": 0.9802236557006836,
+      "pii_bbox": [
+        621.0,
+        819.0,
+        768.0,
+        833.0
+      ],
+      "ocr_words": [
+        "16",
+        "February",
+        "1960ns"
+      ],
+      "layout_region_id": 6,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9816519021987915,
+      "layout_region_bbox": [
+        524.7182006835938,
+        803.342041015625,
+        940.5990600585938,
+        934.7498779296875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "jason76@example.net",
+      "pii_type": "email",
+      "confidence": 0.9998743534088135,
+      "pii_bbox": [
+        141.0,
+        114.0,
+        303.0,
+        128.0
+      ],
+      "ocr_words": [
+        "jason76",
+        "example",
+        "net"
+      ],
+      "layout_region_id": 7,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9691725373268127,
+      "layout_region_bbox": [
+        85.50566101074219,
+        99.30181884765625,
+        500.50299072265625,
+        215.01412963867188
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "724.523.8849x696a",
+      "pii_type": "phone_number",
+      "confidence": 0.9997801184654236,
+      "pii_bbox": [
+        147.0,
+        592.0,
+        290.0,
+        605.0
+      ],
+      "ocr_words": [
+        "724.523.8849x696a"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "text",
+      "layout_region_score": 0.986745297908783,
+      "layout_region_bbox": [
+        84.94657135009766,
+        575.6604614257812,
+        500.0951843261719,
+        810.6941528320312
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "JN018451",
+      "pii_type": "passport_number",
+      "confidence": 0.9860644340515137,
+      "pii_bbox": [
+        160.0,
+        381.0,
+        228.0,
+        395.0
+      ],
+      "ocr_words": [
+        "JN018451"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9854092001914978,
+      "layout_region_bbox": [
+        84.9505386352539,
+        367.6214904785156,
+        500.2470703125,
+        571.4221801757812
+      ],
+      "mapping_method": "center_inside"
+    }
+  ],
+  "pair_results": [
+    {
+      "pii_a": "Austin Gentryodel",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "16 February 1960ns",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": false,
+      "distance_closeness": 0.11030192808996506,
+      "relationship": 0.044120771235986025,
+      "pair_risk": 0.1323623137079581
+    },
+    {
+      "pii_a": "Austin Gentryodel",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "jason76@example.net",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.10652700350365127,
+      "relationship": 0.04261080140146051,
+      "pair_risk": 0.10652700350365127
+    },
+    {
+      "pii_a": "Austin Gentryodel",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "724.523.8849x696a",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.09991177961177093,
+      "relationship": 0.03996471184470837,
+      "pair_risk": 0.09991177961177093
+    },
+    {
+      "pii_a": "Austin Gentryodel",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "JN018451",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.12045444750454792,
+      "relationship": 0.04818177900181917,
+      "pair_risk": 0.19272711600727668
+    },
+    {
+      "pii_a": "16 February 1960ns",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "jason76@example.net",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.02017721775248859,
+      "relationship": 0.008070887100995437,
+      "pair_risk": 0.02824810485348403
+    },
+    {
+      "pii_a": "16 February 1960ns",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "724.523.8849x696a",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.08835964517855432,
+      "relationship": 0.03534385807142173,
+      "pair_risk": 0.12370350324997605
+    },
+    {
+      "pii_a": "16 February 1960ns",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "JN018451",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.046944328384093785,
+      "relationship": 0.018777731353637514,
+      "pair_risk": 0.09388865676818757
+    },
+    {
+      "pii_a": "jason76@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "724.523.8849x696a",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.11123455499198366,
+      "relationship": 0.04449382199679347,
+      "pair_risk": 0.1334814659903804
+    },
+    {
+      "pii_a": "jason76@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "JN018451",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.29092638513633134,
+      "relationship": 0.11637055405453255,
+      "pair_risk": 0.5236674932453964
+    },
+    {
+      "pii_a": "724.523.8849x696a",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "JN018451",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.377328513071025,
+      "relationship": 0.15093140522841,
+      "pair_risk": 0.6791913235278451
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "lcprs_version": "2.0",
+  "document": "0008_99ec49a91523b06062803243de5eeff9bc6cf388f584523b786785e922f9691a_two_column",
+  "image_width": 1025,
+  "image_height": 1025,
+  "formula": {
+    "region_weight": 0.6,
+    "distance_weight": 0.4,
+    "distance_function": "exponential",
+    "distance_decay_ratio": 0.15
+  },
+  "number_of_usable_pii": 4,
+  "number_of_excluded_pii": 0,
+  "excluded_pii": [],
+  "standalone_risk": 7.5,
+  "pair_risk_total": 1.7202625069673194,
+  "document_risk": 9.22026250696732,
+  "maximum_possible_risk": 30.0,
+  "normalized_lcprs_score": 30.73420835655773,
+  "risk_category": "Medium",
+  "governance_action": "Apply controlled access and review before sharing.",
+  "pii_items_used": [
+    {
+      "pii_text": "jason76@example.net",
+      "pii_type": "email",
+      "confidence": 0.9999538660049438,
+      "pii_bbox": [
+        148.0,
+        601.0,
+        312.0,
+        615.0
+      ],
+      "ocr_words": [
+        "jason76",
+        "example",
+        "net"
+      ],
+      "layout_region_id": 0,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9865671992301941,
+      "layout_region_bbox": [
+        85.07453155517578,
+        575.6857299804688,
+        500.2010803222656,
+        810.62646484375
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "724.523.8849x696phenomenology",
+      "pii_type": "phone_number",
+      "confidence": 0.9385867714881897,
+      "pii_bbox": [
+        148.0,
+        382.0,
+        389.0,
+        396.0
+      ],
+      "ocr_words": [
+        "724.523.8849x696phenomenology"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9852862358093262,
+      "layout_region_bbox": [
+        84.8427963256836,
+        367.7379150390625,
+        500.2599792480469,
+        571.5123291015625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "01226 Paul Ranch Suite 848\n1",
+      "pii_type": "street_address",
+      "confidence": 0.5709397792816162,
+      "pii_bbox": [
+        607.0,
+        350.0,
+        811.0,
+        364.0
+      ],
+      "ocr_words": [
+        "01226",
+        "Paul",
+        "Ranch",
+        "Suite",
+        "848"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9865506887435913,
+      "layout_region_bbox": [
+        525.2003784179688,
+        327.3309020996094,
+        940.40673828125,
+        592.31298828125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "JN018451is",
+      "pii_type": "passport_number",
+      "confidence": 0.926148533821106,
+      "pii_bbox": [
+        602.0,
+        610.0,
+        686.0,
+        624.0
+      ],
+      "ocr_words": [
+        "JN018451is"
+      ],
+      "layout_region_id": 4,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9849206805229187,
+      "layout_region_bbox": [
+        524.7833862304688,
+        594.7213745117188,
+        940.497802734375,
+        800.9937744140625
+      ],
+      "mapping_method": "center_inside"
+    }
+  ],
+  "pair_results": [
+    {
+      "pii_a": "jason76@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "724.523.8849x696phenomenology",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.35964371113216437,
+      "relationship": 0.14385748445286575,
+      "pair_risk": 0.4315724533585973
+    },
+    {
+      "pii_a": "jason76@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "01226 Paul Ranch Suite 848\n1",
+      "pii_b_type": "street_address",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.08315241972614314,
+      "relationship": 0.03326096789045726,
+      "pair_risk": 0.09978290367137177
+    },
+    {
+      "pii_a": "jason76@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "JN018451is",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.14890240124246953,
+      "relationship": 0.059560960496987815,
+      "pair_risk": 0.2680243222364452
+    },
+    {
+      "pii_a": "724.523.8849x696phenomenology",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "01226 Paul Ranch Suite 848\n1",
+      "pii_b_type": "street_address",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.13117431293825857,
+      "relationship": 0.05246972517530343,
+      "pair_risk": 0.1574091755259103
+    },
+    {
+      "pii_a": "724.523.8849x696phenomenology",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "JN018451is",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.1326064534592993,
+      "relationship": 0.05304258138371973,
+      "pair_risk": 0.2386916162267388
+    },
+    {
+      "pii_a": "01226 Paul Ranch Suite 848\n1",
+      "pii_a_type": "street_address",
+      "severity_a": 1.5,
+      "pii_b": "JN018451is",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.2915455755268089,
+      "relationship": 0.11661823021072355,
+      "pair_risk": 0.524782035948256
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+{
+  "document": "0012_eacbc7b084332bbcb5683235c58e13a699d65d2792bb9c132d4bc712946c5f02_scattered",
+  "image_width": 1025,
+  "image_height": 1025,
+  "layout_region_count": 2,
+  "pii_prediction_count": 12,
+  "pii_layout_mapped_count": 12,
+  "layout_mapping_rate": 1.0,
+  "layout_regions": [
+    {
+      "region_id": 0,
+      "label": "number",
+      "score": 0.7715048789978027,
+      "bbox": [
+        30.48868751525879,
+        990.0516967773438,
+        42.58712387084961,
+        999.5494995117188
+      ]
+    },
+    {
+      "region_id": 1,
+      "label": "image",
+      "score": 0.5682799816131592,
+      "bbox": [
+        53.9886474609375,
+        106.20120239257812,
+        967.9285278320312,
+        942.248046875
+      ]
+    }
+  ],
+  "pii_mappings": [
+    {
+      "pii_text": "Stewart P. \"Tom\" Mitchell",
+      "pii_type": "full_name",
+      "confidence": 0.957011878490448,
+      "pii_bbox": [
+        727.0,
+        703.0,
+        958.0,
+        717.0
+      ],
+      "ocr_words": [
+        "Stewart",
+        "P",
+        "Tom",
+        "Mitchell"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5682799816131592,
+      "layout_region_bbox": [
+        53.9886474609375,
+        106.20120239257812,
+        967.9285278320312,
+        942.248046875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "Aaron Bowen",
+      "pii_type": "full_name",
+      "confidence": 0.9151442050933838,
+      "pii_bbox": [
+        120.0,
+        393.0,
+        211.0,
+        414.0
+      ],
+      "ocr_words": [
+        "Aaron",
+        "Bowen"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5682799816131592,
+      "layout_region_bbox": [
+        53.9886474609375,
+        106.20120239257812,
+        967.9285278320312,
+        942.248046875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "Tom",
+      "pii_type": "first_name",
+      "confidence": 0.6097283363342285,
+      "pii_bbox": [
+        837.0,
+        703.0,
+        865.0,
+        717.0
+      ],
+      "ocr_words": [
+        "Tom"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5682799816131592,
+      "layout_region_bbox": [
+        53.9886474609375,
+        106.20120239257812,
+        967.9285278320312,
+        942.248046875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "Tom",
+      "pii_type": "first_name",
+      "confidence": 0.5611596703529358,
+      "pii_bbox": [
+        837.0,
+        703.0,
+        865.0,
+        717.0
+      ],
+      "ocr_words": [
+        "Tom"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5682799816131592,
+      "layout_region_bbox": [
+        53.9886474609375,
+        106.20120239257812,
+        967.9285278320312,
+        942.248046875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "Tom",
+      "pii_type": "middle_name",
+      "confidence": 0.5961291790008545,
+      "pii_bbox": [
+        837.0,
+        703.0,
+        865.0,
+        717.0
+      ],
+      "ocr_words": [
+        "Tom"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5682799816131592,
+      "layout_region_bbox": [
+        53.9886474609375,
+        106.20120239257812,
+        967.9285278320312,
+        942.248046875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "29 April 1958",
+      "pii_type": "date_of_birth",
+      "confidence": 0.9999876022338867,
+      "pii_bbox": [
+        155.0,
+        181.0,
+        246.0,
+        202.0
+      ],
+      "ocr_words": [
+        "29",
+        "April",
+        "1958"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5682799816131592,
+      "layout_region_bbox": [
+        53.9886474609375,
+        106.20120239257812,
+        967.9285278320312,
+        942.248046875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "teresa28@example.org",
+      "pii_type": "email",
+      "confidence": 0.9997692704200745,
+      "pii_bbox": [
+        580.0,
+        138.0,
+        752.0,
+        164.0
+      ],
+      "ocr_words": [
+        "teresa28",
+        "example",
+        "org"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5682799816131592,
+      "layout_region_bbox": [
+        53.9886474609375,
+        106.20120239257812,
+        967.9285278320312,
+        942.248046875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "+1-948-293-2528x8095",
+      "pii_type": "phone_number",
+      "confidence": 0.9999715089797974,
+      "pii_bbox": [
+        595.0,
+        628.0,
+        753.0,
+        648.0
+      ],
+      "ocr_words": [
+        "1-948-293-2528x8095"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5682799816131592,
+      "layout_region_bbox": [
+        53.9886474609375,
+        106.20120239257812,
+        967.9285278320312,
+        942.248046875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "3039 Christopher Oval Apt. 822",
+      "pii_type": "street_address",
+      "confidence": 0.9766358733177185,
+      "pii_bbox": [
+        132.0,
+        815.0,
+        363.0,
+        842.0
+      ],
+      "ocr_words": [
+        "3039",
+        "Christopher",
+        "Oval",
+        "Apt",
+        "822"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5682799816131592,
+      "layout_region_bbox": [
+        53.9886474609375,
+        106.20120239257812,
+        967.9285278320312,
+        942.248046875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "United States",
+      "pii_type": "country",
+      "confidence": 0.8958687782287598,
+      "pii_bbox": [
+        536.0,
+        320.0,
+        642.0,
+        338.0
+      ],
+      "ocr_words": [
+        "United",
+        "States"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5682799816131592,
+      "layout_region_bbox": [
+        53.9886474609375,
+        106.20120239257812,
+        967.9285278320312,
+        942.248046875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "NG782489",
+      "pii_type": "passport_number",
+      "confidence": 0.9919964671134949,
+      "pii_bbox": [
+        600.0,
+        369.0,
+        672.0,
+        393.0
+      ],
+      "ocr_words": [
+        "NG782489"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5682799816131592,
+      "layout_region_bbox": [
+        53.9886474609375,
+        106.20120239257812,
+        967.9285278320312,
+        942.248046875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "February 22, 2005",
+      "pii_type": "transaction_date",
+      "confidence": 0.7319365739822388,
+      "pii_bbox": [
+        70.0,
+        510.0,
+        223.0,
+        528.0
+      ],
+      "ocr_words": [
+        "February",
+        "22",
+        "2005"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5682799816131592,
+      "layout_region_bbox": [
+        53.9886474609375,
+        106.20120239257812,
+        967.9285278320312,
+        942.248046875
+      ],
+      "mapping_method": "center_inside"
+    }
+  ]
+}

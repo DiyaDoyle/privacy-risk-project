@@ -1,0 +1,1861 @@
+{
+  "lcprs_version": "2.0",
+  "document": "0005_4079232a7f3a712aa8b3d905175c3017f1d3b8373e16e37bcfb87eff4c96fbc5_two_column",
+  "image_width": 1025,
+  "image_height": 1025,
+  "formula": {
+    "region_weight": 0.6,
+    "distance_weight": 0.4,
+    "distance_function": "exponential",
+    "distance_decay_ratio": 0.15
+  },
+  "number_of_usable_pii": 16,
+  "number_of_excluded_pii": 0,
+  "excluded_pii": [],
+  "standalone_risk": 16.8,
+  "pair_risk_total": 52.36149036014741,
+  "document_risk": 69.16149036014741,
+  "maximum_possible_risk": 268.8000000000001,
+  "normalized_lcprs_score": 25.729721116126257,
+  "risk_category": "Medium",
+  "governance_action": "Apply controlled access and review before sharing.",
+  "pii_items_used": [
+    {
+      "pii_text": "Joseph Marie de Maistre",
+      "pii_type": "full_name",
+      "confidence": 0.9613853096961975,
+      "pii_bbox": [
+        270.0,
+        772.0,
+        426.0,
+        785.0
+      ],
+      "ocr_words": [
+        "Joseph",
+        "Marie",
+        "de",
+        "Maistre"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9803962111473083,
+      "layout_region_bbox": [
+        177.66488647460938,
+        667.9176635742188,
+        531.712646484375,
+        801.746826171875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "smiller@example.net",
+      "pii_type": "email",
+      "confidence": 0.9998370409011841,
+      "pii_bbox": [
+        245.0,
+        463.0,
+        397.0,
+        480.0
+      ],
+      "ocr_words": [
+        "smiller",
+        "example",
+        "net"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9769133925437927,
+      "layout_region_bbox": [
+        177.6036834716797,
+        440.1848449707031,
+        448.4157409667969,
+        645.08935546875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "+1-659-931-0341x316r",
+      "pii_type": "phone_number",
+      "confidence": 0.9999830722808838,
+      "pii_bbox": [
+        250.0,
+        103.0,
+        417.0,
+        122.0
+      ],
+      "ocr_words": [
+        "1-659-931-0341x316r"
+      ],
+      "layout_region_id": 2,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9780924320220947,
+      "layout_region_bbox": [
+        177.40725708007812,
+        90.77799987792969,
+        531.4905395507812,
+        225.99209594726562
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "55341 Amanda Gardens Apt, 764",
+      "pii_type": "street_address",
+      "confidence": 0.9599772691726685,
+      "pii_bbox": [
+        552.0,
+        363.0,
+        790.0,
+        377.0
+      ],
+      "ocr_words": [
+        "55341",
+        "Amanda",
+        "Gardens",
+        "Apt",
+        "764"
+      ],
+      "layout_region_id": 8,
+      "layout_region_type": "chart",
+      "layout_region_score": 0.9401438236236572,
+      "layout_region_bbox": [
+        468.966064453125,
+        351.0093688964844,
+        899.4984130859375,
+        600.3670654296875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "New Orleans",
+      "pii_type": "city",
+      "confidence": 0.9032009243965149,
+      "pii_bbox": [
+        649.0,
+        807.0,
+        719.0,
+        817.0
+      ],
+      "ocr_words": [
+        "New",
+        "Orleans"
+      ],
+      "layout_region_id": 0,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9827288389205933,
+      "layout_region_bbox": [
+        547.521240234375,
+        752.9124755859375,
+        901.1886596679688,
+        921.1637573242188
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "ZK83503002",
+      "pii_type": "passport_number",
+      "confidence": 0.9895583391189575,
+      "pii_bbox": [
+        624.0,
+        766.0,
+        711.0,
+        784.0
+      ],
+      "ocr_words": [
+        "ZK83503002"
+      ],
+      "layout_region_id": 0,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9827288389205933,
+      "layout_region_bbox": [
+        547.521240234375,
+        752.9124755859375,
+        901.1886596679688,
+        921.1637573242188
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "IBERIABANK Corporation",
+      "pii_type": "iban",
+      "confidence": 0.9347956776618958,
+      "pii_bbox": [
+        746.0,
+        109.0,
+        900.0,
+        122.0
+      ],
+      "ocr_words": [
+        "IBERIABANK",
+        "Corporation"
+      ],
+      "layout_region_id": 6,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9676687121391296,
+      "layout_region_bbox": [
+        547.8802490234375,
+        91.11764526367188,
+        901.0905151367188,
+        155.95135498046875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2002",
+      "pii_type": "transaction_date",
+      "confidence": 0.89369136095047,
+      "pii_bbox": [
+        830.0,
+        248.0,
+        856.0,
+        261.0
+      ],
+      "ocr_words": [
+        "2002"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9762660264968872,
+      "layout_region_bbox": [
+        547.9985961914062,
+        178.31581115722656,
+        901.5940551757812,
+        312.73712158203125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2001",
+      "pii_type": "transaction_date",
+      "confidence": 0.8708784580230713,
+      "pii_bbox": [
+        715.0,
+        248.0,
+        739.0,
+        261.0
+      ],
+      "ocr_words": [
+        "2001"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9762660264968872,
+      "layout_region_bbox": [
+        547.9985961914062,
+        178.31581115722656,
+        901.5940551757812,
+        312.73712158203125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2002",
+      "pii_type": "transaction_date",
+      "confidence": 0.8591206669807434,
+      "pii_bbox": [
+        830.0,
+        248.0,
+        856.0,
+        261.0
+      ],
+      "ocr_words": [
+        "2002"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9762660264968872,
+      "layout_region_bbox": [
+        547.9985961914062,
+        178.31581115722656,
+        901.5940551757812,
+        312.73712158203125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2001",
+      "pii_type": "transaction_date",
+      "confidence": 0.8317066431045532,
+      "pii_bbox": [
+        715.0,
+        248.0,
+        739.0,
+        261.0
+      ],
+      "ocr_words": [
+        "2001"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9762660264968872,
+      "layout_region_bbox": [
+        547.9985961914062,
+        178.31581115722656,
+        901.5940551757812,
+        312.73712158203125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2002",
+      "pii_type": "transaction_date",
+      "confidence": 0.8274984955787659,
+      "pii_bbox": [
+        830.0,
+        248.0,
+        856.0,
+        261.0
+      ],
+      "ocr_words": [
+        "2002"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9762660264968872,
+      "layout_region_bbox": [
+        547.9985961914062,
+        178.31581115722656,
+        901.5940551757812,
+        312.73712158203125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2002",
+      "pii_type": "transaction_date",
+      "confidence": 0.7956089973449707,
+      "pii_bbox": [
+        830.0,
+        248.0,
+        856.0,
+        261.0
+      ],
+      "ocr_words": [
+        "2002"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9762660264968872,
+      "layout_region_bbox": [
+        547.9985961914062,
+        178.31581115722656,
+        901.5940551757812,
+        312.73712158203125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2001",
+      "pii_type": "transaction_date",
+      "confidence": 0.7847464084625244,
+      "pii_bbox": [
+        715.0,
+        248.0,
+        739.0,
+        261.0
+      ],
+      "ocr_words": [
+        "2001"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9762660264968872,
+      "layout_region_bbox": [
+        547.9985961914062,
+        178.31581115722656,
+        901.5940551757812,
+        312.73712158203125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2001",
+      "pii_type": "transaction_date",
+      "confidence": 0.6997647881507874,
+      "pii_bbox": [
+        715.0,
+        248.0,
+        739.0,
+        261.0
+      ],
+      "ocr_words": [
+        "2001"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9762660264968872,
+      "layout_region_bbox": [
+        547.9985961914062,
+        178.31581115722656,
+        901.5940551757812,
+        312.73712158203125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2001",
+      "pii_type": "transaction_date",
+      "confidence": 0.6833478808403015,
+      "pii_bbox": [
+        715.0,
+        248.0,
+        739.0,
+        261.0
+      ],
+      "ocr_words": [
+        "2001"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9762660264968872,
+      "layout_region_bbox": [
+        547.9985961914062,
+        178.31581115722656,
+        901.5940551757812,
+        312.73712158203125
+      ],
+      "mapping_method": "center_inside"
+    }
+  ],
+  "pair_results": [
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "smiller@example.net",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.2423520234632023,
+      "relationship": 0.09694080938528093,
+      "pair_risk": 0.24235202346320234
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "+1-659-931-0341x316r",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.046714275604051496,
+      "relationship": 0.0186857102416206,
+      "pair_risk": 0.0467142756040515
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "55341 Amanda Gardens Apt, 764",
+      "pii_b_type": "street_address",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.09116754883337937,
+      "relationship": 0.03646701953335175,
+      "pair_risk": 0.09116754883337937
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "New Orleans",
+      "pii_b_type": "city",
+      "severity_b": 0.8,
+      "same_region": false,
+      "distance_closeness": 0.2116230750852939,
+      "relationship": 0.08464923003411756,
+      "pair_risk": 0.1523686140614116
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "ZK83503002",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.23004265091712114,
+      "relationship": 0.09201706036684847,
+      "pair_risk": 0.36806824146739386
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "IBERIABANK Corporation",
+      "pii_b_type": "iban",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.023494853662294004,
+      "relationship": 0.009397941464917603,
+      "pair_risk": 0.03759176585967041
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.036328132109794915,
+      "relationship": 0.014531252843917966,
+      "pair_risk": 0.02179687926587695
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.051088095996482195,
+      "relationship": 0.02043523839859288,
+      "pair_risk": 0.03065285759788932
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.036328132109794915,
+      "relationship": 0.014531252843917966,
+      "pair_risk": 0.02179687926587695
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.051088095996482195,
+      "relationship": 0.02043523839859288,
+      "pair_risk": 0.03065285759788932
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.036328132109794915,
+      "relationship": 0.014531252843917966,
+      "pair_risk": 0.02179687926587695
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.036328132109794915,
+      "relationship": 0.014531252843917966,
+      "pair_risk": 0.02179687926587695
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.051088095996482195,
+      "relationship": 0.02043523839859288,
+      "pair_risk": 0.03065285759788932
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.051088095996482195,
+      "relationship": 0.02043523839859288,
+      "pair_risk": 0.03065285759788932
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.051088095996482195,
+      "relationship": 0.02043523839859288,
+      "pair_risk": 0.03065285759788932
+    },
+    {
+      "pii_a": "smiller@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "+1-659-931-0341x316r",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.19165351845193515,
+      "relationship": 0.07666140738077407,
+      "pair_risk": 0.2299842221423222
+    },
+    {
+      "pii_a": "smiller@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "55341 Amanda Gardens Apt, 764",
+      "pii_b_type": "street_address",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.18712199035274377,
+      "relationship": 0.0748487961410975,
+      "pair_risk": 0.2245463884232925
+    },
+    {
+      "pii_a": "smiller@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "New Orleans",
+      "pii_b_type": "city",
+      "severity_b": 0.8,
+      "same_region": false,
+      "distance_closeness": 0.10137034495909802,
+      "relationship": 0.04054813798363921,
+      "pair_risk": 0.09326071736237017
+    },
+    {
+      "pii_a": "smiller@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "ZK83503002",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.12021884611090443,
+      "relationship": 0.048087538444361776,
+      "pair_risk": 0.21639392299962798
+    },
+    {
+      "pii_a": "smiller@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "IBERIABANK Corporation",
+      "pii_b_type": "iban",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.058992079140929826,
+      "relationship": 0.02359683165637193,
+      "pair_risk": 0.1061857424536737
+    },
+    {
+      "pii_a": "smiller@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.07428177368084733,
+      "relationship": 0.029712709472338936,
+      "pair_risk": 0.05942541894467787
+    },
+    {
+      "pii_a": "smiller@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.12036872301053991,
+      "relationship": 0.048147489204215965,
+      "pair_risk": 0.09629497840843193
+    },
+    {
+      "pii_a": "smiller@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.07428177368084733,
+      "relationship": 0.029712709472338936,
+      "pair_risk": 0.05942541894467787
+    },
+    {
+      "pii_a": "smiller@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.12036872301053991,
+      "relationship": 0.048147489204215965,
+      "pair_risk": 0.09629497840843193
+    },
+    {
+      "pii_a": "smiller@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.07428177368084733,
+      "relationship": 0.029712709472338936,
+      "pair_risk": 0.05942541894467787
+    },
+    {
+      "pii_a": "smiller@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.07428177368084733,
+      "relationship": 0.029712709472338936,
+      "pair_risk": 0.05942541894467787
+    },
+    {
+      "pii_a": "smiller@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.12036872301053991,
+      "relationship": 0.048147489204215965,
+      "pair_risk": 0.09629497840843193
+    },
+    {
+      "pii_a": "smiller@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.12036872301053991,
+      "relationship": 0.048147489204215965,
+      "pair_risk": 0.09629497840843193
+    },
+    {
+      "pii_a": "smiller@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.12036872301053991,
+      "relationship": 0.048147489204215965,
+      "pair_risk": 0.09629497840843193
+    },
+    {
+      "pii_a": "+1-659-931-0341x316r",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "55341 Amanda Gardens Apt, 764",
+      "pii_b_type": "street_address",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.14193714872396188,
+      "relationship": 0.05677485948958475,
+      "pair_risk": 0.17032457846875426
+    },
+    {
+      "pii_a": "+1-659-931-0341x316r",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "New Orleans",
+      "pii_b_type": "city",
+      "severity_b": 0.8,
+      "same_region": false,
+      "distance_closeness": 0.027369846457911868,
+      "relationship": 0.010947938583164748,
+      "pair_risk": 0.025180258741278917
+    },
+    {
+      "pii_a": "+1-659-931-0341x316r",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "ZK83503002",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.032968804743684806,
+      "relationship": 0.013187521897473922,
+      "pair_risk": 0.05934384853863265
+    },
+    {
+      "pii_a": "+1-659-931-0341x316r",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "IBERIABANK Corporation",
+      "pii_b_type": "iban",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.10526373589208135,
+      "relationship": 0.04210549435683254,
+      "pair_risk": 0.18947472460574644
+    },
+    {
+      "pii_a": "+1-659-931-0341x316r",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.08781437148759157,
+      "relationship": 0.03512574859503663,
+      "pair_risk": 0.07025149719007326
+    },
+    {
+      "pii_a": "+1-659-931-0341x316r",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.14602714640083853,
+      "relationship": 0.05841085856033541,
+      "pair_risk": 0.11682171712067083
+    },
+    {
+      "pii_a": "+1-659-931-0341x316r",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.08781437148759157,
+      "relationship": 0.03512574859503663,
+      "pair_risk": 0.07025149719007326
+    },
+    {
+      "pii_a": "+1-659-931-0341x316r",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.14602714640083853,
+      "relationship": 0.05841085856033541,
+      "pair_risk": 0.11682171712067083
+    },
+    {
+      "pii_a": "+1-659-931-0341x316r",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.08781437148759157,
+      "relationship": 0.03512574859503663,
+      "pair_risk": 0.07025149719007326
+    },
+    {
+      "pii_a": "+1-659-931-0341x316r",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.08781437148759157,
+      "relationship": 0.03512574859503663,
+      "pair_risk": 0.07025149719007326
+    },
+    {
+      "pii_a": "+1-659-931-0341x316r",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.14602714640083853,
+      "relationship": 0.05841085856033541,
+      "pair_risk": 0.11682171712067083
+    },
+    {
+      "pii_a": "+1-659-931-0341x316r",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.14602714640083853,
+      "relationship": 0.05841085856033541,
+      "pair_risk": 0.11682171712067083
+    },
+    {
+      "pii_a": "+1-659-931-0341x316r",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.14602714640083853,
+      "relationship": 0.05841085856033541,
+      "pair_risk": 0.11682171712067083
+    },
+    {
+      "pii_a": "55341 Amanda Gardens Apt, 764",
+      "pii_a_type": "street_address",
+      "severity_a": 1.5,
+      "pii_b": "New Orleans",
+      "pii_b_type": "city",
+      "severity_b": 0.8,
+      "same_region": false,
+      "distance_closeness": 0.13085475404555788,
+      "relationship": 0.052341901618223156,
+      "pair_risk": 0.12038637372191326
+    },
+    {
+      "pii_a": "55341 Amanda Gardens Apt, 764",
+      "pii_a_type": "street_address",
+      "severity_a": 1.5,
+      "pii_b": "ZK83503002",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.15525407768966942,
+      "relationship": 0.062101631075867775,
+      "pair_risk": 0.279457339841405
+    },
+    {
+      "pii_a": "55341 Amanda Gardens Apt, 764",
+      "pii_a_type": "street_address",
+      "severity_a": 1.5,
+      "pii_b": "IBERIABANK Corporation",
+      "pii_b_type": "iban",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.25580775736046313,
+      "relationship": 0.10232310294418526,
+      "pair_risk": 0.46045396324883364
+    },
+    {
+      "pii_a": "55341 Amanda Gardens Apt, 764",
+      "pii_a_type": "street_address",
+      "severity_a": 1.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.3856431751825135,
+      "relationship": 0.1542572700730054,
+      "pair_risk": 0.3085145401460108
+    },
+    {
+      "pii_a": "55341 Amanda Gardens Apt, 764",
+      "pii_a_type": "street_address",
+      "severity_a": 1.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.5541412157385845,
+      "relationship": 0.22165648629543383,
+      "pair_risk": 0.44331297259086766
+    },
+    {
+      "pii_a": "55341 Amanda Gardens Apt, 764",
+      "pii_a_type": "street_address",
+      "severity_a": 1.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.3856431751825135,
+      "relationship": 0.1542572700730054,
+      "pair_risk": 0.3085145401460108
+    },
+    {
+      "pii_a": "55341 Amanda Gardens Apt, 764",
+      "pii_a_type": "street_address",
+      "severity_a": 1.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.5541412157385845,
+      "relationship": 0.22165648629543383,
+      "pair_risk": 0.44331297259086766
+    },
+    {
+      "pii_a": "55341 Amanda Gardens Apt, 764",
+      "pii_a_type": "street_address",
+      "severity_a": 1.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.3856431751825135,
+      "relationship": 0.1542572700730054,
+      "pair_risk": 0.3085145401460108
+    },
+    {
+      "pii_a": "55341 Amanda Gardens Apt, 764",
+      "pii_a_type": "street_address",
+      "severity_a": 1.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.3856431751825135,
+      "relationship": 0.1542572700730054,
+      "pair_risk": 0.3085145401460108
+    },
+    {
+      "pii_a": "55341 Amanda Gardens Apt, 764",
+      "pii_a_type": "street_address",
+      "severity_a": 1.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.5541412157385845,
+      "relationship": 0.22165648629543383,
+      "pair_risk": 0.44331297259086766
+    },
+    {
+      "pii_a": "55341 Amanda Gardens Apt, 764",
+      "pii_a_type": "street_address",
+      "severity_a": 1.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.5541412157385845,
+      "relationship": 0.22165648629543383,
+      "pair_risk": 0.44331297259086766
+    },
+    {
+      "pii_a": "55341 Amanda Gardens Apt, 764",
+      "pii_a_type": "street_address",
+      "severity_a": 1.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.5541412157385845,
+      "relationship": 0.22165648629543383,
+      "pair_risk": 0.44331297259086766
+    },
+    {
+      "pii_a": "New Orleans",
+      "pii_a_type": "city",
+      "severity_a": 0.8,
+      "pii_b": "ZK83503002",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": true,
+      "distance_closeness": 0.8300087433911846,
+      "relationship": 0.9320034973564738,
+      "pair_risk": 3.5416132899546002
+    },
+    {
+      "pii_a": "New Orleans",
+      "pii_a_type": "city",
+      "severity_a": 0.8,
+      "pii_b": "IBERIABANK Corporation",
+      "pii_b_type": "iban",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.038142818713638386,
+      "relationship": 0.015257127485455355,
+      "pair_risk": 0.05797708444473035
+    },
+    {
+      "pii_a": "New Orleans",
+      "pii_a_type": "city",
+      "severity_a": 0.8,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.06951453061280041,
+      "relationship": 0.027805812245120166,
+      "pair_risk": 0.03614755591865622
+    },
+    {
+      "pii_a": "New Orleans",
+      "pii_a_type": "city",
+      "severity_a": 0.8,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.07641349258981837,
+      "relationship": 0.030565397035927352,
+      "pair_risk": 0.03973501614670556
+    },
+    {
+      "pii_a": "New Orleans",
+      "pii_a_type": "city",
+      "severity_a": 0.8,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.06951453061280041,
+      "relationship": 0.027805812245120166,
+      "pair_risk": 0.03614755591865622
+    },
+    {
+      "pii_a": "New Orleans",
+      "pii_a_type": "city",
+      "severity_a": 0.8,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.07641349258981837,
+      "relationship": 0.030565397035927352,
+      "pair_risk": 0.03973501614670556
+    },
+    {
+      "pii_a": "New Orleans",
+      "pii_a_type": "city",
+      "severity_a": 0.8,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.06951453061280041,
+      "relationship": 0.027805812245120166,
+      "pair_risk": 0.03614755591865622
+    },
+    {
+      "pii_a": "New Orleans",
+      "pii_a_type": "city",
+      "severity_a": 0.8,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.06951453061280041,
+      "relationship": 0.027805812245120166,
+      "pair_risk": 0.03614755591865622
+    },
+    {
+      "pii_a": "New Orleans",
+      "pii_a_type": "city",
+      "severity_a": 0.8,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.07641349258981837,
+      "relationship": 0.030565397035927352,
+      "pair_risk": 0.03973501614670556
+    },
+    {
+      "pii_a": "New Orleans",
+      "pii_a_type": "city",
+      "severity_a": 0.8,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.07641349258981837,
+      "relationship": 0.030565397035927352,
+      "pair_risk": 0.03973501614670556
+    },
+    {
+      "pii_a": "New Orleans",
+      "pii_a_type": "city",
+      "severity_a": 0.8,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.07641349258981837,
+      "relationship": 0.030565397035927352,
+      "pair_risk": 0.03973501614670556
+    },
+    {
+      "pii_a": "ZK83503002",
+      "pii_a_type": "passport_number",
+      "severity_a": 3.0,
+      "pii_b": "IBERIABANK Corporation",
+      "pii_b_type": "iban",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.044322773353930575,
+      "relationship": 0.017729109341572232,
+      "pair_risk": 0.10637465604943339
+    },
+    {
+      "pii_a": "ZK83503002",
+      "pii_a_type": "passport_number",
+      "severity_a": 3.0,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.07996018120847632,
+      "relationship": 0.03198407248339053,
+      "pair_risk": 0.11194425369186686
+    },
+    {
+      "pii_a": "ZK83503002",
+      "pii_a_type": "passport_number",
+      "severity_a": 3.0,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.08986875278920134,
+      "relationship": 0.035947501115680534,
+      "pair_risk": 0.12581625390488188
+    },
+    {
+      "pii_a": "ZK83503002",
+      "pii_a_type": "passport_number",
+      "severity_a": 3.0,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.07996018120847632,
+      "relationship": 0.03198407248339053,
+      "pair_risk": 0.11194425369186686
+    },
+    {
+      "pii_a": "ZK83503002",
+      "pii_a_type": "passport_number",
+      "severity_a": 3.0,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.08986875278920134,
+      "relationship": 0.035947501115680534,
+      "pair_risk": 0.12581625390488188
+    },
+    {
+      "pii_a": "ZK83503002",
+      "pii_a_type": "passport_number",
+      "severity_a": 3.0,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.07996018120847632,
+      "relationship": 0.03198407248339053,
+      "pair_risk": 0.11194425369186686
+    },
+    {
+      "pii_a": "ZK83503002",
+      "pii_a_type": "passport_number",
+      "severity_a": 3.0,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.07996018120847632,
+      "relationship": 0.03198407248339053,
+      "pair_risk": 0.11194425369186686
+    },
+    {
+      "pii_a": "ZK83503002",
+      "pii_a_type": "passport_number",
+      "severity_a": 3.0,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.08986875278920134,
+      "relationship": 0.035947501115680534,
+      "pair_risk": 0.12581625390488188
+    },
+    {
+      "pii_a": "ZK83503002",
+      "pii_a_type": "passport_number",
+      "severity_a": 3.0,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.08986875278920134,
+      "relationship": 0.035947501115680534,
+      "pair_risk": 0.12581625390488188
+    },
+    {
+      "pii_a": "ZK83503002",
+      "pii_a_type": "passport_number",
+      "severity_a": 3.0,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.08986875278920134,
+      "relationship": 0.035947501115680534,
+      "pair_risk": 0.12581625390488188
+    },
+    {
+      "pii_a": "IBERIABANK Corporation",
+      "pii_a_type": "iban",
+      "severity_a": 3.0,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.5242146788856886,
+      "relationship": 0.20968587155427545,
+      "pair_risk": 0.733900550439964
+    },
+    {
+      "pii_a": "IBERIABANK Corporation",
+      "pii_a_type": "iban",
+      "severity_a": 3.0,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.459821942463754,
+      "relationship": 0.1839287769855016,
+      "pair_risk": 0.6437507194492557
+    },
+    {
+      "pii_a": "IBERIABANK Corporation",
+      "pii_a_type": "iban",
+      "severity_a": 3.0,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.5242146788856886,
+      "relationship": 0.20968587155427545,
+      "pair_risk": 0.733900550439964
+    },
+    {
+      "pii_a": "IBERIABANK Corporation",
+      "pii_a_type": "iban",
+      "severity_a": 3.0,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.459821942463754,
+      "relationship": 0.1839287769855016,
+      "pair_risk": 0.6437507194492557
+    },
+    {
+      "pii_a": "IBERIABANK Corporation",
+      "pii_a_type": "iban",
+      "severity_a": 3.0,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.5242146788856886,
+      "relationship": 0.20968587155427545,
+      "pair_risk": 0.733900550439964
+    },
+    {
+      "pii_a": "IBERIABANK Corporation",
+      "pii_a_type": "iban",
+      "severity_a": 3.0,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.5242146788856886,
+      "relationship": 0.20968587155427545,
+      "pair_risk": 0.733900550439964
+    },
+    {
+      "pii_a": "IBERIABANK Corporation",
+      "pii_a_type": "iban",
+      "severity_a": 3.0,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.459821942463754,
+      "relationship": 0.1839287769855016,
+      "pair_risk": 0.6437507194492557
+    },
+    {
+      "pii_a": "IBERIABANK Corporation",
+      "pii_a_type": "iban",
+      "severity_a": 3.0,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.459821942463754,
+      "relationship": 0.1839287769855016,
+      "pair_risk": 0.6437507194492557
+    },
+    {
+      "pii_a": "IBERIABANK Corporation",
+      "pii_a_type": "iban",
+      "severity_a": 3.0,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.459821942463754,
+      "relationship": 0.1839287769855016,
+      "pair_risk": 0.6437507194492557
+    },
+    {
+      "pii_a": "2002",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5865531776724577,
+      "relationship": 0.8346212710689831,
+      "pair_risk": 0.8346212710689831
+    },
+    {
+      "pii_a": "2002",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 1.0,
+      "relationship": 1.0,
+      "pair_risk": 1.0
+    },
+    {
+      "pii_a": "2002",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5865531776724577,
+      "relationship": 0.8346212710689831,
+      "pair_risk": 0.8346212710689831
+    },
+    {
+      "pii_a": "2002",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 1.0,
+      "relationship": 1.0,
+      "pair_risk": 1.0
+    },
+    {
+      "pii_a": "2002",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 1.0,
+      "relationship": 1.0,
+      "pair_risk": 1.0
+    },
+    {
+      "pii_a": "2002",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5865531776724577,
+      "relationship": 0.8346212710689831,
+      "pair_risk": 0.8346212710689831
+    },
+    {
+      "pii_a": "2002",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5865531776724577,
+      "relationship": 0.8346212710689831,
+      "pair_risk": 0.8346212710689831
+    },
+    {
+      "pii_a": "2002",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5865531776724577,
+      "relationship": 0.8346212710689831,
+      "pair_risk": 0.8346212710689831
+    },
+    {
+      "pii_a": "2001",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5865531776724577,
+      "relationship": 0.8346212710689831,
+      "pair_risk": 0.8346212710689831
+    },
+    {
+      "pii_a": "2001",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 1.0,
+      "relationship": 1.0,
+      "pair_risk": 1.0
+    },
+    {
+      "pii_a": "2001",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5865531776724577,
+      "relationship": 0.8346212710689831,
+      "pair_risk": 0.8346212710689831
+    },
+    {
+      "pii_a": "2001",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5865531776724577,
+      "relationship": 0.8346212710689831,
+      "pair_risk": 0.8346212710689831
+    },
+    {
+      "pii_a": "2001",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 1.0,
+      "relationship": 1.0,
+      "pair_risk": 1.0
+    },
+    {
+      "pii_a": "2001",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 1.0,
+      "relationship": 1.0,
+      "pair_risk": 1.0
+    },
+    {
+      "pii_a": "2001",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 1.0,
+      "relationship": 1.0,
+      "pair_risk": 1.0
+    },
+    {
+      "pii_a": "2002",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5865531776724577,
+      "relationship": 0.8346212710689831,
+      "pair_risk": 0.8346212710689831
+    },
+    {
+      "pii_a": "2002",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 1.0,
+      "relationship": 1.0,
+      "pair_risk": 1.0
+    },
+    {
+      "pii_a": "2002",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 1.0,
+      "relationship": 1.0,
+      "pair_risk": 1.0
+    },
+    {
+      "pii_a": "2002",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5865531776724577,
+      "relationship": 0.8346212710689831,
+      "pair_risk": 0.8346212710689831
+    },
+    {
+      "pii_a": "2002",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5865531776724577,
+      "relationship": 0.8346212710689831,
+      "pair_risk": 0.8346212710689831
+    },
+    {
+      "pii_a": "2002",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5865531776724577,
+      "relationship": 0.8346212710689831,
+      "pair_risk": 0.8346212710689831
+    },
+    {
+      "pii_a": "2001",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5865531776724577,
+      "relationship": 0.8346212710689831,
+      "pair_risk": 0.8346212710689831
+    },
+    {
+      "pii_a": "2001",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5865531776724577,
+      "relationship": 0.8346212710689831,
+      "pair_risk": 0.8346212710689831
+    },
+    {
+      "pii_a": "2001",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 1.0,
+      "relationship": 1.0,
+      "pair_risk": 1.0
+    },
+    {
+      "pii_a": "2001",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 1.0,
+      "relationship": 1.0,
+      "pair_risk": 1.0
+    },
+    {
+      "pii_a": "2001",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 1.0,
+      "relationship": 1.0,
+      "pair_risk": 1.0
+    },
+    {
+      "pii_a": "2002",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2002",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 1.0,
+      "relationship": 1.0,
+      "pair_risk": 1.0
+    },
+    {
+      "pii_a": "2002",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5865531776724577,
+      "relationship": 0.8346212710689831,
+      "pair_risk": 0.8346212710689831
+    },
+    {
+      "pii_a": "2002",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5865531776724577,
+      "relationship": 0.8346212710689831,
+      "pair_risk": 0.8346212710689831
+    },
+    {
+      "pii_a": "2002",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5865531776724577,
+      "relationship": 0.8346212710689831,
+      "pair_risk": 0.8346212710689831
+    },
+    {
+      "pii_a": "2002",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5865531776724577,
+      "relationship": 0.8346212710689831,
+      "pair_risk": 0.8346212710689831
+    },
+    {
+      "pii_a": "2002",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5865531776724577,
+      "relationship": 0.8346212710689831,
+      "pair_risk": 0.8346212710689831
+    },
+    {
+      "pii_a": "2002",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5865531776724577,
+      "relationship": 0.8346212710689831,
+      "pair_risk": 0.8346212710689831
+    },
+    {
+      "pii_a": "2001",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 1.0,
+      "relationship": 1.0,
+      "pair_risk": 1.0
+    },
+    {
+      "pii_a": "2001",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 1.0,
+      "relationship": 1.0,
+      "pair_risk": 1.0
+    },
+    {
+      "pii_a": "2001",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "2001",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 1.0,
+      "relationship": 1.0,
+      "pair_risk": 1.0
+    }
+  ]
+}

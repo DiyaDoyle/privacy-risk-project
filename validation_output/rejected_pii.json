@@ -1,0 +1,210 @@
+[
+    {
+        "text": "U.S.",
+        "label": "country",
+        "confidence": 0.5220100283622742,
+        "start": 82,
+        "end": 86,
+        "validation_reason": "ambiguous location with low confidence"
+    },
+    {
+        "text": "SFAS No. 133",
+        "label": "tax_id",
+        "confidence": 0.6466313004493713,
+        "start": 787,
+        "end": 799,
+        "validation_reason": "strong PII below confidence threshold"
+    },
+    {
+        "text": "SFAS No. 133",
+        "label": "tax_number",
+        "confidence": 0.5925015807151794,
+        "start": 787,
+        "end": 799,
+        "validation_reason": "strong PII below confidence threshold"
+    },
+    {
+        "text": "2005",
+        "label": "transaction_date",
+        "confidence": 0.9895496368408203,
+        "start": 2050,
+        "end": 2054,
+        "validation_reason": "ordinary four-digit year"
+    },
+    {
+        "text": "2005",
+        "label": "transaction_date",
+        "confidence": 0.9879330992698669,
+        "start": 954,
+        "end": 958,
+        "validation_reason": "ordinary four-digit year"
+    },
+    {
+        "text": "2005",
+        "label": "transaction_date",
+        "confidence": 0.9867094159126282,
+        "start": 2989,
+        "end": 2993,
+        "validation_reason": "ordinary four-digit year"
+    },
+    {
+        "text": "2008",
+        "label": "transaction_date",
+        "confidence": 0.97037672996521,
+        "start": 3052,
+        "end": 3056,
+        "validation_reason": "ordinary four-digit year"
+    },
+    {
+        "text": "2006",
+        "label": "transaction_date",
+        "confidence": 0.9660309553146362,
+        "start": 2063,
+        "end": 2067,
+        "validation_reason": "ordinary four-digit year"
+    },
+    {
+        "text": "2006",
+        "label": "transaction_date",
+        "confidence": 0.9650735855102539,
+        "start": 968,
+        "end": 972,
+        "validation_reason": "ordinary four-digit year"
+    },
+    {
+        "text": "2004",
+        "label": "transaction_date",
+        "confidence": 0.9643573760986328,
+        "start": 2262,
+        "end": 2266,
+        "validation_reason": "ordinary four-digit year"
+    },
+    {
+        "text": "2006",
+        "label": "transaction_date",
+        "confidence": 0.9632445573806763,
+        "start": 3010,
+        "end": 3014,
+        "validation_reason": "ordinary four-digit year"
+    },
+    {
+        "text": "2004",
+        "label": "transaction_date",
+        "confidence": 0.959932804107666,
+        "start": 1538,
+        "end": 1542,
+        "validation_reason": "ordinary four-digit year"
+    },
+    {
+        "text": "2003",
+        "label": "transaction_date",
+        "confidence": 0.9579940438270569,
+        "start": 3582,
+        "end": 3586,
+        "validation_reason": "ordinary four-digit year"
+    },
+    {
+        "text": "2003",
+        "label": "transaction_date",
+        "confidence": 0.9565552473068237,
+        "start": 1207,
+        "end": 1211,
+        "validation_reason": "ordinary four-digit year"
+    },
+    {
+        "text": "2003",
+        "label": "transaction_date",
+        "confidence": 0.9537338614463806,
+        "start": 149,
+        "end": 153,
+        "validation_reason": "ordinary four-digit year"
+    },
+    {
+        "text": "2003",
+        "label": "transaction_date",
+        "confidence": 0.9492334127426147,
+        "start": 1335,
+        "end": 1339,
+        "validation_reason": "ordinary four-digit year"
+    },
+    {
+        "text": "2009",
+        "label": "transaction_date",
+        "confidence": 0.9470107555389404,
+        "start": 3073,
+        "end": 3077,
+        "validation_reason": "ordinary four-digit year"
+    },
+    {
+        "text": "2003",
+        "label": "transaction_date",
+        "confidence": 0.9465174078941345,
+        "start": 366,
+        "end": 370,
+        "validation_reason": "ordinary four-digit year"
+    },
+    {
+        "text": "2003",
+        "label": "transaction_date",
+        "confidence": 0.9464750289916992,
+        "start": 1543,
+        "end": 1547,
+        "validation_reason": "ordinary four-digit year"
+    },
+    {
+        "text": "2003",
+        "label": "transaction_date",
+        "confidence": 0.9381154775619507,
+        "start": 2267,
+        "end": 2271,
+        "validation_reason": "ordinary four-digit year"
+    },
+    {
+        "text": "2002",
+        "label": "transaction_date",
+        "confidence": 0.9372783899307251,
+        "start": 3608,
+        "end": 3612,
+        "validation_reason": "ordinary four-digit year"
+    },
+    {
+        "text": "2007",
+        "label": "transaction_date",
+        "confidence": 0.9243296980857849,
+        "start": 982,
+        "end": 986,
+        "validation_reason": "ordinary four-digit year"
+    },
+    {
+        "text": "2007",
+        "label": "transaction_date",
+        "confidence": 0.9216999411582947,
+        "start": 3031,
+        "end": 3035,
+        "validation_reason": "ordinary four-digit year"
+    },
+    {
+        "text": "2007",
+        "label": "transaction_date",
+        "confidence": 0.9187529683113098,
+        "start": 2076,
+        "end": 2080,
+        "validation_reason": "ordinary four-digit year"
+    },
+    {
+        "text": "2004",
+        "label": "transaction_date",
+        "confidence": 0.8940024971961975,
+        "start": 3560,
+        "end": 3564,
+        "validation_reason": "ordinary four-digit year"
+    },
+    {
+        "text": "December 31",
+        "label": "transaction_date",
+        "confidence": 0.6921367049217224,
+        "start": 1496,
+        "end": 1507,
+        "validation_reason": "date below confidence threshold"
+    }
+]

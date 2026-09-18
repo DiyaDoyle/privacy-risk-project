@@ -1,0 +1,683 @@
+{
+  "lcprs_version": "2.0",
+  "document": "0015_e91de822f267de35c7e42bc6478940152a4b7f36afa1506713166d43c2669882_scattered",
+  "image_width": 1025,
+  "image_height": 1025,
+  "formula": {
+    "region_weight": 0.6,
+    "distance_weight": 0.4,
+    "distance_function": "exponential",
+    "distance_decay_ratio": 0.15
+  },
+  "number_of_usable_pii": 9,
+  "number_of_excluded_pii": 0,
+  "excluded_pii": [],
+  "standalone_risk": 12.8,
+  "pair_risk_total": 8.598578763387087,
+  "document_risk": 21.398578763387086,
+  "maximum_possible_risk": 115.19999999999999,
+  "normalized_lcprs_score": 18.57515517655129,
+  "risk_category": "Low",
+  "governance_action": "Normal handling; standard document controls.",
+  "pii_items_used": [
+    {
+      "pii_text": "David R. Lumley",
+      "pii_type": "full_name",
+      "confidence": 0.9407234787940979,
+      "pii_bbox": [
+        535.0,
+        880.0,
+        659.0,
+        897.0
+      ],
+      "ocr_words": [
+        "David",
+        "R",
+        "Lumley"
+      ],
+      "layout_region_id": 7,
+      "layout_region_type": "text",
+      "layout_region_score": 0.8734972476959229,
+      "layout_region_bbox": [
+        523.3773803710938,
+        879.9935302734375,
+        830.3285522460938,
+        974.2466430664062
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "Nicole Vaughnusinesses",
+      "pii_type": "full_name",
+      "confidence": 0.9022650122642517,
+      "pii_bbox": [
+        351.0,
+        428.0,
+        586.0,
+        453.0
+      ],
+      "ocr_words": [
+        "Nicole",
+        "Vaughnusinesses"
+      ],
+      "layout_region_id": 9,
+      "layout_region_type": "image",
+      "layout_region_score": 0.7389724254608154,
+      "layout_region_bbox": [
+        263.20947265625,
+        407.86871337890625,
+        729.1451416015625,
+        679.6110229492188
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "Daol R. Lumley",
+      "pii_type": "full_name",
+      "confidence": 0.888271689414978,
+      "pii_bbox": [
+        556.0,
+        795.0,
+        835.0,
+        875.0
+      ],
+      "ocr_words": [
+        "Daol",
+        "R",
+        "Lumley"
+      ],
+      "layout_region_id": 10,
+      "layout_region_type": "image",
+      "layout_region_score": 0.6945469379425049,
+      "layout_region_bbox": [
+        519.28955078125,
+        802.2647094726562,
+        841.105712890625,
+        870.92822265625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "Nicole",
+      "pii_type": "first_name",
+      "confidence": 0.5183199048042297,
+      "pii_bbox": [
+        351.0,
+        428.0,
+        390.0,
+        453.0
+      ],
+      "ocr_words": [
+        "Nicole"
+      ],
+      "layout_region_id": 9,
+      "layout_region_type": "image",
+      "layout_region_score": 0.7389724254608154,
+      "layout_region_bbox": [
+        263.20947265625,
+        407.86871337890625,
+        729.1451416015625,
+        679.6110229492188
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "18 November 1998",
+      "pii_type": "date_of_birth",
+      "confidence": 0.9984837174415588,
+      "pii_bbox": [
+        760.0,
+        445.0,
+        893.0,
+        467.0
+      ],
+      "ocr_words": [
+        "18",
+        "November",
+        "1998"
+      ],
+      "layout_region_id": 6,
+      "layout_region_type": "text",
+      "layout_region_score": 0.8872296214103699,
+      "layout_region_bbox": [
+        741.09716796875,
+        443.6225891113281,
+        955.0143432617188,
+        698.551513671875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "raymond57@example.net",
+      "pii_type": "email",
+      "confidence": 0.9999816417694092,
+      "pii_bbox": [
+        113.0,
+        816.0,
+        299.0,
+        835.0
+      ],
+      "ocr_words": [
+        "raymond57",
+        "example",
+        "net"
+      ],
+      "layout_region_id": 0,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9496557116508484,
+      "layout_region_bbox": [
+        56.79451370239258,
+        805.1859130859375,
+        466.7602233886719,
+        975.3959350585938
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "r213.331.5098x393",
+      "pii_type": "phone_number",
+      "confidence": 0.8775194883346558,
+      "pii_bbox": [
+        65.0,
+        413.0,
+        207.0,
+        430.0
+      ],
+      "ocr_words": [
+        "r213.331.5098x393"
+      ],
+      "layout_region_id": 11,
+      "layout_region_type": "text",
+      "layout_region_score": 0.6829056739807129,
+      "layout_region_bbox": [
+        58.29827880859375,
+        413.2369079589844,
+        248.0721893310547,
+        492.05364990234375
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "10518",
+      "pii_type": "postal_code",
+      "confidence": 0.9227781295776367,
+      "pii_bbox": [
+        599.0,
+        315.0,
+        636.0,
+        334.0
+      ],
+      "ocr_words": [
+        "10518"
+      ],
+      "layout_region_id": 2,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9321900010108948,
+      "layout_region_bbox": [
+        525.0380859375,
+        305.7590026855469,
+        952.4544677734375,
+        392.3647766113281
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "HZ382997",
+      "pii_type": "passport_number",
+      "confidence": 0.9985504746437073,
+      "pii_bbox": [
+        133.0,
+        521.0,
+        200.0,
+        541.0
+      ],
+      "ocr_words": [
+        "HZ382997"
+      ],
+      "layout_region_id": 8,
+      "layout_region_type": "text",
+      "layout_region_score": 0.8537732362747192,
+      "layout_region_bbox": [
+        57.94554901123047,
+        514.875732421875,
+        243.5355682373047,
+        683.4899291992188
+      ],
+      "mapping_method": "center_inside"
+    }
+  ],
+  "pair_results": [
+    {
+      "pii_a": "David R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "Nicole Vaughnusinesses",
+      "pii_b_type": "full_name",
+      "severity_b": 1.0,
+      "same_region": false,
+      "distance_closeness": 0.11724808442443914,
+      "relationship": 0.04689923376977566,
+      "pair_risk": 0.09379846753955132
+    },
+    {
+      "pii_a": "David R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "Daol R. Lumley",
+      "pii_b_type": "full_name",
+      "severity_b": 1.0,
+      "same_region": false,
+      "distance_closeness": 0.5971921270132595,
+      "relationship": 0.23887685080530383,
+      "pair_risk": 0.47775370161060765
+    },
+    {
+      "pii_a": "David R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "Nicole",
+      "pii_b_type": "first_name",
+      "severity_b": 0.8,
+      "same_region": false,
+      "distance_closeness": 0.09938613207444681,
+      "relationship": 0.03975445282977873,
+      "pair_risk": 0.07155801509360171
+    },
+    {
+      "pii_a": "David R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "18 November 1998",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": false,
+      "distance_closeness": 0.10521072109105528,
+      "relationship": 0.04208428843642212,
+      "pair_risk": 0.12625286530926635
+    },
+    {
+      "pii_a": "David R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "raymond57@example.net",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.1617944545736129,
+      "relationship": 0.06471778182944517,
+      "pair_risk": 0.1617944545736129
+    },
+    {
+      "pii_a": "David R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "r213.331.5098x393",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.04890139983543253,
+      "relationship": 0.01956055993417301,
+      "pair_risk": 0.04890139983543253
+    },
+    {
+      "pii_a": "David R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "10518",
+      "pii_b_type": "postal_code",
+      "severity_b": 1.0,
+      "same_region": false,
+      "distance_closeness": 0.07460203417804541,
+      "relationship": 0.029840813671218165,
+      "pair_risk": 0.05968162734243633
+    },
+    {
+      "pii_a": "David R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "HZ382997",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.07626246675047293,
+      "relationship": 0.030504986700189175,
+      "pair_risk": 0.1220199468007567
+    },
+    {
+      "pii_a": "Nicole Vaughnusinesses",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "Daol R. Lumley",
+      "pii_b_type": "full_name",
+      "severity_b": 1.0,
+      "same_region": false,
+      "distance_closeness": 0.12328524487624576,
+      "relationship": 0.049314097950498306,
+      "pair_risk": 0.09862819590099661
+    },
+    {
+      "pii_a": "Nicole Vaughnusinesses",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "Nicole",
+      "pii_b_type": "first_name",
+      "severity_b": 0.8,
+      "same_region": true,
+      "distance_closeness": 0.6371764166353935,
+      "relationship": 0.8548705666541574,
+      "pair_risk": 1.5387670199774834
+    },
+    {
+      "pii_a": "Nicole Vaughnusinesses",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "18 November 1998",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": false,
+      "distance_closeness": 0.19243266245085955,
+      "relationship": 0.07697306498034383,
+      "pair_risk": 0.23091919494103147
+    },
+    {
+      "pii_a": "Nicole Vaughnusinesses",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "raymond57@example.net",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.11729727161085786,
+      "relationship": 0.046918908644343144,
+      "pair_risk": 0.11729727161085786
+    },
+    {
+      "pii_a": "Nicole Vaughnusinesses",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "r213.331.5098x393",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.21617113848785927,
+      "relationship": 0.08646845539514371,
+      "pair_risk": 0.21617113848785927
+    },
+    {
+      "pii_a": "Nicole Vaughnusinesses",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "10518",
+      "pii_b_type": "postal_code",
+      "severity_b": 1.0,
+      "same_region": false,
+      "distance_closeness": 0.41960355997080767,
+      "relationship": 0.16784142398832308,
+      "pair_risk": 0.33568284797664616
+    },
+    {
+      "pii_a": "Nicole Vaughnusinesses",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "HZ382997",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.23458398902496339,
+      "relationship": 0.09383359560998536,
+      "pair_risk": 0.37533438243994144
+    },
+    {
+      "pii_a": "Daol R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "Nicole",
+      "pii_b_type": "first_name",
+      "severity_b": 0.8,
+      "same_region": false,
+      "distance_closeness": 0.0952997532441603,
+      "relationship": 0.03811990129766413,
+      "pair_risk": 0.06861582233579543
+    },
+    {
+      "pii_a": "Daol R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "18 November 1998",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": false,
+      "distance_closeness": 0.15814669913327764,
+      "relationship": 0.06325867965331106,
+      "pair_risk": 0.18977603895993317
+    },
+    {
+      "pii_a": "Daol R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "raymond57@example.net",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.10522356962268416,
+      "relationship": 0.042089427849073664,
+      "pair_risk": 0.10522356962268416
+    },
+    {
+      "pii_a": "Daol R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "r213.331.5098x393",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.040776419712077454,
+      "relationship": 0.01631056788483098,
+      "pair_risk": 0.040776419712077454
+    },
+    {
+      "pii_a": "Daol R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "10518",
+      "pii_b_type": "postal_code",
+      "severity_b": 1.0,
+      "same_region": false,
+      "distance_closeness": 0.09300783100351631,
+      "relationship": 0.037203132401406526,
+      "pair_risk": 0.07440626480281305
+    },
+    {
+      "pii_a": "Daol R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "HZ382997",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.060444870112099446,
+      "relationship": 0.02417794804483978,
+      "pair_risk": 0.09671179217935912
+    },
+    {
+      "pii_a": "Nicole",
+      "pii_a_type": "first_name",
+      "severity_a": 0.8,
+      "pii_b": "18 November 1998",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": false,
+      "distance_closeness": 0.12265418025059156,
+      "relationship": 0.049061672100236625,
+      "pair_risk": 0.13737268188066254
+    },
+    {
+      "pii_a": "Nicole",
+      "pii_a_type": "first_name",
+      "severity_a": 0.8,
+      "pii_b": "raymond57@example.net",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.1458034571728189,
+      "relationship": 0.05832138286912756,
+      "pair_risk": 0.13413918059899338
+    },
+    {
+      "pii_a": "Nicole",
+      "pii_a_type": "first_name",
+      "severity_a": 0.8,
+      "pii_b": "r213.331.5098x393",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.33891166550866597,
+      "relationship": 0.13556466620346638,
+      "pair_risk": 0.31179873226797267
+    },
+    {
+      "pii_a": "Nicole",
+      "pii_a_type": "first_name",
+      "severity_a": 0.8,
+      "pii_b": "10518",
+      "pii_b_type": "postal_code",
+      "severity_b": 1.0,
+      "same_region": false,
+      "distance_closeness": 0.28507399565241054,
+      "relationship": 0.11402959826096422,
+      "pair_risk": 0.2052532768697356
+    },
+    {
+      "pii_a": "Nicole",
+      "pii_a_type": "first_name",
+      "severity_a": 0.8,
+      "pii_b": "HZ382997",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.35829860326041946,
+      "relationship": 0.1433194413041678,
+      "pair_risk": 0.5446138769558376
+    },
+    {
+      "pii_a": "18 November 1998",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "raymond57@example.net",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.036103114807294744,
+      "relationship": 0.014441245922917898,
+      "pair_risk": 0.050544360730212644
+    },
+    {
+      "pii_a": "18 November 1998",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "r213.331.5098x393",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.04160153764913462,
+      "relationship": 0.01664061505965385,
+      "pair_risk": 0.05824215270878847
+    },
+    {
+      "pii_a": "18 November 1998",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "10518",
+      "pii_b_type": "postal_code",
+      "severity_b": 1.0,
+      "same_region": false,
+      "distance_closeness": 0.32121742705431905,
+      "relationship": 0.12848697082172764,
+      "pair_risk": 0.3854609124651829
+    },
+    {
+      "pii_a": "18 November 1998",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "HZ382997",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.04712646028495736,
+      "relationship": 0.018850584113982945,
+      "pair_risk": 0.09425292056991472
+    },
+    {
+      "pii_a": "raymond57@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "r213.331.5098x393",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.15172162996868188,
+      "relationship": 0.06068865198747275,
+      "pair_risk": 0.18206595596241826
+    },
+    {
+      "pii_a": "raymond57@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "10518",
+      "pii_b_type": "postal_code",
+      "severity_b": 1.0,
+      "same_region": false,
+      "distance_closeness": 0.05070558280190171,
+      "relationship": 0.020282233120760686,
+      "pair_risk": 0.05070558280190172
+    },
+    {
+      "pii_a": "raymond57@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "HZ382997",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.25498406793666034,
+      "relationship": 0.10199362717466415,
+      "pair_risk": 0.4589713222859887
+    },
+    {
+      "pii_a": "r213.331.5098x393",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "10518",
+      "pii_b_type": "postal_code",
+      "severity_b": 1.0,
+      "same_region": false,
+      "distance_closeness": 0.10446117223545337,
+      "relationship": 0.04178446889418135,
+      "pair_risk": 0.10446117223545338
+    },
+    {
+      "pii_a": "r213.331.5098x393",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "HZ382997",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.5928768033901571,
+      "relationship": 0.23715072135606285,
+      "pair_risk": 1.0671782461022827
+    },
+    {
+      "pii_a": "10518",
+      "pii_a_type": "postal_code",
+      "severity_a": 1.0,
+      "pii_b": "HZ382997",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.10215496993687283,
+      "relationship": 0.04086198797474913,
+      "pair_risk": 0.16344795189899652
+    }
+  ]
+}

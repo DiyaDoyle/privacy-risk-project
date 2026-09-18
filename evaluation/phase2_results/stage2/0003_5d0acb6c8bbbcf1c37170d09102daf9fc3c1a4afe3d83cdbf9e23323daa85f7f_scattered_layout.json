@@ -1,0 +1,678 @@
+{
+  "document": "0003_5d0acb6c8bbbcf1c37170d09102daf9fc3c1a4afe3d83cdbf9e23323daa85f7f_scattered",
+  "image_width": 1025,
+  "image_height": 1025,
+  "layout_region_count": 10,
+  "pii_prediction_count": 22,
+  "pii_layout_mapped_count": 22,
+  "layout_mapping_rate": 1.0,
+  "layout_regions": [
+    {
+      "region_id": 0,
+      "label": "text",
+      "score": 0.9859404563903809,
+      "bbox": [
+        502.0831604003906,
+        633.7769165039062,
+        932.9647216796875,
+        881.3973999023438
+      ]
+    },
+    {
+      "region_id": 1,
+      "label": "table",
+      "score": 0.9858871102333069,
+      "bbox": [
+        504.2135314941406,
+        88.58480834960938,
+        933.4302368164062,
+        371.0308837890625
+      ]
+    },
+    {
+      "region_id": 2,
+      "label": "text",
+      "score": 0.985856294631958,
+      "bbox": [
+        54.57781219482422,
+        488.99835205078125,
+        485.93878173828125,
+        735.3385009765625
+      ]
+    },
+    {
+      "region_id": 3,
+      "label": "text",
+      "score": 0.9848612546920776,
+      "bbox": [
+        54.43541717529297,
+        158.04901123046875,
+        486.2671203613281,
+        371.618896484375
+      ]
+    },
+    {
+      "region_id": 4,
+      "label": "text",
+      "score": 0.9843413233757019,
+      "bbox": [
+        501.5314636230469,
+        386.1490783691406,
+        932.9432373046875,
+        599.5648193359375
+      ]
+    },
+    {
+      "region_id": 5,
+      "label": "text",
+      "score": 0.9769037365913391,
+      "bbox": [
+        54.72893142700195,
+        43.35719299316406,
+        486.3923645019531,
+        137.97177124023438
+      ]
+    },
+    {
+      "region_id": 6,
+      "label": "text",
+      "score": 0.9765893816947937,
+      "bbox": [
+        55.00840759277344,
+        390.1837158203125,
+        486.198486328125,
+        470.263916015625
+      ]
+    },
+    {
+      "region_id": 7,
+      "label": "table_title",
+      "score": 0.914195716381073,
+      "bbox": [
+        502.68603515625,
+        42.89318084716797,
+        933.6622924804688,
+        70.94902801513672
+      ]
+    },
+    {
+      "region_id": 8,
+      "label": "paragraph_title",
+      "score": 0.8410682082176208,
+      "bbox": [
+        503.5550537109375,
+        617.0252685546875,
+        609.9650268554688,
+        627.417724609375
+      ]
+    },
+    {
+      "region_id": 9,
+      "label": "number",
+      "score": 0.752277135848999,
+      "bbox": [
+        58.73123550415039,
+        995.5625610351562,
+        70.65013122558594,
+        1003.2776489257812
+      ]
+    }
+  ],
+  "pii_mappings": [
+    {
+      "pii_text": "Allison Hill",
+      "pii_type": "full_name",
+      "confidence": 0.9865936040878296,
+      "pii_bbox": [
+        563.0,
+        99.0,
+        637.0,
+        117.0
+      ],
+      "ocr_words": [
+        "Allison",
+        "Hill"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "table",
+      "layout_region_score": 0.9858871102333069,
+      "layout_region_bbox": [
+        504.2135314941406,
+        88.58480834960938,
+        933.4302368164062,
+        371.0308837890625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "09 June 1999",
+      "pii_type": "date_of_birth",
+      "confidence": 0.9999222755432129,
+      "pii_bbox": [
+        150.0,
+        54.0,
+        241.0,
+        71.0
+      ],
+      "ocr_words": [
+        "09",
+        "June",
+        "1999"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9769037365913391,
+      "layout_region_bbox": [
+        54.72893142700195,
+        43.35719299316406,
+        486.3923645019531,
+        137.97177124023438
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "donaldgarcia@example.net",
+      "pii_type": "email",
+      "confidence": 0.9998873472213745,
+      "pii_bbox": [
+        113.0,
+        501.0,
+        310.0,
+        520.0
+      ],
+      "ocr_words": [
+        "donaldgarcia",
+        "example",
+        "net"
+      ],
+      "layout_region_id": 2,
+      "layout_region_type": "text",
+      "layout_region_score": 0.985856294631958,
+      "layout_region_bbox": [
+        54.57781219482422,
+        488.99835205078125,
+        485.93878173828125,
+        735.3385009765625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "+1-219-560-0133",
+      "pii_type": "phone_number",
+      "confidence": 0.9970483183860779,
+      "pii_bbox": [
+        575.0,
+        648.0,
+        685.0,
+        662.0
+      ],
+      "ocr_words": [
+        "1-219-560-0133"
+      ],
+      "layout_region_id": 0,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9859404563903809,
+      "layout_region_bbox": [
+        502.0831604003906,
+        633.7769165039062,
+        932.9647216796875,
+        881.3973999023438
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "79402 Peterson Drives Apt. 511",
+      "pii_type": "street_address",
+      "confidence": 0.9968709349632263,
+      "pii_bbox": [
+        574.0,
+        397.0,
+        806.0,
+        414.0
+      ],
+      "ocr_words": [
+        "79402",
+        "Peterson",
+        "Drives",
+        "Apt",
+        "511"
+      ],
+      "layout_region_id": 4,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9843413233757019,
+      "layout_region_bbox": [
+        501.5314636230469,
+        386.1490783691406,
+        932.9432373046875,
+        599.5648193359375
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "ZB615594",
+      "pii_type": "passport_number",
+      "confidence": 0.9945477843284607,
+      "pii_bbox": [
+        130.0,
+        168.0,
+        197.0,
+        186.0
+      ],
+      "ocr_words": [
+        "ZB615594"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9848612546920776,
+      "layout_region_bbox": [
+        54.43541717529297,
+        158.04901123046875,
+        486.2671203613281,
+        371.618896484375
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "September 30, 2013",
+      "pii_type": "transaction_date",
+      "confidence": 0.8771039247512817,
+      "pii_bbox": [
+        84.0,
+        344.0,
+        212.0,
+        354.0
+      ],
+      "ocr_words": [
+        "September",
+        "30",
+        "2013"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9848612546920776,
+      "layout_region_bbox": [
+        54.43541717529297,
+        158.04901123046875,
+        486.2671203613281,
+        371.618896484375
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "September 30, 2012",
+      "pii_type": "transaction_date",
+      "confidence": 0.8689516186714172,
+      "pii_bbox": [
+        608.0,
+        287.0,
+        727.0,
+        300.0
+      ],
+      "ocr_words": [
+        "September",
+        "30",
+        "2012"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "table",
+      "layout_region_score": 0.9858871102333069,
+      "layout_region_bbox": [
+        504.2135314941406,
+        88.58480834960938,
+        933.4302368164062,
+        371.0308837890625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "September 30, 2011",
+      "pii_type": "transaction_date",
+      "confidence": 0.8595176935195923,
+      "pii_bbox": [
+        609.0,
+        217.0,
+        728.0,
+        232.0
+      ],
+      "ocr_words": [
+        "September",
+        "30",
+        "2011"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "table",
+      "layout_region_score": 0.9858871102333069,
+      "layout_region_bbox": [
+        504.2135314941406,
+        88.58480834960938,
+        933.4302368164062,
+        371.0308837890625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "September 30, 2013",
+      "pii_type": "transaction_date",
+      "confidence": 0.832510769367218,
+      "pii_bbox": [
+        84.0,
+        344.0,
+        212.0,
+        354.0
+      ],
+      "ocr_words": [
+        "September",
+        "30",
+        "2013"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9848612546920776,
+      "layout_region_bbox": [
+        54.43541717529297,
+        158.04901123046875,
+        486.2671203613281,
+        371.618896484375
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "September 30, 2012",
+      "pii_type": "transaction_date",
+      "confidence": 0.8287831544876099,
+      "pii_bbox": [
+        608.0,
+        287.0,
+        727.0,
+        300.0
+      ],
+      "ocr_words": [
+        "September",
+        "30",
+        "2012"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "table",
+      "layout_region_score": 0.9858871102333069,
+      "layout_region_bbox": [
+        504.2135314941406,
+        88.58480834960938,
+        933.4302368164062,
+        371.0308837890625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "September 30, 2010",
+      "pii_type": "transaction_date",
+      "confidence": 0.8161020278930664,
+      "pii_bbox": [
+        609.0,
+        151.0,
+        728.0,
+        164.0
+      ],
+      "ocr_words": [
+        "September",
+        "30",
+        "2010"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "table",
+      "layout_region_score": 0.9858871102333069,
+      "layout_region_bbox": [
+        504.2135314941406,
+        88.58480834960938,
+        933.4302368164062,
+        371.0308837890625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "September 30, 2013",
+      "pii_type": "transaction_date",
+      "confidence": 0.7750927805900574,
+      "pii_bbox": [
+        84.0,
+        344.0,
+        212.0,
+        354.0
+      ],
+      "ocr_words": [
+        "September",
+        "30",
+        "2013"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9848612546920776,
+      "layout_region_bbox": [
+        54.43541717529297,
+        158.04901123046875,
+        486.2671203613281,
+        371.618896484375
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "September 30. 2013",
+      "pii_type": "transaction_date",
+      "confidence": 0.7254806756973267,
+      "pii_bbox": [
+        84.0,
+        344.0,
+        212.0,
+        354.0
+      ],
+      "ocr_words": [
+        "September",
+        "30",
+        "2013"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9848612546920776,
+      "layout_region_bbox": [
+        54.43541717529297,
+        158.04901123046875,
+        486.2671203613281,
+        371.618896484375
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2012",
+      "pii_type": "transaction_date",
+      "confidence": 0.7087665796279907,
+      "pii_bbox": [
+        706.0,
+        287.0,
+        727.0,
+        300.0
+      ],
+      "ocr_words": [
+        "2012"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "table",
+      "layout_region_score": 0.9858871102333069,
+      "layout_region_bbox": [
+        504.2135314941406,
+        88.58480834960938,
+        933.4302368164062,
+        371.0308837890625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "September 2011",
+      "pii_type": "transaction_date",
+      "confidence": 0.6865240335464478,
+      "pii_bbox": [
+        173.0,
+        292.0,
+        277.0,
+        305.0
+      ],
+      "ocr_words": [
+        "September",
+        "2011"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9848612546920776,
+      "layout_region_bbox": [
+        54.43541717529297,
+        158.04901123046875,
+        486.2671203613281,
+        371.618896484375
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2012",
+      "pii_type": "transaction_date",
+      "confidence": 0.6466290950775146,
+      "pii_bbox": [
+        706.0,
+        287.0,
+        727.0,
+        300.0
+      ],
+      "ocr_words": [
+        "2012"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "table",
+      "layout_region_score": 0.9858871102333069,
+      "layout_region_bbox": [
+        504.2135314941406,
+        88.58480834960938,
+        933.4302368164062,
+        371.0308837890625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2012",
+      "pii_type": "transaction_date",
+      "confidence": 0.5742407441139221,
+      "pii_bbox": [
+        706.0,
+        287.0,
+        727.0,
+        300.0
+      ],
+      "ocr_words": [
+        "2012"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "table",
+      "layout_region_score": 0.9858871102333069,
+      "layout_region_bbox": [
+        504.2135314941406,
+        88.58480834960938,
+        933.4302368164062,
+        371.0308837890625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2011",
+      "pii_type": "transaction_date",
+      "confidence": 0.5735728144645691,
+      "pii_bbox": [
+        274.0,
+        158.0,
+        300.0,
+        171.0
+      ],
+      "ocr_words": [
+        "2011"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9848612546920776,
+      "layout_region_bbox": [
+        54.43541717529297,
+        158.04901123046875,
+        486.2671203613281,
+        371.618896484375
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2011",
+      "pii_type": "transaction_date",
+      "confidence": 0.5520780682563782,
+      "pii_bbox": [
+        274.0,
+        158.0,
+        300.0,
+        171.0
+      ],
+      "ocr_words": [
+        "2011"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9848612546920776,
+      "layout_region_bbox": [
+        54.43541717529297,
+        158.04901123046875,
+        486.2671203613281,
+        371.618896484375
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "October 1",
+      "pii_type": "transaction_date",
+      "confidence": 0.5337185859680176,
+      "pii_bbox": [
+        155.0,
+        607.0,
+        214.0,
+        620.0
+      ],
+      "ocr_words": [
+        "October",
+        "1"
+      ],
+      "layout_region_id": 2,
+      "layout_region_type": "text",
+      "layout_region_score": 0.985856294631958,
+      "layout_region_bbox": [
+        54.57781219482422,
+        488.99835205078125,
+        485.93878173828125,
+        735.3385009765625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2011",
+      "pii_type": "transaction_date",
+      "confidence": 0.5140865445137024,
+      "pii_bbox": [
+        274.0,
+        158.0,
+        300.0,
+        171.0
+      ],
+      "ocr_words": [
+        "2011"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9848612546920776,
+      "layout_region_bbox": [
+        54.43541717529297,
+        158.04901123046875,
+        486.2671203613281,
+        371.618896484375
+      ],
+      "mapping_method": "center_inside"
+    }
+  ]
+}

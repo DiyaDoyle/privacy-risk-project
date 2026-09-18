@@ -1,0 +1,7 @@
+{
+    "image": "sample.png",
+    "total_ocr_regions": 70,
+    "raw_pii_detections": 32,
+    "validated_pii": 6,
+    "rejected_detections": 26
+}

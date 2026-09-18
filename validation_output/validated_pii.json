@@ -1,0 +1,50 @@
+[
+    {
+        "text": "December 31, 2004",
+        "label": "transaction_date",
+        "confidence": 0.9823949933052063,
+        "start": 127,
+        "end": 144,
+        "validation_reason": "date with sufficient confidence"
+    },
+    {
+        "text": "December 31, 2004",
+        "label": "transaction_date",
+        "confidence": 0.98009192943573,
+        "start": 1185,
+        "end": 1202,
+        "validation_reason": "date with sufficient confidence"
+    },
+    {
+        "text": "December 31, 2004",
+        "label": "transaction_date",
+        "confidence": 0.9798455834388733,
+        "start": 344,
+        "end": 361,
+        "validation_reason": "date with sufficient confidence"
+    },
+    {
+        "text": "December 31, 2004",
+        "label": "transaction_date",
+        "confidence": 0.9775445461273193,
+        "start": 1313,
+        "end": 1330,
+        "validation_reason": "date with sufficient confidence"
+    },
+    {
+        "text": "December 31, 2004",
+        "label": "transaction_date",
+        "confidence": 0.9654162526130676,
+        "start": 2510,
+        "end": 2527,
+        "validation_reason": "date with sufficient confidence"
+    },
+    {
+        "text": "December 31",
+        "label": "transaction_date",
+        "confidence": 0.7005983591079712,
+        "start": 2220,
+        "end": 2231,
+        "validation_reason": "date with sufficient confidence"
+    }
+]

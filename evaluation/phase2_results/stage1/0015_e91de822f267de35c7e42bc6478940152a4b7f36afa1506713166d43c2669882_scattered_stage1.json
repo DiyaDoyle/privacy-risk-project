@@ -1,0 +1,423 @@
+{
+  "document": "0015_e91de822f267de35c7e42bc6478940152a4b7f36afa1506713166d43c2669882_scattered",
+  "ground_truth_count": 6,
+  "gliner_detected_count": 9,
+  "ocr_mapped_count": 9,
+  "ground_truth_matched_count": 3,
+  "ground_truth_match_rate": 0.5,
+  "average_bbox_iou": 0.737484422151406,
+  "ground_truth_comparisons": [
+    {
+      "ground_truth_text": "Nicole Vaughn",
+      "ground_truth_type": "person",
+      "ground_truth_bbox": [
+        342,
+        432,
+        456,
+        453
+      ],
+      "predicted_text": null,
+      "predicted_type": null,
+      "predicted_bbox": null,
+      "iou": 0.0
+    },
+    {
+      "ground_truth_text": "raymond57@example.net",
+      "ground_truth_type": "email",
+      "ground_truth_bbox": [
+        108,
+        813,
+        305,
+        836
+      ],
+      "predicted_text": "raymond57@example.net",
+      "predicted_type": "email",
+      "predicted_confidence": 0.9999816417694092,
+      "predicted_bbox": [
+        113.0,
+        816.0,
+        299.0,
+        835.0
+      ],
+      "iou": 0.7799602736702714
+    },
+    {
+      "ground_truth_text": "213.331.5098x393",
+      "ground_truth_type": "phone_number",
+      "ground_truth_bbox": [
+        70,
+        411,
+        212,
+        429
+      ],
+      "predicted_text": null,
+      "predicted_type": null,
+      "predicted_bbox": null,
+      "iou": 0.0
+    },
+    {
+      "ground_truth_text": "18 November 1998",
+      "ground_truth_type": "date_of_birth",
+      "ground_truth_bbox": [
+        753,
+        446,
+        900,
+        464
+      ],
+      "predicted_text": "18 November 1998",
+      "predicted_type": "date_of_birth",
+      "predicted_confidence": 0.9984837174415588,
+      "predicted_bbox": [
+        760.0,
+        445.0,
+        893.0,
+        467.0
+      ],
+      "iou": 0.7533039647577092
+    },
+    {
+      "ground_truth_text": "10518 Joshua Oval",
+      "ground_truth_type": "address",
+      "ground_truth_bbox": [
+        590,
+        314,
+        740,
+        332
+      ],
+      "predicted_text": null,
+      "predicted_type": null,
+      "predicted_bbox": null,
+      "iou": 0.0
+    },
+    {
+      "ground_truth_text": "HZ382997",
+      "ground_truth_type": "passport_number",
+      "ground_truth_bbox": [
+        125,
+        520,
+        207,
+        538
+      ],
+      "predicted_text": "HZ382997",
+      "predicted_type": "passport_number",
+      "predicted_confidence": 0.9985504746437073,
+      "predicted_bbox": [
+        133.0,
+        521.0,
+        200.0,
+        541.0
+      ],
+      "iou": 0.6791890280262374
+    }
+  ],
+  "detected_entities": [
+    {
+      "text": "David R. Lumley",
+      "type": "full_name",
+      "score": 0.9407234787940979
+    },
+    {
+      "text": "Nicole Vaughnusinesses",
+      "type": "full_name",
+      "score": 0.9022650122642517
+    },
+    {
+      "text": "Daol R. Lumley",
+      "type": "full_name",
+      "score": 0.888271689414978
+    },
+    {
+      "text": "Nicole",
+      "type": "first_name",
+      "score": 0.5183199048042297
+    },
+    {
+      "text": "18 November 1998",
+      "type": "date_of_birth",
+      "score": 0.9984837174415588
+    },
+    {
+      "text": "raymond57@example.net",
+      "type": "email",
+      "score": 0.9999816417694092
+    },
+    {
+      "text": "r213.331.5098x393",
+      "type": "phone_number",
+      "score": 0.8775194883346558
+    },
+    {
+      "text": "10518",
+      "type": "postal_code",
+      "score": 0.9227781295776367
+    },
+    {
+      "text": "HZ382997",
+      "type": "passport_number",
+      "score": 0.9985504746437073
+    }
+  ],
+  "mapped_predictions": [
+    {
+      "text": "David R. Lumley",
+      "type": "full_name",
+      "score": 0.9407234787940979,
+      "ocr_words": [
+        "David",
+        "R",
+        "Lumley"
+      ],
+      "ocr_word_boxes": [
+        [
+          535.0,
+          880.0,
+          572.0,
+          897.0
+        ],
+        [
+          586.0,
+          880.0,
+          589.0,
+          897.0
+        ],
+        [
+          608.0,
+          880.0,
+          659.0,
+          897.0
+        ]
+      ],
+      "predicted_bbox": [
+        535.0,
+        880.0,
+        659.0,
+        897.0
+      ]
+    },
+    {
+      "text": "Nicole Vaughnusinesses",
+      "type": "full_name",
+      "score": 0.9022650122642517,
+      "ocr_words": [
+        "Nicole",
+        "Vaughnusinesses"
+      ],
+      "ocr_word_boxes": [
+        [
+          351.0,
+          428.0,
+          390.0,
+          453.0
+        ],
+        [
+          403.0,
+          428.0,
+          586.0,
+          453.0
+        ]
+      ],
+      "predicted_bbox": [
+        351.0,
+        428.0,
+        586.0,
+        453.0
+      ]
+    },
+    {
+      "text": "Daol R. Lumley",
+      "type": "full_name",
+      "score": 0.888271689414978,
+      "ocr_words": [
+        "Daol",
+        "R",
+        "Lumley"
+      ],
+      "ocr_word_boxes": [
+        [
+          556.0,
+          795.0,
+          641.0,
+          875.0
+        ],
+        [
+          665.0,
+          795.0,
+          677.0,
+          875.0
+        ],
+        [
+          714.0,
+          795.0,
+          835.0,
+          875.0
+        ]
+      ],
+      "predicted_bbox": [
+        556.0,
+        795.0,
+        835.0,
+        875.0
+      ]
+    },
+    {
+      "text": "Nicole",
+      "type": "first_name",
+      "score": 0.5183199048042297,
+      "ocr_words": [
+        "Nicole"
+      ],
+      "ocr_word_boxes": [
+        [
+          351.0,
+          428.0,
+          390.0,
+          453.0
+        ]
+      ],
+      "predicted_bbox": [
+        351.0,
+        428.0,
+        390.0,
+        453.0
+      ]
+    },
+    {
+      "text": "18 November 1998",
+      "type": "date_of_birth",
+      "score": 0.9984837174415588,
+      "ocr_words": [
+        "18",
+        "November",
+        "1998"
+      ],
+      "ocr_word_boxes": [
+        [
+          760.0,
+          445.0,
+          770.0,
+          467.0
+        ],
+        [
+          784.0,
+          445.0,
+          853.0,
+          467.0
+        ],
+        [
+          867.0,
+          445.0,
+          893.0,
+          467.0
+        ]
+      ],
+      "predicted_bbox": [
+        760.0,
+        445.0,
+        893.0,
+        467.0
+      ]
+    },
+    {
+      "text": "raymond57@example.net",
+      "type": "email",
+      "score": 0.9999816417694092,
+      "ocr_words": [
+        "raymond57",
+        "example",
+        "net"
+      ],
+      "ocr_word_boxes": [
+        [
+          113.0,
+          816.0,
+          192.0,
+          835.0
+        ],
+        [
+          214.0,
+          816.0,
+          271.0,
+          835.0
+        ],
+        [
+          284.0,
+          816.0,
+          299.0,
+          835.0
+        ]
+      ],
+      "predicted_bbox": [
+        113.0,
+        816.0,
+        299.0,
+        835.0
+      ]
+    },
+    {
+      "text": "r213.331.5098x393",
+      "type": "phone_number",
+      "score": 0.8775194883346558,
+      "ocr_words": [
+        "r213.331.5098x393"
+      ],
+      "ocr_word_boxes": [
+        [
+          65.0,
+          413.0,
+          207.0,
+          430.0
+        ]
+      ],
+      "predicted_bbox": [
+        65.0,
+        413.0,
+        207.0,
+        430.0
+      ]
+    },
+    {
+      "text": "10518",
+      "type": "postal_code",
+      "score": 0.9227781295776367,
+      "ocr_words": [
+        "10518"
+      ],
+      "ocr_word_boxes": [
+        [
+          599.0,
+          315.0,
+          636.0,
+          334.0
+        ]
+      ],
+      "predicted_bbox": [
+        599.0,
+        315.0,
+        636.0,
+        334.0
+      ]
+    },
+    {
+      "text": "HZ382997",
+      "type": "passport_number",
+      "score": 0.9985504746437073,
+      "ocr_words": [
+        "HZ382997"
+      ],
+      "ocr_word_boxes": [
+        [
+          133.0,
+          521.0,
+          200.0,
+          541.0
+        ]
+      ],
+      "predicted_bbox": [
+        133.0,
+        521.0,
+        200.0,
+        541.0
+      ]
+    }
+  ]
+}

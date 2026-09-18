@@ -1,0 +1,244 @@
+{
+  "lcprs_version": "2.0",
+  "document": "doc_001",
+  "image_width": 1025.0,
+  "image_height": 1675.0,
+  "formula": {
+    "region_weight": 0.6,
+    "distance_weight": 0.4,
+    "distance_function": "exponential",
+    "distance_decay_ratio": 0.15
+  },
+  "number_of_pii": 5,
+  "standalone_risk": 9.0,
+  "pair_risk_total": 8.53421977551106,
+  "document_risk": 17.534219775511062,
+  "maximum_possible_risk": 45.0,
+  "normalized_lcprs_score": 38.964932834469025,
+  "risk_category": "Medium",
+  "governance_action": "Apply controlled access and review before sharing.",
+  "pii_items": [
+    {
+      "pii_text": "Dayita Lad",
+      "pii_type": "person",
+      "pii_bbox": [
+        195.0,
+        1148.0,
+        308.0,
+        1172.0
+      ],
+      "layout_region_id": 18,
+      "layout_region_type": "text",
+      "layout_region_score": 0.619718074798584,
+      "layout_region_bbox": [
+        76.50759887695312,
+        1145.291748046875,
+        310.40960693359375,
+        1171.177734375
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "aayushdhar@example.com",
+      "pii_type": "email",
+      "pii_bbox": [
+        179.0,
+        1208.0,
+        476.0,
+        1232.0
+      ],
+      "layout_region_id": 14,
+      "layout_region_type": "text",
+      "layout_region_score": 0.6454107165336609,
+      "layout_region_bbox": [
+        76.4537124633789,
+        1205.9637451171875,
+        482.76104736328125,
+        1232.0531005859375
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "5883376050",
+      "pii_type": "phone_number",
+      "pii_bbox": [
+        285.0,
+        1267.0,
+        411.0,
+        1290.0
+      ],
+      "layout_region_id": 17,
+      "layout_region_type": "text",
+      "layout_region_score": 0.6335894465446472,
+      "layout_region_bbox": [
+        76.08944702148438,
+        1265.0330810546875,
+        419.3658752441406,
+        1289.3857421875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "24 December 1975",
+      "pii_type": "date_of_birth",
+      "pii_bbox": [
+        263.0,
+        1328.0,
+        468.0,
+        1351.0
+      ],
+      "layout_region_id": 13,
+      "layout_region_type": "text",
+      "layout_region_score": 0.6636834144592285,
+      "layout_region_bbox": [
+        75.8260498046875,
+        1325.08203125,
+        473.2198486328125,
+        1349.464599609375
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "CY8422540",
+      "pii_type": "passport_number",
+      "pii_bbox": [
+        317.0,
+        1448.0,
+        433.0,
+        1470.0
+      ],
+      "layout_region_id": 22,
+      "layout_region_type": "text",
+      "layout_region_score": 0.601877748966217,
+      "layout_region_bbox": [
+        76.2010498046875,
+        1445.2352294921875,
+        442.2130432128906,
+        1470.5533447265625
+      ],
+      "mapping_method": "center_inside"
+    }
+  ],
+  "pair_results": [
+    {
+      "pii_a": "Dayita Lad",
+      "pii_a_type": "person",
+      "severity_a": 1.0,
+      "pii_b": "aayushdhar@example.com",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.719839738625547,
+      "relationship": 0.2879358954502188,
+      "pair_risk": 0.7198397386255471
+    },
+    {
+      "pii_a": "Dayita Lad",
+      "pii_a_type": "person",
+      "severity_a": 1.0,
+      "pii_b": "5883376050",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.595226245157472,
+      "relationship": 0.23809049806298882,
+      "pair_risk": 0.595226245157472
+    },
+    {
+      "pii_a": "Dayita Lad",
+      "pii_a_type": "person",
+      "severity_a": 1.0,
+      "pii_b": "24 December 1975",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": false,
+      "distance_closeness": 0.48583122877357654,
+      "relationship": 0.19433249150943063,
+      "pair_risk": 0.5829974745282919
+    },
+    {
+      "pii_a": "Dayita Lad",
+      "pii_a_type": "person",
+      "severity_a": 1.0,
+      "pii_b": "CY8422540",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.33345302335674903,
+      "relationship": 0.13338120934269962,
+      "pair_risk": 0.5335248373707985
+    },
+    {
+      "pii_a": "aayushdhar@example.com",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "5883376050",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.8102257847415555,
+      "relationship": 0.32409031389662224,
+      "pair_risk": 0.9722709416898667
+    },
+    {
+      "pii_a": "aayushdhar@example.com",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "24 December 1975",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": false,
+      "distance_closeness": 0.6533075226597176,
+      "relationship": 0.26132300906388706,
+      "pair_risk": 0.9146305317236048
+    },
+    {
+      "pii_a": "aayushdhar@example.com",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "CY8422540",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.4372505599821857,
+      "relationship": 0.1749002239928743,
+      "pair_risk": 0.7870510079679344
+    },
+    {
+      "pii_a": "5883376050",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "24 December 1975",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": false,
+      "distance_closeness": 0.8061849983325914,
+      "relationship": 0.32247399933303655,
+      "pair_risk": 1.128658997665628
+    },
+    {
+      "pii_a": "5883376050",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "CY8422540",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.5381618325967733,
+      "relationship": 0.21526473303870933,
+      "pair_risk": 0.968691298674192
+    },
+    {
+      "pii_a": "24 December 1975",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "CY8422540",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.6656643510538626,
+      "relationship": 0.26626574042154505,
+      "pair_risk": 1.3313287021077254
+    }
+  ]
+}

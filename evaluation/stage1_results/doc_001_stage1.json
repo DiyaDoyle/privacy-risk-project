@@ -1,0 +1,120 @@
+[
+    {
+        "ground_truth_text": "Dayita Lad",
+        "ground_truth_type": "person",
+        "ground_truth_bbox": [
+            190,
+            1150,
+            309,
+            1174
+        ],
+        "predicted_bbox": [
+            195.0,
+            1148.0,
+            308.0,
+            1172.0
+        ],
+        "iou": 0.8066190785204412,
+        "matched_words": [
+            "Dayita",
+            "Lad"
+        ]
+    },
+    {
+        "ground_truth_text": "aayushdhar@example.com",
+        "ground_truth_type": "email",
+        "ground_truth_bbox": [
+            172,
+            1210,
+            482,
+            1234
+        ],
+        "predicted_bbox": [
+            179.0,
+            1208.0,
+            476.0,
+            1232.0
+        ],
+        "iou": 0.813293502613891,
+        "matched_words": [
+            "aayushdhar",
+            "example",
+            "com"
+        ]
+    },
+    {
+        "ground_truth_text": "5883376050",
+        "ground_truth_type": "phone_number",
+        "ground_truth_bbox": [
+            280,
+            1270,
+            419,
+            1289
+        ],
+        "predicted_bbox": [
+            285.0,
+            1267.0,
+            411.0,
+            1290.0
+        ],
+        "iou": 0.7612082670906201,
+        "matched_words": [
+            "5883376050"
+        ]
+    },
+    {
+        "ground_truth_text": "24 December 1975",
+        "ground_truth_type": "date_of_birth",
+        "ground_truth_bbox": [
+            255,
+            1330,
+            472,
+            1349
+        ],
+        "predicted_bbox": [
+            263.0,
+            1328.0,
+            468.0,
+            1351.0
+        ],
+        "iou": 0.7879830062714951,
+        "matched_words": [
+            "24",
+            "December",
+            "1975"
+        ]
+    },
+    {
+        "ground_truth_text": "H.No. 707, Wable, Phagwara 433673",
+        "ground_truth_type": "address",
+        "ground_truth_bbox": [
+            204,
+            1390,
+            624,
+            1414
+        ],
+        "predicted_bbox": null,
+        "iou": 0.0,
+        "matched_words": []
+    },
+    {
+        "ground_truth_text": "CY8422540",
+        "ground_truth_type": "passport_number",
+        "ground_truth_bbox": [
+            308,
+            1450,
+            441,
+            1469
+        ],
+        "predicted_bbox": [
+            317.0,
+            1448.0,
+            433.0,
+            1470.0
+        ],
+        "iou": 0.7666086956521739,
+        "matched_words": [
+            "CY8422540"
+        ]
+    }
+]

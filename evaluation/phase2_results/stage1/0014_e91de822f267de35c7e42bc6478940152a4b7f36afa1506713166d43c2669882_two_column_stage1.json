@@ -1,0 +1,356 @@
+{
+  "document": "0014_e91de822f267de35c7e42bc6478940152a4b7f36afa1506713166d43c2669882_two_column",
+  "ground_truth_count": 6,
+  "gliner_detected_count": 7,
+  "ocr_mapped_count": 7,
+  "ground_truth_matched_count": 2,
+  "ground_truth_match_rate": 0.3333333333333333,
+  "average_bbox_iou": 0.7834618667978528,
+  "ground_truth_comparisons": [
+    {
+      "ground_truth_text": "Nicole Vaughn",
+      "ground_truth_type": "person",
+      "ground_truth_bbox": [
+        110,
+        813,
+        224,
+        834
+      ],
+      "predicted_text": null,
+      "predicted_type": null,
+      "predicted_bbox": null,
+      "iou": 0.0
+    },
+    {
+      "ground_truth_text": "raymond57@example.net",
+      "ground_truth_type": "email",
+      "ground_truth_bbox": [
+        116,
+        821,
+        313,
+        844
+      ],
+      "predicted_text": null,
+      "predicted_type": null,
+      "predicted_bbox": null,
+      "iou": 0.0
+    },
+    {
+      "ground_truth_text": "213.331.5098x393",
+      "ground_truth_type": "phone_number",
+      "ground_truth_bbox": [
+        113,
+        262,
+        255,
+        280
+      ],
+      "predicted_text": "213.331.5098x393",
+      "predicted_type": "phone_number",
+      "predicted_confidence": 0.9999938011169434,
+      "predicted_bbox": [
+        121.0,
+        264.0,
+        249.0,
+        281.0
+      ],
+      "iou": 0.7630402384500745
+    },
+    {
+      "ground_truth_text": "18 November 1998",
+      "ground_truth_type": "date_of_birth",
+      "ground_truth_bbox": [
+        753,
+        446,
+        900,
+        464
+      ],
+      "predicted_text": null,
+      "predicted_type": null,
+      "predicted_bbox": null,
+      "iou": 0.0
+    },
+    {
+      "ground_truth_text": "10518 Joshua Oval",
+      "ground_truth_type": "address",
+      "ground_truth_bbox": [
+        808,
+        442,
+        958,
+        460
+      ],
+      "predicted_text": null,
+      "predicted_type": null,
+      "predicted_bbox": null,
+      "iou": 0.0
+    },
+    {
+      "ground_truth_text": "HZ382997",
+      "ground_truth_type": "passport_number",
+      "ground_truth_bbox": [
+        592,
+        314,
+        674,
+        332
+      ],
+      "predicted_text": "HZ382997",
+      "predicted_type": "passport_number",
+      "predicted_confidence": 0.996369481086731,
+      "predicted_bbox": [
+        600.0,
+        314.0,
+        669.0,
+        333.0
+      ],
+      "iou": 0.8038834951456311
+    }
+  ],
+  "detected_entities": [
+    {
+      "text": "David R. Lumley",
+      "type": "full_name",
+      "score": 0.9837865233421326
+    },
+    {
+      "text": "Damol R. Lumley",
+      "type": "full_name",
+      "score": 0.9775992631912231
+    },
+    {
+      "text": "raymond57@example.netd",
+      "type": "email",
+      "score": 0.9999138116836548
+    },
+    {
+      "text": "213.331.5098x393",
+      "type": "phone_number",
+      "score": 0.9999938011169434
+    },
+    {
+      "text": "10518",
+      "type": "postal_code",
+      "score": 0.9163358211517334
+    },
+    {
+      "text": "HZ382997",
+      "type": "passport_number",
+      "score": 0.996369481086731
+    },
+    {
+      "text": "January 25, 2011",
+      "type": "transaction_date",
+      "score": 0.524783194065094
+    }
+  ],
+  "mapped_predictions": [
+    {
+      "text": "David R. Lumley",
+      "type": "full_name",
+      "score": 0.9837865233421326,
+      "ocr_words": [
+        "David",
+        "R",
+        "Lumley"
+      ],
+      "ocr_word_boxes": [
+        [
+          535.0,
+          880.0,
+          572.0,
+          897.0
+        ],
+        [
+          586.0,
+          880.0,
+          589.0,
+          897.0
+        ],
+        [
+          608.0,
+          880.0,
+          659.0,
+          897.0
+        ]
+      ],
+      "predicted_bbox": [
+        535.0,
+        880.0,
+        659.0,
+        897.0
+      ]
+    },
+    {
+      "text": "Damol R. Lumley",
+      "type": "full_name",
+      "score": 0.9775992631912231,
+      "ocr_words": [
+        "Damol",
+        "R",
+        "Lumley"
+      ],
+      "ocr_word_boxes": [
+        [
+          566.0,
+          796.0,
+          638.0,
+          874.0
+        ],
+        [
+          662.0,
+          796.0,
+          674.0,
+          874.0
+        ],
+        [
+          722.0,
+          796.0,
+          830.0,
+          874.0
+        ]
+      ],
+      "predicted_bbox": [
+        566.0,
+        796.0,
+        830.0,
+        874.0
+      ]
+    },
+    {
+      "text": "raymond57@example.netd",
+      "type": "email",
+      "score": 0.9999138116836548,
+      "ocr_words": [
+        "raymond57",
+        "example",
+        "netd"
+      ],
+      "ocr_word_boxes": [
+        [
+          121.0,
+          825.0,
+          198.0,
+          840.0
+        ],
+        [
+          222.0,
+          825.0,
+          281.0,
+          840.0
+        ],
+        [
+          292.0,
+          825.0,
+          327.0,
+          840.0
+        ]
+      ],
+      "predicted_bbox": [
+        121.0,
+        825.0,
+        327.0,
+        840.0
+      ]
+    },
+    {
+      "text": "213.331.5098x393",
+      "type": "phone_number",
+      "score": 0.9999938011169434,
+      "ocr_words": [
+        "213.331.5098x393"
+      ],
+      "ocr_word_boxes": [
+        [
+          121.0,
+          264.0,
+          249.0,
+          281.0
+        ]
+      ],
+      "predicted_bbox": [
+        121.0,
+        264.0,
+        249.0,
+        281.0
+      ]
+    },
+    {
+      "text": "10518",
+      "type": "postal_code",
+      "score": 0.9163358211517334,
+      "ocr_words": [
+        "10518"
+      ],
+      "ocr_word_boxes": [
+        [
+          815.0,
+          443.0,
+          852.0,
+          463.0
+        ]
+      ],
+      "predicted_bbox": [
+        815.0,
+        443.0,
+        852.0,
+        463.0
+      ]
+    },
+    {
+      "text": "HZ382997",
+      "type": "passport_number",
+      "score": 0.996369481086731,
+      "ocr_words": [
+        "HZ382997"
+      ],
+      "ocr_word_boxes": [
+        [
+          600.0,
+          314.0,
+          669.0,
+          333.0
+        ]
+      ],
+      "predicted_bbox": [
+        600.0,
+        314.0,
+        669.0,
+        333.0
+      ]
+    },
+    {
+      "text": "January 25, 2011",
+      "type": "transaction_date",
+      "score": 0.524783194065094,
+      "ocr_words": [
+        "January",
+        "25",
+        "2011"
+      ],
+      "ocr_word_boxes": [
+        [
+          533.0,
+          961.0,
+          582.0,
+          975.0
+        ],
+        [
+          596.0,
+          961.0,
+          608.0,
+          975.0
+        ],
+        [
+          624.0,
+          961.0,
+          652.0,
+          975.0
+        ]
+      ],
+      "predicted_bbox": [
+        533.0,
+        961.0,
+        652.0,
+        975.0
+      ]
+    }
+  ]
+}

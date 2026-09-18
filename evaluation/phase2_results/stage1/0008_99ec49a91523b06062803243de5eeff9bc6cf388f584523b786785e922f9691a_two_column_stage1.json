@@ -1,0 +1,255 @@
+{
+  "document": "0008_99ec49a91523b06062803243de5eeff9bc6cf388f584523b786785e922f9691a_two_column",
+  "ground_truth_count": 6,
+  "gliner_detected_count": 4,
+  "ocr_mapped_count": 4,
+  "ground_truth_matched_count": 1,
+  "ground_truth_match_rate": 0.16666666666666666,
+  "average_bbox_iou": 0.577029404372958,
+  "ground_truth_comparisons": [
+    {
+      "ground_truth_text": "Austin Gentry",
+      "ground_truth_type": "person",
+      "ground_truth_bbox": [
+        138,
+        587,
+        248,
+        609
+      ],
+      "predicted_text": null,
+      "predicted_type": null,
+      "predicted_bbox": null,
+      "iou": 0.0
+    },
+    {
+      "ground_truth_text": "jason76@example.net",
+      "ground_truth_type": "email",
+      "ground_truth_bbox": [
+        144,
+        595,
+        317,
+        618
+      ],
+      "predicted_text": "jason76@example.net",
+      "predicted_type": "email",
+      "predicted_confidence": 0.9999538660049438,
+      "predicted_bbox": [
+        148.0,
+        601.0,
+        312.0,
+        615.0
+      ],
+      "iou": 0.577029404372958
+    },
+    {
+      "ground_truth_text": "724.523.8849x696",
+      "ground_truth_type": "phone_number",
+      "ground_truth_bbox": [
+        141,
+        378,
+        283,
+        396
+      ],
+      "predicted_text": null,
+      "predicted_type": null,
+      "predicted_bbox": null,
+      "iou": 0.0
+    },
+    {
+      "ground_truth_text": "16 February 1960",
+      "ground_truth_type": "date_of_birth",
+      "ground_truth_bbox": [
+        613,
+        338,
+        750,
+        359
+      ],
+      "predicted_text": null,
+      "predicted_type": null,
+      "predicted_bbox": null,
+      "iou": 0.0
+    },
+    {
+      "ground_truth_text": "01226 Paul Ranch Suite 848",
+      "ground_truth_type": "address",
+      "ground_truth_bbox": [
+        600,
+        346,
+        817,
+        365
+      ],
+      "predicted_text": null,
+      "predicted_type": null,
+      "predicted_bbox": null,
+      "iou": 0.0
+    },
+    {
+      "ground_truth_text": "JN018451",
+      "ground_truth_type": "passport_number",
+      "ground_truth_bbox": [
+        594,
+        606,
+        675,
+        624
+      ],
+      "predicted_text": null,
+      "predicted_type": null,
+      "predicted_bbox": null,
+      "iou": 0.0
+    }
+  ],
+  "detected_entities": [
+    {
+      "text": "jason76@example.net",
+      "type": "email",
+      "score": 0.9999538660049438
+    },
+    {
+      "text": "724.523.8849x696phenomenology",
+      "type": "phone_number",
+      "score": 0.9385867714881897
+    },
+    {
+      "text": "01226 Paul Ranch Suite 848\n1",
+      "type": "street_address",
+      "score": 0.5709397792816162
+    },
+    {
+      "text": "JN018451is",
+      "type": "passport_number",
+      "score": 0.926148533821106
+    }
+  ],
+  "mapped_predictions": [
+    {
+      "text": "jason76@example.net",
+      "type": "email",
+      "score": 0.9999538660049438,
+      "ocr_words": [
+        "jason76",
+        "example",
+        "net"
+      ],
+      "ocr_word_boxes": [
+        [
+          148.0,
+          601.0,
+          202.0,
+          615.0
+        ],
+        [
+          228.0,
+          601.0,
+          284.0,
+          615.0
+        ],
+        [
+          296.0,
+          601.0,
+          312.0,
+          615.0
+        ]
+      ],
+      "predicted_bbox": [
+        148.0,
+        601.0,
+        312.0,
+        615.0
+      ]
+    },
+    {
+      "text": "724.523.8849x696phenomenology",
+      "type": "phone_number",
+      "score": 0.9385867714881897,
+      "ocr_words": [
+        "724.523.8849x696phenomenology"
+      ],
+      "ocr_word_boxes": [
+        [
+          148.0,
+          382.0,
+          389.0,
+          396.0
+        ]
+      ],
+      "predicted_bbox": [
+        148.0,
+        382.0,
+        389.0,
+        396.0
+      ]
+    },
+    {
+      "text": "01226 Paul Ranch Suite 848\n1",
+      "type": "street_address",
+      "score": 0.5709397792816162,
+      "ocr_words": [
+        "01226",
+        "Paul",
+        "Ranch",
+        "Suite",
+        "848"
+      ],
+      "ocr_word_boxes": [
+        [
+          607.0,
+          350.0,
+          645.0,
+          364.0
+        ],
+        [
+          659.0,
+          350.0,
+          685.0,
+          364.0
+        ],
+        [
+          696.0,
+          350.0,
+          736.0,
+          364.0
+        ],
+        [
+          750.0,
+          350.0,
+          781.0,
+          364.0
+        ],
+        [
+          792.0,
+          350.0,
+          811.0,
+          364.0
+        ]
+      ],
+      "predicted_bbox": [
+        607.0,
+        350.0,
+        811.0,
+        364.0
+      ]
+    },
+    {
+      "text": "JN018451is",
+      "type": "passport_number",
+      "score": 0.926148533821106,
+      "ocr_words": [
+        "JN018451is"
+      ],
+      "ocr_word_boxes": [
+        [
+          602.0,
+          610.0,
+          686.0,
+          624.0
+        ]
+      ],
+      "predicted_bbox": [
+        602.0,
+        610.0,
+        686.0,
+        624.0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,962 @@
+{
+  "lcprs_version": "2.0",
+  "document": "0010_eacbc7b084332bbcb5683235c58e13a699d65d2792bb9c132d4bc712946c5f02_clustered",
+  "image_width": 1025,
+  "image_height": 1025,
+  "formula": {
+    "region_weight": 0.6,
+    "distance_weight": 0.4,
+    "distance_function": "exponential",
+    "distance_decay_ratio": 0.15
+  },
+  "number_of_usable_pii": 11,
+  "number_of_excluded_pii": 0,
+  "excluded_pii": [],
+  "standalone_risk": 13.9,
+  "pair_risk_total": 98.0485102951755,
+  "document_risk": 111.94851029517551,
+  "maximum_possible_risk": 152.89999999999995,
+  "normalized_lcprs_score": 73.21681510475837,
+  "risk_category": "High",
+  "governance_action": "Restrict access and review before external sharing.",
+  "pii_items_used": [
+    {
+      "pii_text": "Stewart P. \"Tom\" Mitchell",
+      "pii_type": "full_name",
+      "confidence": 0.9304097890853882,
+      "pii_bbox": [
+        727.0,
+        702.0,
+        956.0,
+        719.0
+      ],
+      "ocr_words": [
+        "Stewart",
+        "P",
+        "Tom",
+        "Mitchell"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5762149095535278,
+      "layout_region_bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "Tom",
+      "pii_type": "first_name",
+      "confidence": 0.7174312472343445,
+      "pii_bbox": [
+        837.0,
+        702.0,
+        865.0,
+        719.0
+      ],
+      "ocr_words": [
+        "Tom"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5762149095535278,
+      "layout_region_bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "Tom",
+      "pii_type": "first_name",
+      "confidence": 0.6669880747795105,
+      "pii_bbox": [
+        837.0,
+        702.0,
+        865.0,
+        719.0
+      ],
+      "ocr_words": [
+        "Tom"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5762149095535278,
+      "layout_region_bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "Tom",
+      "pii_type": "middle_name",
+      "confidence": 0.619935929775238,
+      "pii_bbox": [
+        837.0,
+        702.0,
+        865.0,
+        719.0
+      ],
+      "ocr_words": [
+        "Tom"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5762149095535278,
+      "layout_region_bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "29 April 1958th",
+      "pii_type": "date_of_birth",
+      "confidence": 0.9909151196479797,
+      "pii_bbox": [
+        378.0,
+        573.0,
+        493.0,
+        595.0
+      ],
+      "ocr_words": [
+        "29",
+        "April",
+        "1958th"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5762149095535278,
+      "layout_region_bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "teresa28@example.orgose",
+      "pii_type": "email",
+      "confidence": 0.9871125817298889,
+      "pii_bbox": [
+        284.0,
+        406.0,
+        491.0,
+        426.0
+      ],
+      "ocr_words": [
+        "teresa28",
+        "example",
+        "orgose"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5762149095535278,
+      "layout_region_bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "+1-948-293-2528x8095",
+      "pii_type": "phone_number",
+      "confidence": 0.9997473359107971,
+      "pii_bbox": [
+        88.0,
+        534.0,
+        242.0,
+        551.0
+      ],
+      "ocr_words": [
+        "1-948-293-2528x8095"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5762149095535278,
+      "layout_region_bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "3039 Christopher Oval Apt. 822",
+      "pii_type": "street_address",
+      "confidence": 0.9727110862731934,
+      "pii_bbox": [
+        79.0,
+        662.0,
+        306.0,
+        679.0
+      ],
+      "ocr_words": [
+        "3039",
+        "Christopher",
+        "Oval",
+        "Apt",
+        "822"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5762149095535278,
+      "layout_region_bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "United States",
+      "pii_type": "country",
+      "confidence": 0.8835883140563965,
+      "pii_bbox": [
+        535.0,
+        320.0,
+        642.0,
+        338.0
+      ],
+      "ocr_words": [
+        "United",
+        "States"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5762149095535278,
+      "layout_region_bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "NG782489",
+      "pii_type": "passport_number",
+      "confidence": 0.9514443278312683,
+      "pii_bbox": [
+        377.0,
+        701.0,
+        450.0,
+        724.0
+      ],
+      "ocr_words": [
+        "NG782489"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5762149095535278,
+      "layout_region_bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "June",
+      "pii_type": "transaction_date",
+      "confidence": 0.5024950504302979,
+      "pii_bbox": [
+        712.0,
+        745.0,
+        749.0,
+        762.0
+      ],
+      "ocr_words": [
+        "June"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5762149095535278,
+      "layout_region_bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ],
+      "mapping_method": "center_inside"
+    }
+  ],
+  "pair_results": [
+    {
+      "pii_a": "Stewart P. \"Tom\" Mitchell",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "Tom",
+      "pii_b_type": "first_name",
+      "severity_b": 0.8,
+      "same_region": true,
+      "distance_closeness": 0.9572495576714105,
+      "relationship": 0.9828998230685642,
+      "pair_risk": 1.7692196815234156
+    },
+    {
+      "pii_a": "Stewart P. \"Tom\" Mitchell",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "Tom",
+      "pii_b_type": "first_name",
+      "severity_b": 0.8,
+      "same_region": true,
+      "distance_closeness": 0.9572495576714105,
+      "relationship": 0.9828998230685642,
+      "pair_risk": 1.7692196815234156
+    },
+    {
+      "pii_a": "Stewart P. \"Tom\" Mitchell",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "Tom",
+      "pii_b_type": "middle_name",
+      "severity_b": 0.8,
+      "same_region": true,
+      "distance_closeness": 0.9572495576714105,
+      "relationship": 0.9828998230685642,
+      "pair_risk": 1.7692196815234156
+    },
+    {
+      "pii_a": "Stewart P. \"Tom\" Mitchell",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "29 April 1958th",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": true,
+      "distance_closeness": 0.14145726871796452,
+      "relationship": 0.6565829074871858,
+      "pair_risk": 1.9697487224615575
+    },
+    {
+      "pii_a": "Stewart P. \"Tom\" Mitchell",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "teresa28@example.orgose",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.08300965469824591,
+      "relationship": 0.6332038618792983,
+      "pair_risk": 1.583009654698246
+    },
+    {
+      "pii_a": "Stewart P. \"Tom\" Mitchell",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "+1-948-293-2528x8095",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.040527577765614914,
+      "relationship": 0.616211031106246,
+      "pair_risk": 1.5405275777656149
+    },
+    {
+      "pii_a": "Stewart P. \"Tom\" Mitchell",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "3039 Christopher Oval Apt. 822",
+      "pii_b_type": "street_address",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.05026435034830017,
+      "relationship": 0.6201057401393201,
+      "pair_risk": 1.5502643503483002
+    },
+    {
+      "pii_a": "Stewart P. \"Tom\" Mitchell",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "United States",
+      "pii_b_type": "country",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.1218085266134293,
+      "relationship": 0.6487234106453716,
+      "pair_risk": 0.9730851159680575
+    },
+    {
+      "pii_a": "Stewart P. \"Tom\" Mitchell",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "NG782489",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": true,
+      "distance_closeness": 0.13967698014411078,
+      "relationship": 0.6558707920576443,
+      "pair_risk": 2.6234831682305773
+    },
+    {
+      "pii_a": "Stewart P. \"Tom\" Mitchell",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "June",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5784153685463964,
+      "relationship": 0.8313661474185585,
+      "pair_risk": 1.247049221127838
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "first_name",
+      "severity_a": 0.8,
+      "pii_b": "Tom",
+      "pii_b_type": "first_name",
+      "severity_b": 0.8,
+      "same_region": true,
+      "distance_closeness": 1.0,
+      "relationship": 1.0,
+      "pair_risk": 1.6
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "first_name",
+      "severity_a": 0.8,
+      "pii_b": "Tom",
+      "pii_b_type": "middle_name",
+      "severity_b": 0.8,
+      "same_region": true,
+      "distance_closeness": 1.0,
+      "relationship": 1.0,
+      "pair_risk": 1.6
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "first_name",
+      "severity_a": 0.8,
+      "pii_b": "29 April 1958th",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": true,
+      "distance_closeness": 0.13567225915805295,
+      "relationship": 0.6542689036632212,
+      "pair_risk": 1.8319529302570192
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "first_name",
+      "severity_a": 0.8,
+      "pii_b": "teresa28@example.orgose",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.08001309499665672,
+      "relationship": 0.6320052379986627,
+      "pair_risk": 1.453612047396924
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "first_name",
+      "severity_a": 0.8,
+      "pii_b": "+1-948-293-2528x8095",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.038844341791389965,
+      "relationship": 0.615537736716556,
+      "pair_risk": 1.4157367944480788
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "first_name",
+      "severity_a": 0.8,
+      "pii_b": "3039 Christopher Oval Apt. 822",
+      "pii_b_type": "street_address",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.04811945149448804,
+      "relationship": 0.6192477805977952,
+      "pair_risk": 1.4242698953749289
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "first_name",
+      "severity_a": 0.8,
+      "pii_b": "United States",
+      "pii_b_type": "country",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.11886539966907085,
+      "relationship": 0.6475461598676283,
+      "pair_risk": 0.8418100078279168
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "first_name",
+      "severity_a": 0.8,
+      "pii_b": "NG782489",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": true,
+      "distance_closeness": 0.13370578985411244,
+      "relationship": 0.653482315941645,
+      "pair_risk": 2.483232800578251
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "first_name",
+      "severity_a": 0.8,
+      "pii_b": "June",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.555206189082574,
+      "relationship": 0.8220824756330296,
+      "pair_risk": 1.0687072183229385
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "first_name",
+      "severity_a": 0.8,
+      "pii_b": "Tom",
+      "pii_b_type": "middle_name",
+      "severity_b": 0.8,
+      "same_region": true,
+      "distance_closeness": 1.0,
+      "relationship": 1.0,
+      "pair_risk": 1.6
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "first_name",
+      "severity_a": 0.8,
+      "pii_b": "29 April 1958th",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": true,
+      "distance_closeness": 0.13567225915805295,
+      "relationship": 0.6542689036632212,
+      "pair_risk": 1.8319529302570192
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "first_name",
+      "severity_a": 0.8,
+      "pii_b": "teresa28@example.orgose",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.08001309499665672,
+      "relationship": 0.6320052379986627,
+      "pair_risk": 1.453612047396924
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "first_name",
+      "severity_a": 0.8,
+      "pii_b": "+1-948-293-2528x8095",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.038844341791389965,
+      "relationship": 0.615537736716556,
+      "pair_risk": 1.4157367944480788
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "first_name",
+      "severity_a": 0.8,
+      "pii_b": "3039 Christopher Oval Apt. 822",
+      "pii_b_type": "street_address",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.04811945149448804,
+      "relationship": 0.6192477805977952,
+      "pair_risk": 1.4242698953749289
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "first_name",
+      "severity_a": 0.8,
+      "pii_b": "United States",
+      "pii_b_type": "country",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.11886539966907085,
+      "relationship": 0.6475461598676283,
+      "pair_risk": 0.8418100078279168
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "first_name",
+      "severity_a": 0.8,
+      "pii_b": "NG782489",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": true,
+      "distance_closeness": 0.13370578985411244,
+      "relationship": 0.653482315941645,
+      "pair_risk": 2.483232800578251
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "first_name",
+      "severity_a": 0.8,
+      "pii_b": "June",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.555206189082574,
+      "relationship": 0.8220824756330296,
+      "pair_risk": 1.0687072183229385
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "29 April 1958th",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": true,
+      "distance_closeness": 0.13567225915805295,
+      "relationship": 0.6542689036632212,
+      "pair_risk": 1.8319529302570192
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "teresa28@example.orgose",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.08001309499665672,
+      "relationship": 0.6320052379986627,
+      "pair_risk": 1.453612047396924
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "+1-948-293-2528x8095",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.038844341791389965,
+      "relationship": 0.615537736716556,
+      "pair_risk": 1.4157367944480788
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "3039 Christopher Oval Apt. 822",
+      "pii_b_type": "street_address",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.04811945149448804,
+      "relationship": 0.6192477805977952,
+      "pair_risk": 1.4242698953749289
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "United States",
+      "pii_b_type": "country",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.11886539966907085,
+      "relationship": 0.6475461598676283,
+      "pair_risk": 0.8418100078279168
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "NG782489",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": true,
+      "distance_closeness": 0.13370578985411244,
+      "relationship": 0.653482315941645,
+      "pair_risk": 2.483232800578251
+    },
+    {
+      "pii_a": "Tom",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "June",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.555206189082574,
+      "relationship": 0.8220824756330296,
+      "pair_risk": 1.0687072183229385
+    },
+    {
+      "pii_a": "29 April 1958th",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "teresa28@example.orgose",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.4477315804739251,
+      "relationship": 0.77909263218957,
+      "pair_risk": 2.726824212663495
+    },
+    {
+      "pii_a": "29 April 1958th",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "+1-948-293-2528x8095",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.2840503382838792,
+      "relationship": 0.7136201353135516,
+      "pair_risk": 2.497670473597431
+    },
+    {
+      "pii_a": "29 April 1958th",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "3039 Christopher Oval Apt. 822",
+      "pii_b_type": "street_address",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.30535881913118856,
+      "relationship": 0.7221435276524755,
+      "pair_risk": 2.527502346783664
+    },
+    {
+      "pii_a": "29 April 1958th",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "United States",
+      "pii_b_type": "country",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.2547011695631287,
+      "relationship": 0.7018804678252515,
+      "pair_risk": 1.7547011695631287
+    },
+    {
+      "pii_a": "29 April 1958th",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "NG782489",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": true,
+      "distance_closeness": 0.5490427196270343,
+      "relationship": 0.8196170878508138,
+      "pair_risk": 4.098085439254069
+    },
+    {
+      "pii_a": "29 April 1958th",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "June",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.2091438588188438,
+      "relationship": 0.6836575435275375,
+      "pair_risk": 1.7091438588188437
+    },
+    {
+      "pii_a": "teresa28@example.orgose",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "+1-948-293-2528x8095",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.30816667534734793,
+      "relationship": 0.7232666701389392,
+      "pair_risk": 2.1698000104168176
+    },
+    {
+      "pii_a": "teresa28@example.orgose",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "3039 Christopher Oval Apt. 822",
+      "pii_b_type": "street_address",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.22888411142558687,
+      "relationship": 0.6915536445702347,
+      "pair_risk": 2.074660933710704
+    },
+    {
+      "pii_a": "teresa28@example.orgose",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "United States",
+      "pii_b_type": "country",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.3652071699570541,
+      "relationship": 0.7460828679828216,
+      "pair_risk": 1.4921657359656433
+    },
+    {
+      "pii_a": "teresa28@example.orgose",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "NG782489",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": true,
+      "distance_closeness": 0.25439768385954764,
+      "relationship": 0.7017590735438191,
+      "pair_risk": 3.1579158309471858
+    },
+    {
+      "pii_a": "teresa28@example.orgose",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "June",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.10936324552504068,
+      "relationship": 0.6437452982100162,
+      "pair_risk": 1.2874905964200325
+    },
+    {
+      "pii_a": "+1-948-293-2528x8095",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "3039 Christopher Oval Apt. 822",
+      "pii_b_type": "street_address",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.5476528799196885,
+      "relationship": 0.8190611519678754,
+      "pair_risk": 2.4571834559036265
+    },
+    {
+      "pii_a": "+1-948-293-2528x8095",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "United States",
+      "pii_b_type": "country",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.11290458728404369,
+      "relationship": 0.6451618349136174,
+      "pair_risk": 1.290323669827235
+    },
+    {
+      "pii_a": "+1-948-293-2528x8095",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "NG782489",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": true,
+      "distance_closeness": 0.25039613033916464,
+      "relationship": 0.7001584521356659,
+      "pair_risk": 3.1507130346104963
+    },
+    {
+      "pii_a": "+1-948-293-2528x8095",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "June",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.062292450886500414,
+      "relationship": 0.6249169803546002,
+      "pair_risk": 1.2498339607092004
+    },
+    {
+      "pii_a": "3039 Christopher Oval Apt. 822",
+      "pii_a_type": "street_address",
+      "severity_a": 1.5,
+      "pii_b": "United States",
+      "pii_b_type": "country",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.09027327871799054,
+      "relationship": 0.6361093114871962,
+      "pair_risk": 1.2722186229743924
+    },
+    {
+      "pii_a": "3039 Christopher Oval Apt. 822",
+      "pii_a_type": "street_address",
+      "severity_a": 1.5,
+      "pii_b": "NG782489",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": true,
+      "distance_closeness": 0.35537347926643886,
+      "relationship": 0.7421493917065756,
+      "pair_risk": 3.3396722626795903
+    },
+    {
+      "pii_a": "3039 Christopher Oval Apt. 822",
+      "pii_a_type": "street_address",
+      "severity_a": 1.5,
+      "pii_b": "June",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.0817924079621953,
+      "relationship": 0.6327169631848781,
+      "pair_risk": 1.2654339263697563
+    },
+    {
+      "pii_a": "United States",
+      "pii_a_type": "country",
+      "severity_a": 0.5,
+      "pii_b": "NG782489",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": true,
+      "distance_closeness": 0.14389112995003894,
+      "relationship": 0.6575564519800156,
+      "pair_risk": 2.3014475819300544
+    },
+    {
+      "pii_a": "United States",
+      "pii_a_type": "country",
+      "severity_a": 0.5,
+      "pii_b": "June",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.12762767430298502,
+      "relationship": 0.651051069721194,
+      "pair_risk": 0.651051069721194
+    },
+    {
+      "pii_a": "NG782489",
+      "pii_a_type": "passport_number",
+      "severity_a": 3.0,
+      "pii_b": "June",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.22991440322881215,
+      "relationship": 0.6919657612915249,
+      "pair_risk": 2.421880164520337
+    }
+  ]
+}

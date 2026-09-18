@@ -1,7 +1,7 @@
 from paddleocr import PaddleOCR
 import os
 
-IMAGE_PATH = "sample.png"
+IMAGE_PATH = "../sample.png"
 OUTPUT_DIR = "ocr_output"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)

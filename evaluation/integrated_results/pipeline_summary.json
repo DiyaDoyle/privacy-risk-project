@@ -1,0 +1,36 @@
+{
+    "pipeline": [
+        "PaddleOCR",
+        "GLiNER2-PII",
+        "OCR word-level mapping",
+        "PP-DocLayout-L",
+        "PII-to-layout mapping",
+        "LCPRS V2"
+    ],
+    "documents": [
+        {
+            "document": "doc_001",
+            "number_of_pii": 5,
+            "lcprs_score": 38.964932834469025,
+            "risk_category": "Medium",
+            "governance_action": "Apply controlled access and review before sharing.",
+            "result_file": "evaluation\\lcprs_results\\doc_001_lcprs.json"
+        },
+        {
+            "document": "doc_002",
+            "number_of_pii": 5,
+            "lcprs_score": 35.84684463626729,
+            "risk_category": "Medium",
+            "governance_action": "Apply controlled access and review before sharing.",
+            "result_file": "evaluation\\lcprs_results\\doc_002_lcprs.json"
+        },
+        {
+            "document": "doc_003",
+            "number_of_pii": 5,
+            "lcprs_score": 77.19044199906803,
+            "risk_category": "Critical",
+            "governance_action": "Restrict access, protect sensitive content, and require authorization before sharing.",
+            "result_file": "evaluation\\lcprs_results\\doc_003_lcprs.json"
+        }
+    ]
+}

@@ -7,7 +7,7 @@ print("=" * 60)
 print("GLINER2 + PADDLEOCR INTEGRATION TEST")
 print("=" * 60)
 
-IMAGE_PATH = "sample.png"
+IMAGE_PATH = "../sample.png"
 
 # --------------------------------------------------
 # 1. Load PII labels
@@ -15,7 +15,7 @@ IMAGE_PATH = "sample.png"
 
 print("\nLoading PII labels...")
 
-with open("config/pii_labels.json", "r", encoding="utf-8") as file:
+with open("../config/pii_labels.json", "r", encoding="utf-8") as file:
     labels = json.load(file)
 
 print(f"Loaded {len(labels)} PII labels.")

@@ -1,0 +1,67 @@
+{
+    "document_id": "doc_002",
+    "source_document": "sample.png",
+    "layout_pattern": "two_column",
+    "entities": [
+        {
+            "text": "Tanveer Murty",
+            "type": "person",
+            "bbox": [
+                173,
+                1160,
+                339,
+                1184
+            ]
+        },
+        {
+            "text": "hritik97@example.org",
+            "type": "email",
+            "bbox": [
+                588,
+                1160,
+                836,
+                1184
+            ]
+        },
+        {
+            "text": "+910408418377",
+            "type": "phone_number",
+            "bbox": [
+                265,
+                1300,
+                447,
+                1319
+            ]
+        },
+        {
+            "text": "22 August 1974",
+            "type": "date_of_birth",
+            "bbox": [
+                670,
+                1300,
+                847,
+                1324
+            ]
+        },
+        {
+            "text": "H.No. 71, Dutta Zila, Ranchi 812319",
+            "type": "address",
+            "bbox": [
+                189,
+                1440,
+                597,
+                1463
+            ]
+        },
+        {
+            "text": "YJ7574475",
+            "type": "passport_number",
+            "bbox": [
+                722,
+                1440,
+                850,
+                1459
+            ]
+        }
+    ]
+}

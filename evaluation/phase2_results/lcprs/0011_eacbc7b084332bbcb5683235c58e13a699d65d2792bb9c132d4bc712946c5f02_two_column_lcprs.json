@@ -1,0 +1,454 @@
+{
+  "lcprs_version": "2.0",
+  "document": "0011_eacbc7b084332bbcb5683235c58e13a699d65d2792bb9c132d4bc712946c5f02_two_column",
+  "image_width": 1025,
+  "image_height": 1025,
+  "formula": {
+    "region_weight": 0.6,
+    "distance_weight": 0.4,
+    "distance_function": "exponential",
+    "distance_decay_ratio": 0.15
+  },
+  "number_of_usable_pii": 7,
+  "number_of_excluded_pii": 0,
+  "excluded_pii": [],
+  "standalone_risk": 8.5,
+  "pair_risk_total": 34.739125617743305,
+  "document_risk": 43.239125617743305,
+  "maximum_possible_risk": 59.5,
+  "normalized_lcprs_score": 72.67079935755177,
+  "risk_category": "High",
+  "governance_action": "Restrict access and review before external sharing.",
+  "pii_items_used": [
+    {
+      "pii_text": "Stewart P. \"Tom\" Mitchell",
+      "pii_type": "full_name",
+      "confidence": 0.9455767869949341,
+      "pii_bbox": [
+        727.0,
+        703.0,
+        958.0,
+        720.0
+      ],
+      "ocr_words": [
+        "Stewart",
+        "P",
+        "Tom",
+        "Mitchell"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5751748085021973,
+      "layout_region_bbox": [
+        55.28996276855469,
+        114.02472686767578,
+        968.5864868164062,
+        905.7229614257812
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "teresa28@example.orgoo",
+      "pii_type": "email",
+      "confidence": 0.9924181699752808,
+      "pii_bbox": [
+        122.0,
+        402.0,
+        333.0,
+        424.0
+      ],
+      "ocr_words": [
+        "teresa28",
+        "example",
+        "orgoo4"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5751748085021973,
+      "layout_region_bbox": [
+        55.28996276855469,
+        114.02472686767578,
+        968.5864868164062,
+        905.7229614257812
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "+1-948-293-2528x8095",
+      "pii_type": "phone_number",
+      "confidence": 0.9999964237213135,
+      "pii_bbox": [
+        130.0,
+        178.0,
+        287.0,
+        203.0
+      ],
+      "ocr_words": [
+        "1-948-293-2528x8095"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5751748085021973,
+      "layout_region_bbox": [
+        55.28996276855469,
+        114.02472686767578,
+        968.5864868164062,
+        905.7229614257812
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "United States",
+      "pii_type": "country",
+      "confidence": 0.8673965930938721,
+      "pii_bbox": [
+        536.0,
+        320.0,
+        642.0,
+        338.0
+      ],
+      "ocr_words": [
+        "United",
+        "States"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5751748085021973,
+      "layout_region_bbox": [
+        55.28996276855469,
+        114.02472686767578,
+        968.5864868164062,
+        905.7229614257812
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "NG782489",
+      "pii_type": "passport_number",
+      "confidence": 0.9894722104072571,
+      "pii_bbox": [
+        600.0,
+        369.0,
+        672.0,
+        393.0
+      ],
+      "ocr_words": [
+        "NG782489"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5751748085021973,
+      "layout_region_bbox": [
+        55.28996276855469,
+        114.02472686767578,
+        968.5864868164062,
+        905.7229614257812
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "February 22, 2005",
+      "pii_type": "transaction_date",
+      "confidence": 0.7315220236778259,
+      "pii_bbox": [
+        70.0,
+        510.0,
+        223.0,
+        528.0
+      ],
+      "ocr_words": [
+        "February",
+        "22",
+        "2005"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5751748085021973,
+      "layout_region_bbox": [
+        55.28996276855469,
+        114.02472686767578,
+        968.5864868164062,
+        905.7229614257812
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "June",
+      "pii_type": "transaction_date",
+      "confidence": 0.5042480230331421,
+      "pii_bbox": [
+        713.0,
+        744.0,
+        747.0,
+        761.0
+      ],
+      "ocr_words": [
+        "June"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5751748085021973,
+      "layout_region_bbox": [
+        55.28996276855469,
+        114.02472686767578,
+        968.5864868164062,
+        905.7229614257812
+      ],
+      "mapping_method": "center_inside"
+    }
+  ],
+  "pair_results": [
+    {
+      "pii_a": "Stewart P. \"Tom\" Mitchell",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "teresa28@example.orgoo",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.04311067003370233,
+      "relationship": 0.6172442680134809,
+      "pair_risk": 1.5431106700337023
+    },
+    {
+      "pii_a": "Stewart P. \"Tom\" Mitchell",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "+1-948-293-2528x8095",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.02295932681600533,
+      "relationship": 0.6091837307264021,
+      "pair_risk": 1.522959326816005
+    },
+    {
+      "pii_a": "Stewart P. \"Tom\" Mitchell",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "United States",
+      "pii_b_type": "country",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.12118842019588082,
+      "relationship": 0.6484753680783523,
+      "pair_risk": 0.9727130521175285
+    },
+    {
+      "pii_a": "Stewart P. \"Tom\" Mitchell",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "NG782489",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": true,
+      "distance_closeness": 0.1665774660317316,
+      "relationship": 0.6666309864126926,
+      "pair_risk": 2.6665239456507703
+    },
+    {
+      "pii_a": "Stewart P. \"Tom\" Mitchell",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "February 22, 2005",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.03611211167046476,
+      "relationship": 0.6144448446681858,
+      "pair_risk": 0.9216672670022787
+    },
+    {
+      "pii_a": "Stewart P. \"Tom\" Mitchell",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "June",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5765550568989233,
+      "relationship": 0.8306220227595693,
+      "pair_risk": 1.245933034139354
+    },
+    {
+      "pii_a": "teresa28@example.orgoo",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "+1-948-293-2528x8095",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.3580735405416379,
+      "relationship": 0.7432294162166552,
+      "pair_risk": 2.2296882486499654
+    },
+    {
+      "pii_a": "teresa28@example.orgoo",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "United States",
+      "pii_b_type": "country",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.18143513340032008,
+      "relationship": 0.672574053360128,
+      "pair_risk": 1.345148106720256
+    },
+    {
+      "pii_a": "teresa28@example.orgoo",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "NG782489",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": true,
+      "distance_closeness": 0.1519087936015172,
+      "relationship": 0.6607635174406069,
+      "pair_risk": 2.973435828482731
+    },
+    {
+      "pii_a": "teresa28@example.orgoo",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "February 22, 2005",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.5414305046578797,
+      "relationship": 0.8165722018631518,
+      "pair_risk": 1.6331444037263037
+    },
+    {
+      "pii_a": "teresa28@example.orgoo",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "June",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.06147972563863537,
+      "relationship": 0.6245918902554541,
+      "pair_risk": 1.2491837805109083
+    },
+    {
+      "pii_a": "+1-948-293-2528x8095",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "United States",
+      "pii_b_type": "country",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.15531998969286925,
+      "relationship": 0.6621279958771477,
+      "pair_risk": 1.3242559917542953
+    },
+    {
+      "pii_a": "+1-948-293-2528x8095",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "NG782489",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": true,
+      "distance_closeness": 0.11619626155380824,
+      "relationship": 0.6464785046215232,
+      "pair_risk": 2.9091532707968546
+    },
+    {
+      "pii_a": "+1-948-293-2528x8095",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "February 22, 2005",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.2149248284354433,
+      "relationship": 0.6859699313741773,
+      "pair_risk": 1.3719398627483546
+    },
+    {
+      "pii_a": "+1-948-293-2528x8095",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "June",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.029421254855649316,
+      "relationship": 0.6117685019422597,
+      "pair_risk": 1.2235370038845195
+    },
+    {
+      "pii_a": "United States",
+      "pii_a_type": "country",
+      "severity_a": 0.5,
+      "pii_b": "NG782489",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": true,
+      "distance_closeness": 0.724436209895946,
+      "relationship": 0.8897744839583783,
+      "pair_risk": 3.114210693854324
+    },
+    {
+      "pii_a": "United States",
+      "pii_a_type": "country",
+      "severity_a": 0.5,
+      "pii_b": "February 22, 2005",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.10918002988402253,
+      "relationship": 0.643672011953609,
+      "pair_risk": 0.643672011953609
+    },
+    {
+      "pii_a": "United States",
+      "pii_a_type": "country",
+      "severity_a": 0.5,
+      "pii_b": "June",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.12837243279614308,
+      "relationship": 0.6513489731184572,
+      "pair_risk": 0.6513489731184572
+    },
+    {
+      "pii_a": "NG782489",
+      "pii_a_type": "passport_number",
+      "severity_a": 3.0,
+      "pii_b": "February 22, 2005",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.09642429172503136,
+      "relationship": 0.6385697166900125,
+      "pair_risk": 2.2349940084150437
+    },
+    {
+      "pii_a": "NG782489",
+      "pii_a_type": "passport_number",
+      "severity_a": 3.0,
+      "pii_b": "June",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.17163260359127863,
+      "relationship": 0.6686530414365114,
+      "pair_risk": 2.34028564502779
+    },
+    {
+      "pii_a": "February 22, 2005",
+      "pii_a_type": "transaction_date",
+      "severity_a": 0.5,
+      "pii_b": "June",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.05555123085063224,
+      "relationship": 0.6222204923402529,
+      "pair_risk": 0.6222204923402529
+    }
+  ]
+}

@@ -1,0 +1,620 @@
+{
+  "document": "0001_5d0acb6c8bbbcf1c37170d09102daf9fc3c1a4afe3d83cdbf9e23323daa85f7f_clustered",
+  "image_width": 1025,
+  "image_height": 1025,
+  "layout_region_count": 10,
+  "pii_prediction_count": 20,
+  "pii_layout_mapped_count": 20,
+  "layout_mapping_rate": 1.0,
+  "layout_regions": [
+    {
+      "region_id": 0,
+      "label": "table",
+      "score": 0.9864301681518555,
+      "bbox": [
+        504.03900146484375,
+        87.87740325927734,
+        931.9581909179688,
+        370.8876647949219
+      ]
+    },
+    {
+      "region_id": 1,
+      "label": "text",
+      "score": 0.9864230751991272,
+      "bbox": [
+        54.76149368286133,
+        489.1005859375,
+        486.1253967285156,
+        735.4716796875
+      ]
+    },
+    {
+      "region_id": 2,
+      "label": "text",
+      "score": 0.9863259196281433,
+      "bbox": [
+        502.06585693359375,
+        633.5074462890625,
+        933.013671875,
+        881.4196166992188
+      ]
+    },
+    {
+      "region_id": 3,
+      "label": "text",
+      "score": 0.985974133014679,
+      "bbox": [
+        54.726898193359375,
+        158.34454345703125,
+        486.60894775390625,
+        371.5832824707031
+      ]
+    },
+    {
+      "region_id": 4,
+      "label": "text",
+      "score": 0.9846029281616211,
+      "bbox": [
+        501.56256103515625,
+        385.89697265625,
+        932.9660034179688,
+        599.5810546875
+      ]
+    },
+    {
+      "region_id": 5,
+      "label": "text",
+      "score": 0.9789799451828003,
+      "bbox": [
+        55.084014892578125,
+        43.49441146850586,
+        486.7015075683594,
+        137.81747436523438
+      ]
+    },
+    {
+      "region_id": 6,
+      "label": "text",
+      "score": 0.9761279225349426,
+      "bbox": [
+        55.01083755493164,
+        390.2460632324219,
+        486.22705078125,
+        470.2732849121094
+      ]
+    },
+    {
+      "region_id": 7,
+      "label": "table_title",
+      "score": 0.9138432741165161,
+      "bbox": [
+        502.8338928222656,
+        42.96206283569336,
+        932.603515625,
+        70.89261627197266
+      ]
+    },
+    {
+      "region_id": 8,
+      "label": "paragraph_title",
+      "score": 0.8527031540870667,
+      "bbox": [
+        503.5239562988281,
+        617.0225830078125,
+        609.9774169921875,
+        627.6746826171875
+      ]
+    },
+    {
+      "region_id": 9,
+      "label": "number",
+      "score": 0.7540639042854309,
+      "bbox": [
+        58.83885955810547,
+        995.614501953125,
+        70.67247009277344,
+        1003.2731323242188
+      ]
+    }
+  ],
+  "pii_mappings": [
+    {
+      "pii_text": "Allison Hill",
+      "pii_type": "full_name",
+      "confidence": 0.9963305592536926,
+      "pii_bbox": [
+        602.0,
+        134.0,
+        675.0,
+        152.0
+      ],
+      "ocr_words": [
+        "Allison",
+        "Hill"
+      ],
+      "layout_region_id": 0,
+      "layout_region_type": "table",
+      "layout_region_score": 0.9864301681518555,
+      "layout_region_bbox": [
+        504.03900146484375,
+        87.87740325927734,
+        931.9581909179688,
+        370.8876647949219
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "09 June 1999",
+      "pii_type": "date_of_birth",
+      "confidence": 0.999901533126831,
+      "pii_bbox": [
+        816.0,
+        221.0,
+        907.0,
+        240.0
+      ],
+      "ocr_words": [
+        "09",
+        "June",
+        "1999"
+      ],
+      "layout_region_id": 0,
+      "layout_region_type": "table",
+      "layout_region_score": 0.9864301681518555,
+      "layout_region_bbox": [
+        504.03900146484375,
+        87.87740325927734,
+        931.9581909179688,
+        370.8876647949219
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "donaldgarcia@example.net",
+      "pii_type": "email",
+      "confidence": 0.9999817609786987,
+      "pii_bbox": [
+        727.0,
+        111.0,
+        922.0,
+        129.0
+      ],
+      "ocr_words": [
+        "donaldgarcia",
+        "example",
+        "net"
+      ],
+      "layout_region_id": 0,
+      "layout_region_type": "table",
+      "layout_region_score": 0.9864301681518555,
+      "layout_region_bbox": [
+        504.03900146484375,
+        87.87740325927734,
+        931.9581909179688,
+        370.8876647949219
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "+1-219-560-0133",
+      "pii_type": "phone_number",
+      "confidence": 0.9999722242355347,
+      "pii_bbox": [
+        590.0,
+        215.0,
+        703.0,
+        245.0
+      ],
+      "ocr_words": [
+        "1-219-560-0133"
+      ],
+      "layout_region_id": 0,
+      "layout_region_type": "table",
+      "layout_region_score": 0.9864301681518555,
+      "layout_region_bbox": [
+        504.03900146484375,
+        87.87740325927734,
+        931.9581909179688,
+        370.8876647949219
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "ZB615594",
+      "pii_type": "passport_number",
+      "confidence": 0.9878486394882202,
+      "pii_bbox": [
+        818.0,
+        309.0,
+        885.0,
+        328.0
+      ],
+      "ocr_words": [
+        "ZB615594"
+      ],
+      "layout_region_id": 0,
+      "layout_region_type": "table",
+      "layout_region_score": 0.9864301681518555,
+      "layout_region_bbox": [
+        504.03900146484375,
+        87.87740325927734,
+        931.9581909179688,
+        370.8876647949219
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "September 30, 2013",
+      "pii_type": "transaction_date",
+      "confidence": 0.9009038805961609,
+      "pii_bbox": [
+        84.0,
+        344.0,
+        212.0,
+        354.0
+      ],
+      "ocr_words": [
+        "September",
+        "30",
+        "2013"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.985974133014679,
+      "layout_region_bbox": [
+        54.726898193359375,
+        158.34454345703125,
+        486.60894775390625,
+        371.5832824707031
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "September 30, 2013",
+      "pii_type": "transaction_date",
+      "confidence": 0.8793621063232422,
+      "pii_bbox": [
+        84.0,
+        344.0,
+        212.0,
+        354.0
+      ],
+      "ocr_words": [
+        "September",
+        "30",
+        "2013"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.985974133014679,
+      "layout_region_bbox": [
+        54.726898193359375,
+        158.34454345703125,
+        486.60894775390625,
+        371.5832824707031
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "September 30, 2013",
+      "pii_type": "transaction_date",
+      "confidence": 0.8244167566299438,
+      "pii_bbox": [
+        84.0,
+        344.0,
+        212.0,
+        354.0
+      ],
+      "ocr_words": [
+        "September",
+        "30",
+        "2013"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.985974133014679,
+      "layout_region_bbox": [
+        54.726898193359375,
+        158.34454345703125,
+        486.60894775390625,
+        371.5832824707031
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "September 30, 2010",
+      "pii_type": "transaction_date",
+      "confidence": 0.8039959669113159,
+      "pii_bbox": [
+        609.0,
+        151.0,
+        729.0,
+        164.0
+      ],
+      "ocr_words": [
+        "September",
+        "30",
+        "2010"
+      ],
+      "layout_region_id": 0,
+      "layout_region_type": "table",
+      "layout_region_score": 0.9864301681518555,
+      "layout_region_bbox": [
+        504.03900146484375,
+        87.87740325927734,
+        931.9581909179688,
+        370.8876647949219
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "September 30, 2013",
+      "pii_type": "transaction_date",
+      "confidence": 0.7726998329162598,
+      "pii_bbox": [
+        84.0,
+        344.0,
+        212.0,
+        354.0
+      ],
+      "ocr_words": [
+        "September",
+        "30",
+        "2013"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.985974133014679,
+      "layout_region_bbox": [
+        54.726898193359375,
+        158.34454345703125,
+        486.60894775390625,
+        371.5832824707031
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2012",
+      "pii_type": "transaction_date",
+      "confidence": 0.7675362825393677,
+      "pii_bbox": [
+        113.0,
+        44.0,
+        138.0,
+        54.0
+      ],
+      "ocr_words": [
+        "2012"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9789799451828003,
+      "layout_region_bbox": [
+        55.084014892578125,
+        43.49441146850586,
+        486.7015075683594,
+        137.81747436523438
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2012",
+      "pii_type": "transaction_date",
+      "confidence": 0.7595186233520508,
+      "pii_bbox": [
+        113.0,
+        44.0,
+        138.0,
+        54.0
+      ],
+      "ocr_words": [
+        "2012"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9789799451828003,
+      "layout_region_bbox": [
+        55.084014892578125,
+        43.49441146850586,
+        486.7015075683594,
+        137.81747436523438
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "September 30. 2013",
+      "pii_type": "transaction_date",
+      "confidence": 0.7515632510185242,
+      "pii_bbox": [
+        84.0,
+        344.0,
+        212.0,
+        354.0
+      ],
+      "ocr_words": [
+        "September",
+        "30",
+        "2013"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.985974133014679,
+      "layout_region_bbox": [
+        54.726898193359375,
+        158.34454345703125,
+        486.60894775390625,
+        371.5832824707031
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2012",
+      "pii_type": "transaction_date",
+      "confidence": 0.7213761806488037,
+      "pii_bbox": [
+        113.0,
+        44.0,
+        138.0,
+        54.0
+      ],
+      "ocr_words": [
+        "2012"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9789799451828003,
+      "layout_region_bbox": [
+        55.084014892578125,
+        43.49441146850586,
+        486.7015075683594,
+        137.81747436523438
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2012",
+      "pii_type": "transaction_date",
+      "confidence": 0.696785569190979,
+      "pii_bbox": [
+        113.0,
+        44.0,
+        138.0,
+        54.0
+      ],
+      "ocr_words": [
+        "2012"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9789799451828003,
+      "layout_region_bbox": [
+        55.084014892578125,
+        43.49441146850586,
+        486.7015075683594,
+        137.81747436523438
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2011",
+      "pii_type": "transaction_date",
+      "confidence": 0.6443922519683838,
+      "pii_bbox": [
+        273.0,
+        158.0,
+        301.0,
+        171.0
+      ],
+      "ocr_words": [
+        "2011"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.985974133014679,
+      "layout_region_bbox": [
+        54.726898193359375,
+        158.34454345703125,
+        486.60894775390625,
+        371.5832824707031
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2012",
+      "pii_type": "transaction_date",
+      "confidence": 0.635332465171814,
+      "pii_bbox": [
+        113.0,
+        44.0,
+        138.0,
+        54.0
+      ],
+      "ocr_words": [
+        "2012"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9789799451828003,
+      "layout_region_bbox": [
+        55.084014892578125,
+        43.49441146850586,
+        486.7015075683594,
+        137.81747436523438
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2011",
+      "pii_type": "transaction_date",
+      "confidence": 0.6324359774589539,
+      "pii_bbox": [
+        273.0,
+        158.0,
+        301.0,
+        171.0
+      ],
+      "ocr_words": [
+        "2011"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.985974133014679,
+      "layout_region_bbox": [
+        54.726898193359375,
+        158.34454345703125,
+        486.60894775390625,
+        371.5832824707031
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2011",
+      "pii_type": "transaction_date",
+      "confidence": 0.6238851547241211,
+      "pii_bbox": [
+        273.0,
+        158.0,
+        301.0,
+        171.0
+      ],
+      "ocr_words": [
+        "2011"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.985974133014679,
+      "layout_region_bbox": [
+        54.726898193359375,
+        158.34454345703125,
+        486.60894775390625,
+        371.5832824707031
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "2011",
+      "pii_type": "transaction_date",
+      "confidence": 0.6045488715171814,
+      "pii_bbox": [
+        273.0,
+        158.0,
+        301.0,
+        171.0
+      ],
+      "ocr_words": [
+        "2011"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.985974133014679,
+      "layout_region_bbox": [
+        54.726898193359375,
+        158.34454345703125,
+        486.60894775390625,
+        371.5832824707031
+      ],
+      "mapping_method": "center_inside"
+    }
+  ]
+}

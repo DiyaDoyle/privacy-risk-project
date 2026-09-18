@@ -1,0 +1,31 @@
+{
+  "dataset_version": "phase1_v3",
+  "source_dataset": "docling-project/DocLayNet-v1.1",
+  "source_split": "train",
+  "seed": 42,
+  "base_pages_requested": 5,
+  "base_pages_selected": 5,
+  "synthetic_documents_generated": 15,
+  "conditions": [
+    "clustered",
+    "two_column",
+    "scattered"
+  ],
+  "pii_types": [
+    "person",
+    "email",
+    "phone_number",
+    "date_of_birth",
+    "address",
+    "passport_number"
+  ],
+  "rows_scanned": 305,
+  "image_directory": "C:\\Users\\Diya\\git\\privacy-risk-project\\evaluation\\dataset\\images",
+  "annotation_directory": "C:\\Users\\Diya\\git\\privacy-risk-project\\evaluation\\dataset\\annotations",
+  "preview_directory": "C:\\Users\\Diya\\git\\privacy-risk-project\\evaluation\\dataset\\previews",
+  "experimental_design": {
+    "same_base_page_across_conditions": true,
+    "same_pii_values_across_conditions": true,
+    "controlled_variable": "PII spatial placement"
+  }
+}

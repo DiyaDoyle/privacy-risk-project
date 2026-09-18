@@ -1,0 +1,120 @@
+[
+    {
+        "ground_truth_text": "Charles Tailor",
+        "ground_truth_type": "person",
+        "ground_truth_bbox": [
+            174,
+            1150,
+            334,
+            1169
+        ],
+        "predicted_bbox": [
+            184.0,
+            1148.0,
+            331.0,
+            1171.0
+        ],
+        "iou": 0.769845644983462,
+        "matched_words": [
+            "Charles",
+            "Tailor"
+        ]
+    },
+    {
+        "ground_truth_text": "jsawhney@example.com",
+        "ground_truth_type": "email",
+        "ground_truth_bbox": [
+            485,
+            1220,
+            771,
+            1244
+        ],
+        "predicted_bbox": [
+            491.0,
+            1218.0,
+            764.0,
+            1242.0
+        ],
+        "iou": 0.8105263157894737,
+        "matched_words": [
+            "jsawhney",
+            "example",
+            "com"
+        ]
+    },
+    {
+        "ground_truth_text": "02772642855",
+        "ground_truth_type": "phone_number",
+        "ground_truth_bbox": [
+            345,
+            1350,
+            498,
+            1369
+        ],
+        "predicted_bbox": [
+            353.0,
+            1347.0,
+            495.0,
+            1370.0
+        ],
+        "iou": 0.7764028776978418,
+        "matched_words": [
+            "02772642855"
+        ]
+    },
+    {
+        "ground_truth_text": "04 August 1967",
+        "ground_truth_type": "date_of_birth",
+        "ground_truth_bbox": [
+            821,
+            1330,
+            997,
+            1354
+        ],
+        "predicted_bbox": [
+            827.0,
+            1328.0,
+            993.0,
+            1351.0
+        ],
+        "iou": 0.7651448639157156,
+        "matched_words": [
+            "04",
+            "August",
+            "1967"
+        ]
+    },
+    {
+        "ground_truth_text": "93/444, Chaudry Zila, Pimpri-Chinchwad 989245",
+        "ground_truth_type": "address",
+        "ground_truth_bbox": [
+            468,
+            1460,
+            1019,
+            1484
+        ],
+        "predicted_bbox": null,
+        "iou": 0.0,
+        "matched_words": []
+    },
+    {
+        "ground_truth_text": "IC4853900",
+        "ground_truth_type": "passport_number",
+        "ground_truth_bbox": [
+            324,
+            1550,
+            446,
+            1569
+        ],
+        "predicted_bbox": [
+            325.0,
+            1547.0,
+            441.0,
+            1570.0
+        ],
+        "iou": 0.792235801581596,
+        "matched_words": [
+            "IC4853900"
+        ]
+    }
+]

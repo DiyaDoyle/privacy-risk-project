@@ -14,7 +14,7 @@ model = GLiNER2.from_pretrained(
 print("GLiNER2-PII loaded successfully.")
 
 # Load PII labels from configuration
-with open("config/pii_labels.json", "r", encoding="utf-8") as file:
+with open("../config/pii_labels.json", "r", encoding="utf-8") as file:
     labels = json.load(file)
 
 print(f"\nLoaded {len(labels)} PII labels from configuration.")

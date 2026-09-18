@@ -1,0 +1,67 @@
+{
+    "document_id": "doc_001",
+    "source_document": "sample.png",
+    "layout_pattern": "clustered",
+    "entities": [
+        {
+            "text": "Dayita Lad",
+            "type": "person",
+            "bbox": [
+                190,
+                1150,
+                309,
+                1174
+            ]
+        },
+        {
+            "text": "aayushdhar@example.com",
+            "type": "email",
+            "bbox": [
+                172,
+                1210,
+                482,
+                1234
+            ]
+        },
+        {
+            "text": "5883376050",
+            "type": "phone_number",
+            "bbox": [
+                280,
+                1270,
+                419,
+                1289
+            ]
+        },
+        {
+            "text": "24 December 1975",
+            "type": "date_of_birth",
+            "bbox": [
+                255,
+                1330,
+                472,
+                1349
+            ]
+        },
+        {
+            "text": "H.No. 707, Wable, Phagwara 433673",
+            "type": "address",
+            "bbox": [
+                204,
+                1390,
+                624,
+                1414
+            ]
+        },
+        {
+            "text": "CY8422540",
+            "type": "passport_number",
+            "bbox": [
+                308,
+                1450,
+                441,
+                1469
+            ]
+        }
+    ]
+}

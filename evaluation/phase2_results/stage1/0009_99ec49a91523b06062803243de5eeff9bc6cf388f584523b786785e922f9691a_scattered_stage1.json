@@ -1,0 +1,281 @@
+{
+  "document": "0009_99ec49a91523b06062803243de5eeff9bc6cf388f584523b786785e922f9691a_scattered",
+  "ground_truth_count": 6,
+  "gliner_detected_count": 5,
+  "ocr_mapped_count": 5,
+  "ground_truth_matched_count": 2,
+  "ground_truth_match_rate": 0.3333333333333333,
+  "average_bbox_iou": 0.6114708529795141,
+  "ground_truth_comparisons": [
+    {
+      "ground_truth_text": "Austin Gentry",
+      "ground_truth_type": "person",
+      "ground_truth_bbox": [
+        579,
+        338,
+        689,
+        360
+      ],
+      "predicted_text": null,
+      "predicted_type": null,
+      "predicted_bbox": null,
+      "iou": 0.0
+    },
+    {
+      "ground_truth_text": "jason76@example.net",
+      "ground_truth_type": "email",
+      "ground_truth_bbox": [
+        136,
+        110,
+        309,
+        133
+      ],
+      "predicted_text": "jason76@example.net",
+      "predicted_type": "email",
+      "predicted_confidence": 0.9998743534088135,
+      "predicted_bbox": [
+        141.0,
+        114.0,
+        303.0,
+        128.0
+      ],
+      "iou": 0.5699924604171902
+    },
+    {
+      "ground_truth_text": "724.523.8849x696",
+      "ground_truth_type": "phone_number",
+      "ground_truth_bbox": [
+        141,
+        587,
+        283,
+        605
+      ],
+      "predicted_text": null,
+      "predicted_type": null,
+      "predicted_bbox": null,
+      "iou": 0.0
+    },
+    {
+      "ground_truth_text": "16 February 1960",
+      "ground_truth_type": "date_of_birth",
+      "ground_truth_bbox": [
+        613,
+        814,
+        750,
+        835
+      ],
+      "predicted_text": null,
+      "predicted_type": null,
+      "predicted_bbox": null,
+      "iou": 0.0
+    },
+    {
+      "ground_truth_text": "01226 Paul Ranch Suite 848",
+      "ground_truth_type": "address",
+      "ground_truth_bbox": [
+        592,
+        79,
+        809,
+        98
+      ],
+      "predicted_text": null,
+      "predicted_type": null,
+      "predicted_bbox": null,
+      "iou": 0.0
+    },
+    {
+      "ground_truth_text": "JN018451",
+      "ground_truth_type": "passport_number",
+      "ground_truth_bbox": [
+        153,
+        378,
+        234,
+        396
+      ],
+      "predicted_text": "JN018451",
+      "predicted_type": "passport_number",
+      "predicted_confidence": 0.9860644340515137,
+      "predicted_bbox": [
+        160.0,
+        381.0,
+        228.0,
+        395.0
+      ],
+      "iou": 0.6529492455418381
+    }
+  ],
+  "detected_entities": [
+    {
+      "text": "Austin Gentryodel",
+      "type": "full_name",
+      "score": 0.9861928820610046
+    },
+    {
+      "text": "16 February 1960ns",
+      "type": "date_of_birth",
+      "score": 0.9802236557006836
+    },
+    {
+      "text": "jason76@example.net",
+      "type": "email",
+      "score": 0.9998743534088135
+    },
+    {
+      "text": "724.523.8849x696a",
+      "type": "phone_number",
+      "score": 0.9997801184654236
+    },
+    {
+      "text": "JN018451",
+      "type": "passport_number",
+      "score": 0.9860644340515137
+    }
+  ],
+  "mapped_predictions": [
+    {
+      "text": "Austin Gentryodel",
+      "type": "full_name",
+      "score": 0.9861928820610046,
+      "ocr_words": [
+        "Austin",
+        "Gentryodel"
+      ],
+      "ocr_word_boxes": [
+        [
+          587.0,
+          342.0,
+          626.0,
+          355.0
+        ],
+        [
+          642.0,
+          342.0,
+          718.0,
+          355.0
+        ]
+      ],
+      "predicted_bbox": [
+        587.0,
+        342.0,
+        718.0,
+        355.0
+      ]
+    },
+    {
+      "text": "16 February 1960ns",
+      "type": "date_of_birth",
+      "score": 0.9802236557006836,
+      "ocr_words": [
+        "16",
+        "February",
+        "1960ns"
+      ],
+      "ocr_word_boxes": [
+        [
+          621.0,
+          819.0,
+          630.0,
+          833.0
+        ],
+        [
+          644.0,
+          819.0,
+          703.0,
+          833.0
+        ],
+        [
+          717.0,
+          819.0,
+          768.0,
+          833.0
+        ]
+      ],
+      "predicted_bbox": [
+        621.0,
+        819.0,
+        768.0,
+        833.0
+      ]
+    },
+    {
+      "text": "jason76@example.net",
+      "type": "email",
+      "score": 0.9998743534088135,
+      "ocr_words": [
+        "jason76",
+        "example",
+        "net"
+      ],
+      "ocr_word_boxes": [
+        [
+          141.0,
+          114.0,
+          194.0,
+          128.0
+        ],
+        [
+          218.0,
+          114.0,
+          274.0,
+          128.0
+        ],
+        [
+          285.0,
+          114.0,
+          303.0,
+          128.0
+        ]
+      ],
+      "predicted_bbox": [
+        141.0,
+        114.0,
+        303.0,
+        128.0
+      ]
+    },
+    {
+      "text": "724.523.8849x696a",
+      "type": "phone_number",
+      "score": 0.9997801184654236,
+      "ocr_words": [
+        "724.523.8849x696a"
+      ],
+      "ocr_word_boxes": [
+        [
+          147.0,
+          592.0,
+          290.0,
+          605.0
+        ]
+      ],
+      "predicted_bbox": [
+        147.0,
+        592.0,
+        290.0,
+        605.0
+      ]
+    },
+    {
+      "text": "JN018451",
+      "type": "passport_number",
+      "score": 0.9860644340515137,
+      "ocr_words": [
+        "JN018451"
+      ],
+      "ocr_word_boxes": [
+        [
+          160.0,
+          381.0,
+          228.0,
+          395.0
+        ]
+      ],
+      "predicted_bbox": [
+        160.0,
+        381.0,
+        228.0,
+        395.0
+      ]
+    }
+  ]
+}

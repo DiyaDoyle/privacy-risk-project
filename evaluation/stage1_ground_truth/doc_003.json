@@ -1,0 +1,67 @@
+{
+    "document_id": "doc_003",
+    "source_document": "sample.png",
+    "layout_pattern": "scattered",
+    "entities": [
+        {
+            "text": "Charles Tailor",
+            "type": "person",
+            "bbox": [
+                174,
+                1150,
+                334,
+                1169
+            ]
+        },
+        {
+            "text": "jsawhney@example.com",
+            "type": "email",
+            "bbox": [
+                485,
+                1220,
+                771,
+                1244
+            ]
+        },
+        {
+            "text": "02772642855",
+            "type": "phone_number",
+            "bbox": [
+                345,
+                1350,
+                498,
+                1369
+            ]
+        },
+        {
+            "text": "04 August 1967",
+            "type": "date_of_birth",
+            "bbox": [
+                821,
+                1330,
+                997,
+                1354
+            ]
+        },
+        {
+            "text": "93/444, Chaudry Zila, Pimpri-Chinchwad 989245",
+            "type": "address",
+            "bbox": [
+                468,
+                1460,
+                1019,
+                1484
+            ]
+        },
+        {
+            "text": "IC4853900",
+            "type": "passport_number",
+            "bbox": [
+                324,
+                1550,
+                446,
+                1569
+            ]
+        }
+    ]
+}

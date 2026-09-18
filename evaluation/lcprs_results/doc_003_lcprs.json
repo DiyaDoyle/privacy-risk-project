@@ -1,0 +1,244 @@
+{
+  "lcprs_version": "2.0",
+  "document": "doc_003",
+  "image_width": 1025.0,
+  "image_height": 1675.0,
+  "formula": {
+    "region_weight": 0.6,
+    "distance_weight": 0.4,
+    "distance_function": "exponential",
+    "distance_decay_ratio": 0.15
+  },
+  "number_of_pii": 5,
+  "standalone_risk": 9.0,
+  "pair_risk_total": 25.735698899580616,
+  "document_risk": 34.73569889958061,
+  "maximum_possible_risk": 45.0,
+  "normalized_lcprs_score": 77.19044199906803,
+  "risk_category": "Critical",
+  "governance_action": "Restrict access, protect sensitive content, and require authorization before sharing.",
+  "pii_items": [
+    {
+      "pii_text": "Charles Tailor",
+      "pii_type": "person",
+      "pii_bbox": [
+        184.0,
+        1148.0,
+        331.0,
+        1171.0
+      ],
+      "layout_region_id": 9,
+      "layout_region_type": "table",
+      "layout_region_score": 0.5443109273910522,
+      "layout_region_bbox": [
+        23.170555114746094,
+        1040.0823974609375,
+        1019.268798828125,
+        1657.81689453125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "jsawhney@example.com",
+      "pii_type": "email",
+      "pii_bbox": [
+        491.0,
+        1218.0,
+        764.0,
+        1242.0
+      ],
+      "layout_region_id": 9,
+      "layout_region_type": "table",
+      "layout_region_score": 0.5443109273910522,
+      "layout_region_bbox": [
+        23.170555114746094,
+        1040.0823974609375,
+        1019.268798828125,
+        1657.81689453125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "02772642855",
+      "pii_type": "phone_number",
+      "pii_bbox": [
+        353.0,
+        1347.0,
+        495.0,
+        1370.0
+      ],
+      "layout_region_id": 9,
+      "layout_region_type": "table",
+      "layout_region_score": 0.5443109273910522,
+      "layout_region_bbox": [
+        23.170555114746094,
+        1040.0823974609375,
+        1019.268798828125,
+        1657.81689453125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "04 August 1967",
+      "pii_type": "date_of_birth",
+      "pii_bbox": [
+        827.0,
+        1328.0,
+        993.0,
+        1351.0
+      ],
+      "layout_region_id": 9,
+      "layout_region_type": "table",
+      "layout_region_score": 0.5443109273910522,
+      "layout_region_bbox": [
+        23.170555114746094,
+        1040.0823974609375,
+        1019.268798828125,
+        1657.81689453125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "IC4853900",
+      "pii_type": "passport_number",
+      "pii_bbox": [
+        325.0,
+        1547.0,
+        441.0,
+        1570.0
+      ],
+      "layout_region_id": 9,
+      "layout_region_type": "table",
+      "layout_region_score": 0.5443109273910522,
+      "layout_region_bbox": [
+        23.170555114746094,
+        1040.0823974609375,
+        1019.268798828125,
+        1657.81689453125
+      ],
+      "mapping_method": "center_inside"
+    }
+  ],
+  "pair_results": [
+    {
+      "pii_a": "Charles Tailor",
+      "pii_a_type": "person",
+      "severity_a": 1.0,
+      "pii_b": "jsawhney@example.com",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.27839640023260553,
+      "relationship": 0.7113585600930422,
+      "pair_risk": 1.7783964002326056
+    },
+    {
+      "pii_a": "Charles Tailor",
+      "pii_a_type": "person",
+      "severity_a": 1.0,
+      "pii_b": "02772642855",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.41442484055829987,
+      "relationship": 0.7657699362233199,
+      "pair_risk": 1.9144248405582998
+    },
+    {
+      "pii_a": "Charles Tailor",
+      "pii_a_type": "person",
+      "severity_a": 1.0,
+      "pii_b": "04 August 1967",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": true,
+      "distance_closeness": 0.10046863419759976,
+      "relationship": 0.6401874536790398,
+      "pair_risk": 1.9205623610371196
+    },
+    {
+      "pii_a": "Charles Tailor",
+      "pii_a_type": "person",
+      "severity_a": 1.0,
+      "pii_b": "IC4853900",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": true,
+      "distance_closeness": 0.24171691678616605,
+      "relationship": 0.6966867667144664,
+      "pair_risk": 2.7867470668578656
+    },
+    {
+      "pii_a": "jsawhney@example.com",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "02772642855",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.4417256470472454,
+      "relationship": 0.7766902588188982,
+      "pair_risk": 2.3300707764566946
+    },
+    {
+      "pii_a": "jsawhney@example.com",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "04 August 1967",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": true,
+      "distance_closeness": 0.3575133085479936,
+      "relationship": 0.7430053234191974,
+      "pair_risk": 2.600518631967191
+    },
+    {
+      "pii_a": "jsawhney@example.com",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "IC4853900",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": true,
+      "distance_closeness": 0.24902096219969802,
+      "relationship": 0.6996083848798792,
+      "pair_risk": 3.1482377319594566
+    },
+    {
+      "pii_a": "02772642855",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "04 August 1967",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": true,
+      "distance_closeness": 0.19182369131488483,
+      "relationship": 0.6767294765259539,
+      "pair_risk": 2.368553167840839
+    },
+    {
+      "pii_a": "02772642855",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "IC4853900",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": true,
+      "distance_closeness": 0.5000241363813084,
+      "relationship": 0.8000096545525234,
+      "pair_risk": 3.6000434454863552
+    },
+    {
+      "pii_a": "04 August 1967",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "IC4853900",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": true,
+      "distance_closeness": 0.14407223859209436,
+      "relationship": 0.6576288954368377,
+      "pair_risk": 3.288144477184188
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 from paddleocr import LayoutDetection
 import os
 
-IMAGE_PATH = "sample.png"
+IMAGE_PATH = "../sample.png"
 OUTPUT_DIR = "layout_output"
 
 if not os.path.exists(IMAGE_PATH):

@@ -1,0 +1,343 @@
+{
+  "document": "0014_e91de822f267de35c7e42bc6478940152a4b7f36afa1506713166d43c2669882_two_column",
+  "image_width": 1025,
+  "image_height": 1025,
+  "layout_region_count": 14,
+  "pii_prediction_count": 7,
+  "pii_layout_mapped_count": 7,
+  "layout_mapping_rate": 1.0,
+  "layout_regions": [
+    {
+      "region_id": 0,
+      "label": "text",
+      "score": 0.9549567103385925,
+      "bbox": [
+        57.015769958496094,
+        805.38037109375,
+        466.78106689453125,
+        975.3699340820312
+      ]
+    },
+    {
+      "region_id": 1,
+      "label": "text",
+      "score": 0.9438202381134033,
+      "bbox": [
+        523.8455200195312,
+        203.23526000976562,
+        951.3084716796875,
+        286.7691650390625
+      ]
+    },
+    {
+      "region_id": 2,
+      "label": "text",
+      "score": 0.9392359852790833,
+      "bbox": [
+        524.90673828125,
+        305.7939147949219,
+        952.5458984375,
+        392.40576171875
+      ]
+    },
+    {
+      "region_id": 3,
+      "label": "text",
+      "score": 0.9229308366775513,
+      "bbox": [
+        741.0885620117188,
+        444.7783508300781,
+        955.4231567382812,
+        698.8897705078125
+      ]
+    },
+    {
+      "region_id": 4,
+      "label": "image",
+      "score": 0.9207587838172913,
+      "bbox": [
+        262.062255859375,
+        401.19854736328125,
+        728.2259521484375,
+        679.5823364257812
+      ]
+    },
+    {
+      "region_id": 5,
+      "label": "text",
+      "score": 0.916840136051178,
+      "bbox": [
+        57.094078063964844,
+        201.88711547851562,
+        471.451171875,
+        389.9286804199219
+      ]
+    },
+    {
+      "region_id": 6,
+      "label": "text",
+      "score": 0.9143245816230774,
+      "bbox": [
+        57.324588775634766,
+        719.1068725585938,
+        462.5421447753906,
+        785.9447021484375
+      ]
+    },
+    {
+      "region_id": 7,
+      "label": "text",
+      "score": 0.91031813621521,
+      "bbox": [
+        523.6145629882812,
+        702.8262939453125,
+        905.5587158203125,
+        752.4814453125
+      ]
+    },
+    {
+      "region_id": 8,
+      "label": "text",
+      "score": 0.8902299404144287,
+      "bbox": [
+        523.4168701171875,
+        879.995361328125,
+        830.3004150390625,
+        974.2660522460938
+      ]
+    },
+    {
+      "region_id": 9,
+      "label": "text",
+      "score": 0.8711400032043457,
+      "bbox": [
+        57.55023193359375,
+        513.244140625,
+        244.07568359375,
+        683.2843017578125
+      ]
+    },
+    {
+      "region_id": 10,
+      "label": "image",
+      "score": 0.7744736671447754,
+      "bbox": [
+        519.5023193359375,
+        802.21533203125,
+        841.1207885742188,
+        870.9161376953125
+      ]
+    },
+    {
+      "region_id": 11,
+      "label": "text",
+      "score": 0.634138286113739,
+      "bbox": [
+        58.13317108154297,
+        388.7500915527344,
+        248.75245666503906,
+        491.8829345703125
+      ]
+    },
+    {
+      "region_id": 12,
+      "label": "text",
+      "score": 0.5663944482803345,
+      "bbox": [
+        525.9007568359375,
+        770.4931640625,
+        612.7476806640625,
+        786.53857421875
+      ]
+    },
+    {
+      "region_id": 13,
+      "label": "image",
+      "score": 0.5329360365867615,
+      "bbox": [
+        3.4158692359924316,
+        27.75661849975586,
+        1022.959716796875,
+        184.84304809570312
+      ]
+    }
+  ],
+  "pii_mappings": [
+    {
+      "pii_text": "David R. Lumley",
+      "pii_type": "full_name",
+      "confidence": 0.9837865233421326,
+      "pii_bbox": [
+        535.0,
+        880.0,
+        659.0,
+        897.0
+      ],
+      "ocr_words": [
+        "David",
+        "R",
+        "Lumley"
+      ],
+      "layout_region_id": 8,
+      "layout_region_type": "text",
+      "layout_region_score": 0.8902299404144287,
+      "layout_region_bbox": [
+        523.4168701171875,
+        879.995361328125,
+        830.3004150390625,
+        974.2660522460938
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "Damol R. Lumley",
+      "pii_type": "full_name",
+      "confidence": 0.9775992631912231,
+      "pii_bbox": [
+        566.0,
+        796.0,
+        830.0,
+        874.0
+      ],
+      "ocr_words": [
+        "Damol",
+        "R",
+        "Lumley"
+      ],
+      "layout_region_id": 10,
+      "layout_region_type": "image",
+      "layout_region_score": 0.7744736671447754,
+      "layout_region_bbox": [
+        519.5023193359375,
+        802.21533203125,
+        841.1207885742188,
+        870.9161376953125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "raymond57@example.netd",
+      "pii_type": "email",
+      "confidence": 0.9999138116836548,
+      "pii_bbox": [
+        121.0,
+        825.0,
+        327.0,
+        840.0
+      ],
+      "ocr_words": [
+        "raymond57",
+        "example",
+        "netd"
+      ],
+      "layout_region_id": 0,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9549567103385925,
+      "layout_region_bbox": [
+        57.015769958496094,
+        805.38037109375,
+        466.78106689453125,
+        975.3699340820312
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "213.331.5098x393",
+      "pii_type": "phone_number",
+      "confidence": 0.9999938011169434,
+      "pii_bbox": [
+        121.0,
+        264.0,
+        249.0,
+        281.0
+      ],
+      "ocr_words": [
+        "213.331.5098x393"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.916840136051178,
+      "layout_region_bbox": [
+        57.094078063964844,
+        201.88711547851562,
+        471.451171875,
+        389.9286804199219
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "10518",
+      "pii_type": "postal_code",
+      "confidence": 0.9163358211517334,
+      "pii_bbox": [
+        815.0,
+        443.0,
+        852.0,
+        463.0
+      ],
+      "ocr_words": [
+        "10518"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9229308366775513,
+      "layout_region_bbox": [
+        741.0885620117188,
+        444.7783508300781,
+        955.4231567382812,
+        698.8897705078125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "HZ382997",
+      "pii_type": "passport_number",
+      "confidence": 0.996369481086731,
+      "pii_bbox": [
+        600.0,
+        314.0,
+        669.0,
+        333.0
+      ],
+      "ocr_words": [
+        "HZ382997"
+      ],
+      "layout_region_id": 2,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9392359852790833,
+      "layout_region_bbox": [
+        524.90673828125,
+        305.7939147949219,
+        952.5458984375,
+        392.40576171875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "January 25, 2011",
+      "pii_type": "transaction_date",
+      "confidence": 0.524783194065094,
+      "pii_bbox": [
+        533.0,
+        961.0,
+        652.0,
+        975.0
+      ],
+      "ocr_words": [
+        "January",
+        "25",
+        "2011"
+      ],
+      "layout_region_id": 8,
+      "layout_region_type": "text",
+      "layout_region_score": 0.8902299404144287,
+      "layout_region_bbox": [
+        523.4168701171875,
+        879.995361328125,
+        830.3004150390625,
+        974.2660522460938
+      ],
+      "mapping_method": "center_inside"
+    }
+  ]
+}

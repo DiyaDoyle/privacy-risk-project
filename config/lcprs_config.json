@@ -1,0 +1,82 @@
+{
+    "paths": {
+        "stage2_results": "evaluation/stage2_results",
+        "document_images": "evaluation/stage1_images",
+        "output_results": "evaluation/lcprs_results"
+    },
+
+    "formula": {
+        "region_weight": 0.60,
+        "distance_weight": 0.40,
+
+        "distance_function": "exponential",
+
+        "distance_decay_ratio": 0.15
+    },
+
+    "severity": {
+        "person": 1.0,
+        "full_name": 1.0,
+        "first_name": 0.8,
+        "middle_name": 0.8,
+        "last_name": 0.8,
+
+        "date_of_birth": 2.0,
+
+        "email": 1.5,
+        "phone_number": 1.5,
+
+        "address": 1.5,
+        "street_address": 1.5,
+        "city": 0.8,
+        "state_or_region": 0.8,
+        "postal_code": 1.0,
+        "country": 0.5,
+
+        "government_id": 3.0,
+        "national_id_number": 3.0,
+        "passport_number": 3.0,
+        "drivers_license_number": 3.0,
+        "license_number": 2.5,
+        "tax_id": 3.0,
+        "tax_number": 3.0,
+
+        "bank_account": 3.0,
+        "account_number": 3.0,
+        "routing_number": 2.5,
+        "iban": 3.0,
+        "payment_card": 3.0,
+        "card_number": 3.0,
+        "card_expiry": 1.5,
+        "card_cvv": 3.0,
+
+        "username": 1.0,
+        "ip_address": 1.0,
+        "account_id": 1.5,
+        "sensitive_account_id": 2.5,
+
+        "password": 3.0,
+        "secret": 3.0,
+        "api_key": 3.0,
+        "access_token": 3.0,
+        "recovery_code": 3.0,
+
+        "sensitive_date": 1.5,
+        "document_date": 0.5,
+        "expiration_date": 1.0,
+        "transaction_date": 0.5
+    },
+
+    "risk_thresholds": {
+        "low": 25.0,
+        "medium": 50.0,
+        "high": 75.0
+    },
+
+    "governance_actions": {
+        "Low": "Normal handling; standard document controls.",
+        "Medium": "Apply controlled access and review before sharing.",
+        "High": "Restrict access and review before external sharing.",
+        "Critical": "Restrict access, protect sensitive content, and require authorization before sharing."
+    }
+}

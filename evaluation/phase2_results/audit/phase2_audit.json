@@ -1,0 +1,594 @@
+{
+  "phase": 2,
+  "audit_type": "LCPRS arithmetic and layout audit",
+  "documents_audited": 15,
+  "arithmetic_consistent_documents": 15,
+  "documents": [
+    {
+      "document": "0001_5d0acb6c8bbbcf1c37170d09102daf9fc3c1a4afe3d83cdbf9e23323daa85f7f_clustered",
+      "status": "audited",
+      "arithmetic_consistent": true,
+      "checks": {
+        "standalone_risk": true,
+        "pair_risk_total": true,
+        "document_risk": true,
+        "maximum_possible_risk": true,
+        "normalized_score": true,
+        "risk_category": true
+      },
+      "stored": {
+        "standalone_risk": 16.5,
+        "pair_risk_total": 88.64662022600237,
+        "document_risk": 105.14662022600237,
+        "maximum_possible_risk": 330.0,
+        "normalized_lcprs_score": 31.862612189697685,
+        "risk_category": "Medium"
+      },
+      "recalculated": {
+        "standalone_risk": 16.5,
+        "pair_risk_total": 88.64662022600237,
+        "document_risk": 105.14662022600237,
+        "maximum_possible_risk": 330.0,
+        "normalized_lcprs_score": 31.862612189697685,
+        "risk_category": "Medium"
+      },
+      "number_of_usable_pii": 20,
+      "layout_regions_used": 3,
+      "pair_count": 190,
+      "missing_severity_labels": [],
+      "condition": "clustered",
+      "base_group": "0001_5d0acb6c8bbbcf1c37170d09102daf9fc3c1a4afe3d83cdbf9e23323daa85f7f",
+      "score": 31.862612189697685,
+      "risk": "Medium",
+      "pii": 20,
+      "regions": 3
+    },
+    {
+      "document": "0002_5d0acb6c8bbbcf1c37170d09102daf9fc3c1a4afe3d83cdbf9e23323daa85f7f_two_column",
+      "status": "audited",
+      "arithmetic_consistent": true,
+      "checks": {
+        "standalone_risk": true,
+        "pair_risk_total": true,
+        "document_risk": true,
+        "maximum_possible_risk": true,
+        "normalized_score": true,
+        "risk_category": true
+      },
+      "stored": {
+        "standalone_risk": 13.5,
+        "pair_risk_total": 79.13520354643204,
+        "document_risk": 92.63520354643204,
+        "maximum_possible_risk": 283.5,
+        "normalized_lcprs_score": 32.675556806501596,
+        "risk_category": "Medium"
+      },
+      "recalculated": {
+        "standalone_risk": 13.5,
+        "pair_risk_total": 79.13520354643204,
+        "document_risk": 92.63520354643204,
+        "maximum_possible_risk": 283.5,
+        "normalized_lcprs_score": 32.675556806501596,
+        "risk_category": "Medium"
+      },
+      "number_of_usable_pii": 21,
+      "layout_regions_used": 4,
+      "pair_count": 210,
+      "missing_severity_labels": [],
+      "condition": "two_column",
+      "base_group": "0002_5d0acb6c8bbbcf1c37170d09102daf9fc3c1a4afe3d83cdbf9e23323daa85f7f",
+      "score": 32.675556806501596,
+      "risk": "Medium",
+      "pii": 21,
+      "regions": 4
+    },
+    {
+      "document": "0003_5d0acb6c8bbbcf1c37170d09102daf9fc3c1a4afe3d83cdbf9e23323daa85f7f_scattered",
+      "status": "audited",
+      "arithmetic_consistent": true,
+      "checks": {
+        "standalone_risk": true,
+        "pair_risk_total": true,
+        "document_risk": true,
+        "maximum_possible_risk": true,
+        "normalized_score": true,
+        "risk_category": true
+      },
+      "stored": {
+        "standalone_risk": 18.5,
+        "pair_risk_total": 95.01055045298669,
+        "document_risk": 113.51055045298669,
+        "maximum_possible_risk": 407.0,
+        "normalized_lcprs_score": 27.88957013586897,
+        "risk_category": "Medium"
+      },
+      "recalculated": {
+        "standalone_risk": 18.5,
+        "pair_risk_total": 95.01055045298669,
+        "document_risk": 113.51055045298669,
+        "maximum_possible_risk": 407.0,
+        "normalized_lcprs_score": 27.88957013586897,
+        "risk_category": "Medium"
+      },
+      "number_of_usable_pii": 22,
+      "layout_regions_used": 6,
+      "pair_count": 231,
+      "missing_severity_labels": [],
+      "condition": "scattered",
+      "base_group": "0003_5d0acb6c8bbbcf1c37170d09102daf9fc3c1a4afe3d83cdbf9e23323daa85f7f",
+      "score": 27.88957013586897,
+      "risk": "Medium",
+      "pii": 22,
+      "regions": 6
+    },
+    {
+      "document": "0004_4079232a7f3a712aa8b3d905175c3017f1d3b8373e16e37bcfb87eff4c96fbc5_clustered",
+      "status": "audited",
+      "arithmetic_consistent": true,
+      "checks": {
+        "standalone_risk": true,
+        "pair_risk_total": true,
+        "document_risk": true,
+        "maximum_possible_risk": true,
+        "normalized_score": true,
+        "risk_category": true
+      },
+      "stored": {
+        "standalone_risk": 16.4,
+        "pair_risk_total": 44.448970419801036,
+        "document_risk": 60.848970419801034,
+        "maximum_possible_risk": 180.4,
+        "normalized_lcprs_score": 33.73002794889193,
+        "risk_category": "Medium"
+      },
+      "recalculated": {
+        "standalone_risk": 16.4,
+        "pair_risk_total": 44.448970419801036,
+        "document_risk": 60.848970419801034,
+        "maximum_possible_risk": 180.4,
+        "normalized_lcprs_score": 33.73002794889193,
+        "risk_category": "Medium"
+      },
+      "number_of_usable_pii": 11,
+      "layout_regions_used": 5,
+      "pair_count": 55,
+      "missing_severity_labels": [],
+      "condition": "clustered",
+      "base_group": "0004_4079232a7f3a712aa8b3d905175c3017f1d3b8373e16e37bcfb87eff4c96fbc5",
+      "score": 33.73002794889193,
+      "risk": "Medium",
+      "pii": 11,
+      "regions": 5
+    },
+    {
+      "document": "0005_4079232a7f3a712aa8b3d905175c3017f1d3b8373e16e37bcfb87eff4c96fbc5_two_column",
+      "status": "audited",
+      "arithmetic_consistent": true,
+      "checks": {
+        "standalone_risk": true,
+        "pair_risk_total": true,
+        "document_risk": true,
+        "maximum_possible_risk": true,
+        "normalized_score": true,
+        "risk_category": true
+      },
+      "stored": {
+        "standalone_risk": 16.8,
+        "pair_risk_total": 52.36149036014741,
+        "document_risk": 69.16149036014741,
+        "maximum_possible_risk": 268.8000000000001,
+        "normalized_lcprs_score": 25.729721116126257,
+        "risk_category": "Medium"
+      },
+      "recalculated": {
+        "standalone_risk": 16.8,
+        "pair_risk_total": 52.36149036014741,
+        "document_risk": 69.16149036014741,
+        "maximum_possible_risk": 268.8000000000001,
+        "normalized_lcprs_score": 25.729721116126257,
+        "risk_category": "Medium"
+      },
+      "number_of_usable_pii": 16,
+      "layout_regions_used": 7,
+      "pair_count": 120,
+      "missing_severity_labels": [],
+      "condition": "two_column",
+      "base_group": "0005_4079232a7f3a712aa8b3d905175c3017f1d3b8373e16e37bcfb87eff4c96fbc5",
+      "score": 25.729721116126257,
+      "risk": "Medium",
+      "pii": 16,
+      "regions": 7
+    },
+    {
+      "document": "0006_4079232a7f3a712aa8b3d905175c3017f1d3b8373e16e37bcfb87eff4c96fbc5_scattered",
+      "status": "audited",
+      "arithmetic_consistent": true,
+      "checks": {
+        "standalone_risk": true,
+        "pair_risk_total": true,
+        "document_risk": true,
+        "maximum_possible_risk": true,
+        "normalized_score": true,
+        "risk_category": true
+      },
+      "stored": {
+        "standalone_risk": 18.3,
+        "pair_risk_total": 46.16719026458646,
+        "document_risk": 64.46719026458646,
+        "maximum_possible_risk": 274.5000000000001,
+        "normalized_lcprs_score": 23.485315214785587,
+        "risk_category": "Low"
+      },
+      "recalculated": {
+        "standalone_risk": 18.3,
+        "pair_risk_total": 46.16719026458646,
+        "document_risk": 64.46719026458646,
+        "maximum_possible_risk": 274.5000000000001,
+        "normalized_lcprs_score": 23.485315214785587,
+        "risk_category": "Low"
+      },
+      "number_of_usable_pii": 15,
+      "layout_regions_used": 6,
+      "pair_count": 105,
+      "missing_severity_labels": [],
+      "condition": "scattered",
+      "base_group": "0006_4079232a7f3a712aa8b3d905175c3017f1d3b8373e16e37bcfb87eff4c96fbc5",
+      "score": 23.485315214785587,
+      "risk": "Low",
+      "pii": 15,
+      "regions": 6
+    },
+    {
+      "document": "0007_99ec49a91523b06062803243de5eeff9bc6cf388f584523b786785e922f9691a_clustered",
+      "status": "audited",
+      "arithmetic_consistent": true,
+      "checks": {
+        "standalone_risk": true,
+        "pair_risk_total": true,
+        "document_risk": true,
+        "maximum_possible_risk": true,
+        "normalized_score": true,
+        "risk_category": true
+      },
+      "stored": {
+        "standalone_risk": 9.0,
+        "pair_risk_total": 28.742272234319262,
+        "document_risk": 37.74227223431926,
+        "maximum_possible_risk": 45.0,
+        "normalized_lcprs_score": 83.87171607626502,
+        "risk_category": "Critical"
+      },
+      "recalculated": {
+        "standalone_risk": 9.0,
+        "pair_risk_total": 28.742272234319262,
+        "document_risk": 37.74227223431926,
+        "maximum_possible_risk": 45.0,
+        "normalized_lcprs_score": 83.87171607626502,
+        "risk_category": "Critical"
+      },
+      "number_of_usable_pii": 5,
+      "layout_regions_used": 1,
+      "pair_count": 10,
+      "missing_severity_labels": [],
+      "condition": "clustered",
+      "base_group": "0007_99ec49a91523b06062803243de5eeff9bc6cf388f584523b786785e922f9691a",
+      "score": 83.87171607626502,
+      "risk": "Critical",
+      "pii": 5,
+      "regions": 1
+    },
+    {
+      "document": "0008_99ec49a91523b06062803243de5eeff9bc6cf388f584523b786785e922f9691a_two_column",
+      "status": "audited",
+      "arithmetic_consistent": true,
+      "checks": {
+        "standalone_risk": true,
+        "pair_risk_total": true,
+        "document_risk": true,
+        "maximum_possible_risk": true,
+        "normalized_score": true,
+        "risk_category": true
+      },
+      "stored": {
+        "standalone_risk": 7.5,
+        "pair_risk_total": 1.7202625069673194,
+        "document_risk": 9.22026250696732,
+        "maximum_possible_risk": 30.0,
+        "normalized_lcprs_score": 30.73420835655773,
+        "risk_category": "Medium"
+      },
+      "recalculated": {
+        "standalone_risk": 7.5,
+        "pair_risk_total": 1.7202625069673194,
+        "document_risk": 9.22026250696732,
+        "maximum_possible_risk": 30.0,
+        "normalized_lcprs_score": 30.73420835655773,
+        "risk_category": "Medium"
+      },
+      "number_of_usable_pii": 4,
+      "layout_regions_used": 4,
+      "pair_count": 6,
+      "missing_severity_labels": [],
+      "condition": "two_column",
+      "base_group": "0008_99ec49a91523b06062803243de5eeff9bc6cf388f584523b786785e922f9691a",
+      "score": 30.73420835655773,
+      "risk": "Medium",
+      "pii": 4,
+      "regions": 4
+    },
+    {
+      "document": "0009_99ec49a91523b06062803243de5eeff9bc6cf388f584523b786785e922f9691a_scattered",
+      "status": "audited",
+      "arithmetic_consistent": true,
+      "checks": {
+        "standalone_risk": true,
+        "pair_risk_total": true,
+        "document_risk": true,
+        "maximum_possible_risk": true,
+        "normalized_score": true,
+        "risk_category": true
+      },
+      "stored": {
+        "standalone_risk": 9.0,
+        "pair_risk_total": 2.1137087604659266,
+        "document_risk": 11.113708760465926,
+        "maximum_possible_risk": 45.0,
+        "normalized_lcprs_score": 24.697130578813166,
+        "risk_category": "Low"
+      },
+      "recalculated": {
+        "standalone_risk": 9.0,
+        "pair_risk_total": 2.1137087604659266,
+        "document_risk": 11.113708760465926,
+        "maximum_possible_risk": 45.0,
+        "normalized_lcprs_score": 24.697130578813166,
+        "risk_category": "Low"
+      },
+      "number_of_usable_pii": 5,
+      "layout_regions_used": 5,
+      "pair_count": 10,
+      "missing_severity_labels": [],
+      "condition": "scattered",
+      "base_group": "0009_99ec49a91523b06062803243de5eeff9bc6cf388f584523b786785e922f9691a",
+      "score": 24.697130578813166,
+      "risk": "Low",
+      "pii": 5,
+      "regions": 5
+    },
+    {
+      "document": "0010_eacbc7b084332bbcb5683235c58e13a699d65d2792bb9c132d4bc712946c5f02_clustered",
+      "status": "audited",
+      "arithmetic_consistent": true,
+      "checks": {
+        "standalone_risk": true,
+        "pair_risk_total": true,
+        "document_risk": true,
+        "maximum_possible_risk": true,
+        "normalized_score": true,
+        "risk_category": true
+      },
+      "stored": {
+        "standalone_risk": 13.9,
+        "pair_risk_total": 98.0485102951755,
+        "document_risk": 111.94851029517551,
+        "maximum_possible_risk": 152.89999999999995,
+        "normalized_lcprs_score": 73.21681510475837,
+        "risk_category": "High"
+      },
+      "recalculated": {
+        "standalone_risk": 13.9,
+        "pair_risk_total": 98.0485102951755,
+        "document_risk": 111.94851029517551,
+        "maximum_possible_risk": 152.89999999999995,
+        "normalized_lcprs_score": 73.21681510475837,
+        "risk_category": "High"
+      },
+      "number_of_usable_pii": 11,
+      "layout_regions_used": 1,
+      "pair_count": 55,
+      "missing_severity_labels": [],
+      "condition": "clustered",
+      "base_group": "0010_eacbc7b084332bbcb5683235c58e13a699d65d2792bb9c132d4bc712946c5f02",
+      "score": 73.21681510475837,
+      "risk": "High",
+      "pii": 11,
+      "regions": 1
+    },
+    {
+      "document": "0011_eacbc7b084332bbcb5683235c58e13a699d65d2792bb9c132d4bc712946c5f02_two_column",
+      "status": "audited",
+      "arithmetic_consistent": true,
+      "checks": {
+        "standalone_risk": true,
+        "pair_risk_total": true,
+        "document_risk": true,
+        "maximum_possible_risk": true,
+        "normalized_score": true,
+        "risk_category": true
+      },
+      "stored": {
+        "standalone_risk": 8.5,
+        "pair_risk_total": 34.739125617743305,
+        "document_risk": 43.239125617743305,
+        "maximum_possible_risk": 59.5,
+        "normalized_lcprs_score": 72.67079935755177,
+        "risk_category": "High"
+      },
+      "recalculated": {
+        "standalone_risk": 8.5,
+        "pair_risk_total": 34.739125617743305,
+        "document_risk": 43.239125617743305,
+        "maximum_possible_risk": 59.5,
+        "normalized_lcprs_score": 72.67079935755177,
+        "risk_category": "High"
+      },
+      "number_of_usable_pii": 7,
+      "layout_regions_used": 1,
+      "pair_count": 21,
+      "missing_severity_labels": [],
+      "condition": "two_column",
+      "base_group": "0011_eacbc7b084332bbcb5683235c58e13a699d65d2792bb9c132d4bc712946c5f02",
+      "score": 72.67079935755177,
+      "risk": "High",
+      "pii": 7,
+      "regions": 1
+    },
+    {
+      "document": "0012_eacbc7b084332bbcb5683235c58e13a699d65d2792bb9c132d4bc712946c5f02_scattered",
+      "status": "audited",
+      "arithmetic_consistent": true,
+      "checks": {
+        "standalone_risk": true,
+        "pair_risk_total": true,
+        "document_risk": true,
+        "maximum_possible_risk": true,
+        "normalized_score": true,
+        "risk_category": true
+      },
+      "stored": {
+        "standalone_risk": 14.9,
+        "pair_risk_total": 111.81105221790057,
+        "document_risk": 126.71105221790057,
+        "maximum_possible_risk": 178.79999999999993,
+        "normalized_lcprs_score": 70.86747886907195,
+        "risk_category": "High"
+      },
+      "recalculated": {
+        "standalone_risk": 14.899999999999999,
+        "pair_risk_total": 111.81105221790057,
+        "document_risk": 126.71105221790057,
+        "maximum_possible_risk": 178.79999999999993,
+        "normalized_lcprs_score": 70.86747886907195,
+        "risk_category": "High"
+      },
+      "number_of_usable_pii": 12,
+      "layout_regions_used": 1,
+      "pair_count": 66,
+      "missing_severity_labels": [],
+      "condition": "scattered",
+      "base_group": "0012_eacbc7b084332bbcb5683235c58e13a699d65d2792bb9c132d4bc712946c5f02",
+      "score": 70.86747886907195,
+      "risk": "High",
+      "pii": 12,
+      "regions": 1
+    },
+    {
+      "document": "0013_e91de822f267de35c7e42bc6478940152a4b7f36afa1506713166d43c2669882_clustered",
+      "status": "audited",
+      "arithmetic_consistent": true,
+      "checks": {
+        "standalone_risk": true,
+        "pair_risk_total": true,
+        "document_risk": true,
+        "maximum_possible_risk": true,
+        "normalized_score": true,
+        "risk_category": true
+      },
+      "stored": {
+        "standalone_risk": 12.0,
+        "pair_risk_total": 42.76196183808613,
+        "document_risk": 54.76196183808613,
+        "maximum_possible_risk": 96.0,
+        "normalized_lcprs_score": 57.043710248006384,
+        "risk_category": "High"
+      },
+      "recalculated": {
+        "standalone_risk": 12.0,
+        "pair_risk_total": 42.76196183808613,
+        "document_risk": 54.76196183808613,
+        "maximum_possible_risk": 96.0,
+        "normalized_lcprs_score": 57.043710248006384,
+        "risk_category": "High"
+      },
+      "number_of_usable_pii": 8,
+      "layout_regions_used": 3,
+      "pair_count": 28,
+      "missing_severity_labels": [],
+      "condition": "clustered",
+      "base_group": "0013_e91de822f267de35c7e42bc6478940152a4b7f36afa1506713166d43c2669882",
+      "score": 57.043710248006384,
+      "risk": "High",
+      "pii": 8,
+      "regions": 3
+    },
+    {
+      "document": "0014_e91de822f267de35c7e42bc6478940152a4b7f36afa1506713166d43c2669882_two_column",
+      "status": "audited",
+      "arithmetic_consistent": true,
+      "checks": {
+        "standalone_risk": true,
+        "pair_risk_total": true,
+        "document_risk": true,
+        "maximum_possible_risk": true,
+        "normalized_score": true,
+        "risk_category": true
+      },
+      "stored": {
+        "standalone_risk": 9.5,
+        "pair_risk_total": 4.180559022724777,
+        "document_risk": 13.680559022724777,
+        "maximum_possible_risk": 66.5,
+        "normalized_lcprs_score": 20.572269207104927,
+        "risk_category": "Low"
+      },
+      "recalculated": {
+        "standalone_risk": 9.5,
+        "pair_risk_total": 4.180559022724777,
+        "document_risk": 13.680559022724777,
+        "maximum_possible_risk": 66.5,
+        "normalized_lcprs_score": 20.572269207104927,
+        "risk_category": "Low"
+      },
+      "number_of_usable_pii": 7,
+      "layout_regions_used": 6,
+      "pair_count": 21,
+      "missing_severity_labels": [],
+      "condition": "two_column",
+      "base_group": "0014_e91de822f267de35c7e42bc6478940152a4b7f36afa1506713166d43c2669882",
+      "score": 20.572269207104927,
+      "risk": "Low",
+      "pii": 7,
+      "regions": 6
+    },
+    {
+      "document": "0015_e91de822f267de35c7e42bc6478940152a4b7f36afa1506713166d43c2669882_scattered",
+      "status": "audited",
+      "arithmetic_consistent": true,
+      "checks": {
+        "standalone_risk": true,
+        "pair_risk_total": true,
+        "document_risk": true,
+        "maximum_possible_risk": true,
+        "normalized_score": true,
+        "risk_category": true
+      },
+      "stored": {
+        "standalone_risk": 12.8,
+        "pair_risk_total": 8.598578763387087,
+        "document_risk": 21.398578763387086,
+        "maximum_possible_risk": 115.19999999999999,
+        "normalized_lcprs_score": 18.57515517655129,
+        "risk_category": "Low"
+      },
+      "recalculated": {
+        "standalone_risk": 12.8,
+        "pair_risk_total": 8.598578763387087,
+        "document_risk": 21.398578763387086,
+        "maximum_possible_risk": 115.19999999999999,
+        "normalized_lcprs_score": 18.57515517655129,
+        "risk_category": "Low"
+      },
+      "number_of_usable_pii": 9,
+      "layout_regions_used": 8,
+      "pair_count": 36,
+      "missing_severity_labels": [],
+      "condition": "scattered",
+      "base_group": "0015_e91de822f267de35c7e42bc6478940152a4b7f36afa1506713166d43c2669882",
+      "score": 18.57515517655129,
+      "risk": "Low",
+      "pii": 9,
+      "regions": 8
+    }
+  ],
+  "paired_layout_variants": []
+}

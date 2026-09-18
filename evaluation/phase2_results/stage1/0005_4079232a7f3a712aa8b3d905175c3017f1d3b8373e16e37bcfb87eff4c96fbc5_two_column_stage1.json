@@ -1,0 +1,620 @@
+{
+  "document": "0005_4079232a7f3a712aa8b3d905175c3017f1d3b8373e16e37bcfb87eff4c96fbc5_two_column",
+  "ground_truth_count": 6,
+  "gliner_detected_count": 16,
+  "ocr_mapped_count": 16,
+  "ground_truth_matched_count": 2,
+  "ground_truth_match_rate": 0.3333333333333333,
+  "average_bbox_iou": 0.6418411435282156,
+  "ground_truth_comparisons": [
+    {
+      "ground_truth_text": "Kimberly Dudley",
+      "ground_truth_type": "person",
+      "ground_truth_bbox": [
+        231,
+        452,
+        360,
+        473
+      ],
+      "predicted_text": null,
+      "predicted_type": null,
+      "predicted_bbox": null,
+      "iou": 0.0
+    },
+    {
+      "ground_truth_text": "smiller@example.net",
+      "ground_truth_type": "email",
+      "ground_truth_bbox": [
+        237,
+        460,
+        401,
+        483
+      ],
+      "predicted_text": "smiller@example.net",
+      "predicted_type": "email",
+      "predicted_confidence": 0.9998370409011841,
+      "predicted_bbox": [
+        245.0,
+        463.0,
+        397.0,
+        480.0
+      ],
+      "iou": 0.6850477200424178
+    },
+    {
+      "ground_truth_text": "+1-659-931-0341x316",
+      "ground_truth_type": "phone_number",
+      "ground_truth_bbox": [
+        234,
+        102,
+        403,
+        120
+      ],
+      "predicted_text": null,
+      "predicted_type": null,
+      "predicted_bbox": null,
+      "iou": 0.0
+    },
+    {
+      "ground_truth_text": "21 December 1993",
+      "ground_truth_type": "date_of_birth",
+      "ground_truth_bbox": [
+        557,
+        351,
+        704,
+        369
+      ],
+      "predicted_text": null,
+      "predicted_type": null,
+      "predicted_bbox": null,
+      "iou": 0.0
+    },
+    {
+      "ground_truth_text": "55341 Amanda Gardens Apt. 764",
+      "ground_truth_type": "address",
+      "ground_truth_bbox": [
+        544,
+        359,
+        797,
+        381
+      ],
+      "predicted_text": "55341 Amanda Gardens Apt, 764",
+      "predicted_type": "street_address",
+      "predicted_confidence": 0.9599772691726685,
+      "predicted_bbox": [
+        552.0,
+        363.0,
+        790.0,
+        377.0
+      ],
+      "iou": 0.5986345670140136
+    },
+    {
+      "ground_truth_text": "ZK835030",
+      "ground_truth_type": "passport_number",
+      "ground_truth_bbox": [
+        616,
+        764,
+        697,
+        782
+      ],
+      "predicted_text": null,
+      "predicted_type": null,
+      "predicted_bbox": null,
+      "iou": 0.0
+    }
+  ],
+  "detected_entities": [
+    {
+      "text": "Joseph Marie de Maistre",
+      "type": "full_name",
+      "score": 0.9613853096961975
+    },
+    {
+      "text": "smiller@example.net",
+      "type": "email",
+      "score": 0.9998370409011841
+    },
+    {
+      "text": "+1-659-931-0341x316r",
+      "type": "phone_number",
+      "score": 0.9999830722808838
+    },
+    {
+      "text": "55341 Amanda Gardens Apt, 764",
+      "type": "street_address",
+      "score": 0.9599772691726685
+    },
+    {
+      "text": "New Orleans",
+      "type": "city",
+      "score": 0.9032009243965149
+    },
+    {
+      "text": "ZK83503002",
+      "type": "passport_number",
+      "score": 0.9895583391189575
+    },
+    {
+      "text": "IBERIABANK Corporation",
+      "type": "iban",
+      "score": 0.9347956776618958
+    },
+    {
+      "text": "2002",
+      "type": "transaction_date",
+      "score": 0.89369136095047
+    },
+    {
+      "text": "2001",
+      "type": "transaction_date",
+      "score": 0.8708784580230713
+    },
+    {
+      "text": "2002",
+      "type": "transaction_date",
+      "score": 0.8591206669807434
+    },
+    {
+      "text": "2001",
+      "type": "transaction_date",
+      "score": 0.8317066431045532
+    },
+    {
+      "text": "2002",
+      "type": "transaction_date",
+      "score": 0.8274984955787659
+    },
+    {
+      "text": "2002",
+      "type": "transaction_date",
+      "score": 0.7956089973449707
+    },
+    {
+      "text": "2001",
+      "type": "transaction_date",
+      "score": 0.7847464084625244
+    },
+    {
+      "text": "2001",
+      "type": "transaction_date",
+      "score": 0.6997647881507874
+    },
+    {
+      "text": "2001",
+      "type": "transaction_date",
+      "score": 0.6833478808403015
+    }
+  ],
+  "mapped_predictions": [
+    {
+      "text": "Joseph Marie de Maistre",
+      "type": "full_name",
+      "score": 0.9613853096961975,
+      "ocr_words": [
+        "Joseph",
+        "Marie",
+        "de",
+        "Maistre"
+      ],
+      "ocr_word_boxes": [
+        [
+          270.0,
+          772.0,
+          310.0,
+          785.0
+        ],
+        [
+          322.0,
+          772.0,
+          352.0,
+          785.0
+        ],
+        [
+          363.0,
+          772.0,
+          373.0,
+          785.0
+        ],
+        [
+          387.0,
+          772.0,
+          426.0,
+          785.0
+        ]
+      ],
+      "predicted_bbox": [
+        270.0,
+        772.0,
+        426.0,
+        785.0
+      ]
+    },
+    {
+      "text": "smiller@example.net",
+      "type": "email",
+      "score": 0.9998370409011841,
+      "ocr_words": [
+        "smiller",
+        "example",
+        "net"
+      ],
+      "ocr_word_boxes": [
+        [
+          245.0,
+          463.0,
+          287.0,
+          480.0
+        ],
+        [
+          310.0,
+          463.0,
+          366.0,
+          480.0
+        ],
+        [
+          378.0,
+          463.0,
+          397.0,
+          480.0
+        ]
+      ],
+      "predicted_bbox": [
+        245.0,
+        463.0,
+        397.0,
+        480.0
+      ]
+    },
+    {
+      "text": "+1-659-931-0341x316r",
+      "type": "phone_number",
+      "score": 0.9999830722808838,
+      "ocr_words": [
+        "1-659-931-0341x316r"
+      ],
+      "ocr_word_boxes": [
+        [
+          250.0,
+          103.0,
+          417.0,
+          122.0
+        ]
+      ],
+      "predicted_bbox": [
+        250.0,
+        103.0,
+        417.0,
+        122.0
+      ]
+    },
+    {
+      "text": "55341 Amanda Gardens Apt, 764",
+      "type": "street_address",
+      "score": 0.9599772691726685,
+      "ocr_words": [
+        "55341",
+        "Amanda",
+        "Gardens",
+        "Apt",
+        "764"
+      ],
+      "ocr_word_boxes": [
+        [
+          552.0,
+          363.0,
+          589.0,
+          377.0
+        ],
+        [
+          603.0,
+          363.0,
+          655.0,
+          377.0
+        ],
+        [
+          671.0,
+          363.0,
+          722.0,
+          377.0
+        ],
+        [
+          739.0,
+          363.0,
+          755.0,
+          377.0
+        ],
+        [
+          772.0,
+          363.0,
+          790.0,
+          377.0
+        ]
+      ],
+      "predicted_bbox": [
+        552.0,
+        363.0,
+        790.0,
+        377.0
+      ]
+    },
+    {
+      "text": "New Orleans",
+      "type": "city",
+      "score": 0.9032009243965149,
+      "ocr_words": [
+        "New",
+        "Orleans"
+      ],
+      "ocr_word_boxes": [
+        [
+          649.0,
+          807.0,
+          668.0,
+          817.0
+        ],
+        [
+          681.0,
+          807.0,
+          719.0,
+          817.0
+        ]
+      ],
+      "predicted_bbox": [
+        649.0,
+        807.0,
+        719.0,
+        817.0
+      ]
+    },
+    {
+      "text": "ZK83503002",
+      "type": "passport_number",
+      "score": 0.9895583391189575,
+      "ocr_words": [
+        "ZK83503002"
+      ],
+      "ocr_word_boxes": [
+        [
+          624.0,
+          766.0,
+          711.0,
+          784.0
+        ]
+      ],
+      "predicted_bbox": [
+        624.0,
+        766.0,
+        711.0,
+        784.0
+      ]
+    },
+    {
+      "text": "IBERIABANK Corporation",
+      "type": "iban",
+      "score": 0.9347956776618958,
+      "ocr_words": [
+        "IBERIABANK",
+        "Corporation"
+      ],
+      "ocr_word_boxes": [
+        [
+          746.0,
+          109.0,
+          820.0,
+          122.0
+        ],
+        [
+          831.0,
+          109.0,
+          900.0,
+          122.0
+        ]
+      ],
+      "predicted_bbox": [
+        746.0,
+        109.0,
+        900.0,
+        122.0
+      ]
+    },
+    {
+      "text": "2002",
+      "type": "transaction_date",
+      "score": 0.89369136095047,
+      "ocr_words": [
+        "2002"
+      ],
+      "ocr_word_boxes": [
+        [
+          830.0,
+          248.0,
+          856.0,
+          261.0
+        ]
+      ],
+      "predicted_bbox": [
+        830.0,
+        248.0,
+        856.0,
+        261.0
+      ]
+    },
+    {
+      "text": "2001",
+      "type": "transaction_date",
+      "score": 0.8708784580230713,
+      "ocr_words": [
+        "2001"
+      ],
+      "ocr_word_boxes": [
+        [
+          715.0,
+          248.0,
+          739.0,
+          261.0
+        ]
+      ],
+      "predicted_bbox": [
+        715.0,
+        248.0,
+        739.0,
+        261.0
+      ]
+    },
+    {
+      "text": "2002",
+      "type": "transaction_date",
+      "score": 0.8591206669807434,
+      "ocr_words": [
+        "2002"
+      ],
+      "ocr_word_boxes": [
+        [
+          830.0,
+          248.0,
+          856.0,
+          261.0
+        ]
+      ],
+      "predicted_bbox": [
+        830.0,
+        248.0,
+        856.0,
+        261.0
+      ]
+    },
+    {
+      "text": "2001",
+      "type": "transaction_date",
+      "score": 0.8317066431045532,
+      "ocr_words": [
+        "2001"
+      ],
+      "ocr_word_boxes": [
+        [
+          715.0,
+          248.0,
+          739.0,
+          261.0
+        ]
+      ],
+      "predicted_bbox": [
+        715.0,
+        248.0,
+        739.0,
+        261.0
+      ]
+    },
+    {
+      "text": "2002",
+      "type": "transaction_date",
+      "score": 0.8274984955787659,
+      "ocr_words": [
+        "2002"
+      ],
+      "ocr_word_boxes": [
+        [
+          830.0,
+          248.0,
+          856.0,
+          261.0
+        ]
+      ],
+      "predicted_bbox": [
+        830.0,
+        248.0,
+        856.0,
+        261.0
+      ]
+    },
+    {
+      "text": "2002",
+      "type": "transaction_date",
+      "score": 0.7956089973449707,
+      "ocr_words": [
+        "2002"
+      ],
+      "ocr_word_boxes": [
+        [
+          830.0,
+          248.0,
+          856.0,
+          261.0
+        ]
+      ],
+      "predicted_bbox": [
+        830.0,
+        248.0,
+        856.0,
+        261.0
+      ]
+    },
+    {
+      "text": "2001",
+      "type": "transaction_date",
+      "score": 0.7847464084625244,
+      "ocr_words": [
+        "2001"
+      ],
+      "ocr_word_boxes": [
+        [
+          715.0,
+          248.0,
+          739.0,
+          261.0
+        ]
+      ],
+      "predicted_bbox": [
+        715.0,
+        248.0,
+        739.0,
+        261.0
+      ]
+    },
+    {
+      "text": "2001",
+      "type": "transaction_date",
+      "score": 0.6997647881507874,
+      "ocr_words": [
+        "2001"
+      ],
+      "ocr_word_boxes": [
+        [
+          715.0,
+          248.0,
+          739.0,
+          261.0
+        ]
+      ],
+      "predicted_bbox": [
+        715.0,
+        248.0,
+        739.0,
+        261.0
+      ]
+    },
+    {
+      "text": "2001",
+      "type": "transaction_date",
+      "score": 0.6833478808403015,
+      "ocr_words": [
+        "2001"
+      ],
+      "ocr_word_boxes": [
+        [
+          715.0,
+          248.0,
+          739.0,
+          261.0
+        ]
+      ],
+      "predicted_bbox": [
+        715.0,
+        248.0,
+        739.0,
+        261.0
+      ]
+    }
+  ]
+}

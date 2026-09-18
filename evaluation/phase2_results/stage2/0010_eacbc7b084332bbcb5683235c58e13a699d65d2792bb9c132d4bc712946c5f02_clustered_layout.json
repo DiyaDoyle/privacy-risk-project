@@ -1,0 +1,311 @@
+{
+  "document": "0010_eacbc7b084332bbcb5683235c58e13a699d65d2792bb9c132d4bc712946c5f02_clustered",
+  "image_width": 1025,
+  "image_height": 1025,
+  "layout_region_count": 2,
+  "pii_prediction_count": 11,
+  "pii_layout_mapped_count": 11,
+  "layout_mapping_rate": 1.0,
+  "layout_regions": [
+    {
+      "region_id": 0,
+      "label": "number",
+      "score": 0.7810438871383667,
+      "bbox": [
+        30.54900550842285,
+        990.1126098632812,
+        42.587486267089844,
+        999.5055541992188
+      ]
+    },
+    {
+      "region_id": 1,
+      "label": "image",
+      "score": 0.5762149095535278,
+      "bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ]
+    }
+  ],
+  "pii_mappings": [
+    {
+      "pii_text": "Stewart P. \"Tom\" Mitchell",
+      "pii_type": "full_name",
+      "confidence": 0.9304097890853882,
+      "pii_bbox": [
+        727.0,
+        702.0,
+        956.0,
+        719.0
+      ],
+      "ocr_words": [
+        "Stewart",
+        "P",
+        "Tom",
+        "Mitchell"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5762149095535278,
+      "layout_region_bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "Tom",
+      "pii_type": "first_name",
+      "confidence": 0.7174312472343445,
+      "pii_bbox": [
+        837.0,
+        702.0,
+        865.0,
+        719.0
+      ],
+      "ocr_words": [
+        "Tom"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5762149095535278,
+      "layout_region_bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "Tom",
+      "pii_type": "first_name",
+      "confidence": 0.6669880747795105,
+      "pii_bbox": [
+        837.0,
+        702.0,
+        865.0,
+        719.0
+      ],
+      "ocr_words": [
+        "Tom"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5762149095535278,
+      "layout_region_bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "Tom",
+      "pii_type": "middle_name",
+      "confidence": 0.619935929775238,
+      "pii_bbox": [
+        837.0,
+        702.0,
+        865.0,
+        719.0
+      ],
+      "ocr_words": [
+        "Tom"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5762149095535278,
+      "layout_region_bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "29 April 1958th",
+      "pii_type": "date_of_birth",
+      "confidence": 0.9909151196479797,
+      "pii_bbox": [
+        378.0,
+        573.0,
+        493.0,
+        595.0
+      ],
+      "ocr_words": [
+        "29",
+        "April",
+        "1958th"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5762149095535278,
+      "layout_region_bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "teresa28@example.orgose",
+      "pii_type": "email",
+      "confidence": 0.9871125817298889,
+      "pii_bbox": [
+        284.0,
+        406.0,
+        491.0,
+        426.0
+      ],
+      "ocr_words": [
+        "teresa28",
+        "example",
+        "orgose"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5762149095535278,
+      "layout_region_bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "+1-948-293-2528x8095",
+      "pii_type": "phone_number",
+      "confidence": 0.9997473359107971,
+      "pii_bbox": [
+        88.0,
+        534.0,
+        242.0,
+        551.0
+      ],
+      "ocr_words": [
+        "1-948-293-2528x8095"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5762149095535278,
+      "layout_region_bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "3039 Christopher Oval Apt. 822",
+      "pii_type": "street_address",
+      "confidence": 0.9727110862731934,
+      "pii_bbox": [
+        79.0,
+        662.0,
+        306.0,
+        679.0
+      ],
+      "ocr_words": [
+        "3039",
+        "Christopher",
+        "Oval",
+        "Apt",
+        "822"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5762149095535278,
+      "layout_region_bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "United States",
+      "pii_type": "country",
+      "confidence": 0.8835883140563965,
+      "pii_bbox": [
+        535.0,
+        320.0,
+        642.0,
+        338.0
+      ],
+      "ocr_words": [
+        "United",
+        "States"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5762149095535278,
+      "layout_region_bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "NG782489",
+      "pii_type": "passport_number",
+      "confidence": 0.9514443278312683,
+      "pii_bbox": [
+        377.0,
+        701.0,
+        450.0,
+        724.0
+      ],
+      "ocr_words": [
+        "NG782489"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5762149095535278,
+      "layout_region_bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "June",
+      "pii_type": "transaction_date",
+      "confidence": 0.5024950504302979,
+      "pii_bbox": [
+        712.0,
+        745.0,
+        749.0,
+        762.0
+      ],
+      "ocr_words": [
+        "June"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5762149095535278,
+      "layout_region_bbox": [
+        51.91029357910156,
+        94.9656982421875,
+        967.177978515625,
+        944.924072265625
+      ],
+      "mapping_method": "center_inside"
+    }
+  ]
+}

@@ -1,0 +1,454 @@
+{
+  "lcprs_version": "2.0",
+  "document": "0014_e91de822f267de35c7e42bc6478940152a4b7f36afa1506713166d43c2669882_two_column",
+  "image_width": 1025,
+  "image_height": 1025,
+  "formula": {
+    "region_weight": 0.6,
+    "distance_weight": 0.4,
+    "distance_function": "exponential",
+    "distance_decay_ratio": 0.15
+  },
+  "number_of_usable_pii": 7,
+  "number_of_excluded_pii": 0,
+  "excluded_pii": [],
+  "standalone_risk": 9.5,
+  "pair_risk_total": 4.180559022724777,
+  "document_risk": 13.680559022724777,
+  "maximum_possible_risk": 66.5,
+  "normalized_lcprs_score": 20.572269207104927,
+  "risk_category": "Low",
+  "governance_action": "Normal handling; standard document controls.",
+  "pii_items_used": [
+    {
+      "pii_text": "David R. Lumley",
+      "pii_type": "full_name",
+      "confidence": 0.9837865233421326,
+      "pii_bbox": [
+        535.0,
+        880.0,
+        659.0,
+        897.0
+      ],
+      "ocr_words": [
+        "David",
+        "R",
+        "Lumley"
+      ],
+      "layout_region_id": 8,
+      "layout_region_type": "text",
+      "layout_region_score": 0.8902299404144287,
+      "layout_region_bbox": [
+        523.4168701171875,
+        879.995361328125,
+        830.3004150390625,
+        974.2660522460938
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "Damol R. Lumley",
+      "pii_type": "full_name",
+      "confidence": 0.9775992631912231,
+      "pii_bbox": [
+        566.0,
+        796.0,
+        830.0,
+        874.0
+      ],
+      "ocr_words": [
+        "Damol",
+        "R",
+        "Lumley"
+      ],
+      "layout_region_id": 10,
+      "layout_region_type": "image",
+      "layout_region_score": 0.7744736671447754,
+      "layout_region_bbox": [
+        519.5023193359375,
+        802.21533203125,
+        841.1207885742188,
+        870.9161376953125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "raymond57@example.netd",
+      "pii_type": "email",
+      "confidence": 0.9999138116836548,
+      "pii_bbox": [
+        121.0,
+        825.0,
+        327.0,
+        840.0
+      ],
+      "ocr_words": [
+        "raymond57",
+        "example",
+        "netd"
+      ],
+      "layout_region_id": 0,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9549567103385925,
+      "layout_region_bbox": [
+        57.015769958496094,
+        805.38037109375,
+        466.78106689453125,
+        975.3699340820312
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "213.331.5098x393",
+      "pii_type": "phone_number",
+      "confidence": 0.9999938011169434,
+      "pii_bbox": [
+        121.0,
+        264.0,
+        249.0,
+        281.0
+      ],
+      "ocr_words": [
+        "213.331.5098x393"
+      ],
+      "layout_region_id": 5,
+      "layout_region_type": "text",
+      "layout_region_score": 0.916840136051178,
+      "layout_region_bbox": [
+        57.094078063964844,
+        201.88711547851562,
+        471.451171875,
+        389.9286804199219
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "10518",
+      "pii_type": "postal_code",
+      "confidence": 0.9163358211517334,
+      "pii_bbox": [
+        815.0,
+        443.0,
+        852.0,
+        463.0
+      ],
+      "ocr_words": [
+        "10518"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9229308366775513,
+      "layout_region_bbox": [
+        741.0885620117188,
+        444.7783508300781,
+        955.4231567382812,
+        698.8897705078125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "HZ382997",
+      "pii_type": "passport_number",
+      "confidence": 0.996369481086731,
+      "pii_bbox": [
+        600.0,
+        314.0,
+        669.0,
+        333.0
+      ],
+      "ocr_words": [
+        "HZ382997"
+      ],
+      "layout_region_id": 2,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9392359852790833,
+      "layout_region_bbox": [
+        524.90673828125,
+        305.7939147949219,
+        952.5458984375,
+        392.40576171875
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "January 25, 2011",
+      "pii_type": "transaction_date",
+      "confidence": 0.524783194065094,
+      "pii_bbox": [
+        533.0,
+        961.0,
+        652.0,
+        975.0
+      ],
+      "ocr_words": [
+        "January",
+        "25",
+        "2011"
+      ],
+      "layout_region_id": 8,
+      "layout_region_type": "text",
+      "layout_region_score": 0.8902299404144287,
+      "layout_region_bbox": [
+        523.4168701171875,
+        879.995361328125,
+        830.3004150390625,
+        974.2660522460938
+      ],
+      "mapping_method": "center_inside"
+    }
+  ],
+  "pair_results": [
+    {
+      "pii_a": "David R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "Damol R. Lumley",
+      "pii_b_type": "full_name",
+      "severity_b": 1.0,
+      "same_region": false,
+      "distance_closeness": 0.5911718168258555,
+      "relationship": 0.23646872673034222,
+      "pair_risk": 0.47293745346068444
+    },
+    {
+      "pii_a": "David R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "raymond57@example.netd",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.17645698123943154,
+      "relationship": 0.07058279249577262,
+      "pair_risk": 0.17645698123943154
+    },
+    {
+      "pii_a": "David R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "213.331.5098x393",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.03309811237732903,
+      "relationship": 0.013239244950931612,
+      "pair_risk": 0.03309811237732903
+    },
+    {
+      "pii_a": "David R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "10518",
+      "pii_b_type": "postal_code",
+      "severity_b": 1.0,
+      "same_region": false,
+      "distance_closeness": 0.10236875752038975,
+      "relationship": 0.0409475030081559,
+      "pair_risk": 0.0818950060163118
+    },
+    {
+      "pii_a": "David R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "HZ382997",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.07396296315824896,
+      "relationship": 0.029585185263299587,
+      "pair_risk": 0.11834074105319835
+    },
+    {
+      "pii_a": "David R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "January 25, 2011",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": true,
+      "distance_closeness": 0.6933563437549253,
+      "relationship": 0.8773425375019701,
+      "pair_risk": 1.3160138062529552
+    },
+    {
+      "pii_a": "Damol R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "raymond57@example.netd",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.1130427981223651,
+      "relationship": 0.045217119248946044,
+      "pair_risk": 0.11304279812236512
+    },
+    {
+      "pii_a": "Damol R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "213.331.5098x393",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.0301592538604053,
+      "relationship": 0.012063701544162121,
+      "pair_risk": 0.030159253860405303
+    },
+    {
+      "pii_a": "Damol R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "10518",
+      "pii_b_type": "postal_code",
+      "severity_b": 1.0,
+      "same_region": false,
+      "distance_closeness": 0.15503658691254568,
+      "relationship": 0.06201463476501828,
+      "pair_risk": 0.12402926953003655
+    },
+    {
+      "pii_a": "Damol R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "HZ382997",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.09343569054810705,
+      "relationship": 0.03737427621924282,
+      "pair_risk": 0.1494971048769713
+    },
+    {
+      "pii_a": "Damol R. Lumley",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "January 25, 2011",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.4580629763310226,
+      "relationship": 0.18322519053240904,
+      "pair_risk": 0.27483778579861357
+    },
+    {
+      "pii_a": "raymond57@example.netd",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "213.331.5098x393",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.0756440493618876,
+      "relationship": 0.03025761974475504,
+      "pair_risk": 0.09077285923426512
+    },
+    {
+      "pii_a": "raymond57@example.netd",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "10518",
+      "pii_b_type": "postal_code",
+      "severity_b": 1.0,
+      "same_region": false,
+      "distance_closeness": 0.03680623778539301,
+      "relationship": 0.014722495114157207,
+      "pair_risk": 0.03680623778539302
+    },
+    {
+      "pii_a": "raymond57@example.netd",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "HZ382997",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.04942236968344896,
+      "relationship": 0.019768947873379586,
+      "pair_risk": 0.08896026543020813
+    },
+    {
+      "pii_a": "raymond57@example.netd",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "January 25, 2011",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.16435966141845065,
+      "relationship": 0.06574386456738027,
+      "pair_risk": 0.13148772913476053
+    },
+    {
+      "pii_a": "213.331.5098x393",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "10518",
+      "pii_b_type": "postal_code",
+      "severity_b": 1.0,
+      "same_region": false,
+      "distance_closeness": 0.045235715120435435,
+      "relationship": 0.018094286048174174,
+      "pair_risk": 0.045235715120435435
+    },
+    {
+      "pii_a": "213.331.5098x393",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "HZ382997",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.12486216473306166,
+      "relationship": 0.049944865893224666,
+      "pair_risk": 0.224751896519511
+    },
+    {
+      "pii_a": "213.331.5098x393",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "January 25, 2011",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.024544928240833378,
+      "relationship": 0.009817971296333352,
+      "pair_risk": 0.019635942592666704
+    },
+    {
+      "pii_a": "10518",
+      "pii_a_type": "postal_code",
+      "severity_a": 1.0,
+      "pii_b": "HZ382997",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.33556492090050444,
+      "relationship": 0.1342259683602018,
+      "pair_risk": 0.5369038734408071
+    },
+    {
+      "pii_a": "10518",
+      "pii_a_type": "postal_code",
+      "severity_a": 1.0,
+      "pii_b": "January 25, 2011",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.07316555650356761,
+      "relationship": 0.029266222601427045,
+      "pair_risk": 0.04389933390214057
+    },
+    {
+      "pii_a": "HZ382997",
+      "pii_a_type": "passport_number",
+      "severity_a": 3.0,
+      "pii_b": "January 25, 2011",
+      "pii_b_type": "transaction_date",
+      "severity_b": 0.5,
+      "same_region": false,
+      "distance_closeness": 0.051283469268776846,
+      "relationship": 0.02051338770751074,
+      "pair_risk": 0.07179685697628758
+    }
+  ]
+}

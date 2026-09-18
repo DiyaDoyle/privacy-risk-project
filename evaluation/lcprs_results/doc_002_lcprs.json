@@ -1,0 +1,234 @@
+{
+  "lcprs_version": "2.0",
+  "document": "doc_002",
+  "image_width": 1025.0,
+  "image_height": 1675.0,
+  "formula": {
+    "region_weight": 0.6,
+    "distance_weight": 0.4,
+    "distance_function": "exponential",
+    "distance_decay_ratio": 0.15
+  },
+  "number_of_pii": 5,
+  "standalone_risk": 9.0,
+  "pair_risk_total": 7.1310800863202815,
+  "document_risk": 16.13108008632028,
+  "maximum_possible_risk": 45.0,
+  "normalized_lcprs_score": 35.84684463626729,
+  "risk_category": "Medium",
+  "governance_action": "Apply controlled access and review before sharing.",
+  "pii_items": [
+    {
+      "pii_text": "Tanveer Murty",
+      "pii_type": "person",
+      "pii_bbox": [
+        181.0,
+        1158.0,
+        334.0,
+        1182.0
+      ],
+      "layout_region_id": null,
+      "layout_region_type": null,
+      "layout_region_score": null,
+      "layout_region_bbox": null,
+      "mapping_method": "unmatched"
+    },
+    {
+      "pii_text": "hritik97@example.org",
+      "pii_type": "email",
+      "pii_bbox": [
+        593.0,
+        1156.0,
+        830.0,
+        1183.0
+      ],
+      "layout_region_id": 16,
+      "layout_region_type": "text",
+      "layout_region_score": 0.5211626291275024,
+      "layout_region_bbox": [
+        497.8677978515625,
+        1155.8900146484375,
+        837.1012573242188,
+        1182.73291015625
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "+910408418377",
+      "pii_type": "phone_number",
+      "pii_bbox": [
+        283.0,
+        1299.0,
+        440.0,
+        1319.0
+      ],
+      "layout_region_id": 13,
+      "layout_region_type": "text",
+      "layout_region_score": 0.5590572953224182,
+      "layout_region_bbox": [
+        65.20582580566406,
+        1295.7642822265625,
+        846.7998046875,
+        1320.4747314453125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "22 August 1974",
+      "pii_type": "date_of_birth",
+      "pii_bbox": [
+        678.0,
+        1298.0,
+        842.0,
+        1322.0
+      ],
+      "layout_region_id": 13,
+      "layout_region_type": "text",
+      "layout_region_score": 0.5590572953224182,
+      "layout_region_bbox": [
+        65.20582580566406,
+        1295.7642822265625,
+        846.7998046875,
+        1320.4747314453125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "YJ7574475",
+      "pii_type": "passport_number",
+      "pii_bbox": [
+        729.0,
+        1435.0,
+        845.0,
+        1462.0
+      ],
+      "layout_region_id": null,
+      "layout_region_type": null,
+      "layout_region_score": null,
+      "layout_region_bbox": null,
+      "mapping_method": "unmatched"
+    }
+  ],
+  "pair_results": [
+    {
+      "pii_a": "Tanveer Murty",
+      "pii_a_type": "person",
+      "severity_a": 1.0,
+      "pii_b": "hritik97@example.org",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.2141063193737564,
+      "relationship": 0.08564252774950257,
+      "pair_risk": 0.2141063193737564
+    },
+    {
+      "pii_a": "Tanveer Murty",
+      "pii_a_type": "person",
+      "severity_a": 1.0,
+      "pii_b": "+910408418377",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.554685553181358,
+      "relationship": 0.22187422127254322,
+      "pair_risk": 0.554685553181358
+    },
+    {
+      "pii_a": "Tanveer Murty",
+      "pii_a_type": "person",
+      "severity_a": 1.0,
+      "pii_b": "22 August 1974",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": false,
+      "distance_closeness": 0.1701788067807788,
+      "relationship": 0.06807152271231152,
+      "pair_risk": 0.20421456813693456
+    },
+    {
+      "pii_a": "Tanveer Murty",
+      "pii_a_type": "person",
+      "severity_a": 1.0,
+      "pii_b": "YJ7574475",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.13119394711674096,
+      "relationship": 0.052477578846696384,
+      "pair_risk": 0.20991031538678553
+    },
+    {
+      "pii_a": "hritik97@example.org",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "+910408418377",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.2782835247306567,
+      "relationship": 0.11131340989226268,
+      "pair_risk": 0.33394022967678805
+    },
+    {
+      "pii_a": "hritik97@example.org",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "22 August 1974",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": false,
+      "distance_closeness": 0.6037460888257271,
+      "relationship": 0.24149843553029085,
+      "pair_risk": 0.8452445243560179
+    },
+    {
+      "pii_a": "hritik97@example.org",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "YJ7574475",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.37484482339943154,
+      "relationship": 0.14993792935977263,
+      "pair_risk": 0.6747206821189768
+    },
+    {
+      "pii_a": "+910408418377",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "22 August 1974",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": true,
+      "distance_closeness": 0.25849748730028643,
+      "relationship": 0.7033989949201146,
+      "pair_risk": 2.4618964822204012
+    },
+    {
+      "pii_a": "+910408418377",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "YJ7574475",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.21867275525481752,
+      "relationship": 0.08746910210192702,
+      "pair_risk": 0.3936109594586716
+    },
+    {
+      "pii_a": "22 August 1974",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "YJ7574475",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.6193752262052956,
+      "relationship": 0.24775009048211827,
+      "pair_risk": 1.2387504524105912
+    }
+  ]
+}

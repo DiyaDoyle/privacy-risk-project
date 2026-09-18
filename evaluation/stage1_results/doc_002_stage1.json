@@ -1,0 +1,120 @@
+[
+    {
+        "ground_truth_text": "Tanveer Murty",
+        "ground_truth_type": "person",
+        "ground_truth_bbox": [
+            173,
+            1160,
+            339,
+            1184
+        ],
+        "predicted_bbox": [
+            181.0,
+            1158.0,
+            334.0,
+            1182.0
+        ],
+        "iou": 0.7846153846153846,
+        "matched_words": [
+            "Tanveer",
+            "Murty"
+        ]
+    },
+    {
+        "ground_truth_text": "hritik97@example.org",
+        "ground_truth_type": "email",
+        "ground_truth_bbox": [
+            588,
+            1160,
+            836,
+            1184
+        ],
+        "predicted_bbox": [
+            593.0,
+            1156.0,
+            830.0,
+            1183.0
+        ],
+        "iou": 0.79,
+        "matched_words": [
+            "hritik97",
+            "example",
+            "org"
+        ]
+    },
+    {
+        "ground_truth_text": "+910408418377",
+        "ground_truth_type": "phone_number",
+        "ground_truth_bbox": [
+            265,
+            1300,
+            447,
+            1319
+        ],
+        "predicted_bbox": [
+            283.0,
+            1299.0,
+            440.0,
+            1319.0
+        ],
+        "iou": 0.8251728907330567,
+        "matched_words": [
+            "910408418377"
+        ]
+    },
+    {
+        "ground_truth_text": "22 August 1974",
+        "ground_truth_type": "date_of_birth",
+        "ground_truth_bbox": [
+            670,
+            1300,
+            847,
+            1324
+        ],
+        "predicted_bbox": [
+            678.0,
+            1298.0,
+            842.0,
+            1322.0
+        ],
+        "iou": 0.7884615384615384,
+        "matched_words": [
+            "22",
+            "August",
+            "1974"
+        ]
+    },
+    {
+        "ground_truth_text": "H.No. 71, Dutta Zila, Ranchi 812319",
+        "ground_truth_type": "address",
+        "ground_truth_bbox": [
+            189,
+            1440,
+            597,
+            1463
+        ],
+        "predicted_bbox": null,
+        "iou": 0.0,
+        "matched_words": []
+    },
+    {
+        "ground_truth_text": "YJ7574475",
+        "ground_truth_type": "passport_number",
+        "ground_truth_bbox": [
+            722,
+            1440,
+            850,
+            1459
+        ],
+        "predicted_bbox": [
+            729.0,
+            1435.0,
+            845.0,
+            1462.0
+        ],
+        "iou": 0.655952380952381,
+        "matched_words": [
+            "YJ7574475"
+        ]
+    }
+]

@@ -1,0 +1,211 @@
+{
+  "document": "0011_eacbc7b084332bbcb5683235c58e13a699d65d2792bb9c132d4bc712946c5f02_two_column",
+  "image_width": 1025,
+  "image_height": 1025,
+  "layout_region_count": 2,
+  "pii_prediction_count": 7,
+  "pii_layout_mapped_count": 7,
+  "layout_mapping_rate": 1.0,
+  "layout_regions": [
+    {
+      "region_id": 0,
+      "label": "number",
+      "score": 0.7753356695175171,
+      "bbox": [
+        30.613981246948242,
+        990.095703125,
+        42.754066467285156,
+        999.5191040039062
+      ]
+    },
+    {
+      "region_id": 1,
+      "label": "image",
+      "score": 0.5751748085021973,
+      "bbox": [
+        55.28996276855469,
+        114.02472686767578,
+        968.5864868164062,
+        905.7229614257812
+      ]
+    }
+  ],
+  "pii_mappings": [
+    {
+      "pii_text": "Stewart P. \"Tom\" Mitchell",
+      "pii_type": "full_name",
+      "confidence": 0.9455767869949341,
+      "pii_bbox": [
+        727.0,
+        703.0,
+        958.0,
+        720.0
+      ],
+      "ocr_words": [
+        "Stewart",
+        "P",
+        "Tom",
+        "Mitchell"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5751748085021973,
+      "layout_region_bbox": [
+        55.28996276855469,
+        114.02472686767578,
+        968.5864868164062,
+        905.7229614257812
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "teresa28@example.orgoo",
+      "pii_type": "email",
+      "confidence": 0.9924181699752808,
+      "pii_bbox": [
+        122.0,
+        402.0,
+        333.0,
+        424.0
+      ],
+      "ocr_words": [
+        "teresa28",
+        "example",
+        "orgoo4"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5751748085021973,
+      "layout_region_bbox": [
+        55.28996276855469,
+        114.02472686767578,
+        968.5864868164062,
+        905.7229614257812
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "+1-948-293-2528x8095",
+      "pii_type": "phone_number",
+      "confidence": 0.9999964237213135,
+      "pii_bbox": [
+        130.0,
+        178.0,
+        287.0,
+        203.0
+      ],
+      "ocr_words": [
+        "1-948-293-2528x8095"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5751748085021973,
+      "layout_region_bbox": [
+        55.28996276855469,
+        114.02472686767578,
+        968.5864868164062,
+        905.7229614257812
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "United States",
+      "pii_type": "country",
+      "confidence": 0.8673965930938721,
+      "pii_bbox": [
+        536.0,
+        320.0,
+        642.0,
+        338.0
+      ],
+      "ocr_words": [
+        "United",
+        "States"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5751748085021973,
+      "layout_region_bbox": [
+        55.28996276855469,
+        114.02472686767578,
+        968.5864868164062,
+        905.7229614257812
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "NG782489",
+      "pii_type": "passport_number",
+      "confidence": 0.9894722104072571,
+      "pii_bbox": [
+        600.0,
+        369.0,
+        672.0,
+        393.0
+      ],
+      "ocr_words": [
+        "NG782489"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5751748085021973,
+      "layout_region_bbox": [
+        55.28996276855469,
+        114.02472686767578,
+        968.5864868164062,
+        905.7229614257812
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "February 22, 2005",
+      "pii_type": "transaction_date",
+      "confidence": 0.7315220236778259,
+      "pii_bbox": [
+        70.0,
+        510.0,
+        223.0,
+        528.0
+      ],
+      "ocr_words": [
+        "February",
+        "22",
+        "2005"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5751748085021973,
+      "layout_region_bbox": [
+        55.28996276855469,
+        114.02472686767578,
+        968.5864868164062,
+        905.7229614257812
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "June",
+      "pii_type": "transaction_date",
+      "confidence": 0.5042480230331421,
+      "pii_bbox": [
+        713.0,
+        744.0,
+        747.0,
+        761.0
+      ],
+      "ocr_words": [
+        "June"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "image",
+      "layout_region_score": 0.5751748085021973,
+      "layout_region_bbox": [
+        55.28996276855469,
+        114.02472686767578,
+        968.5864868164062,
+        905.7229614257812
+      ],
+      "mapping_method": "center_inside"
+    }
+  ]
+}

@@ -1,0 +1,788 @@
+{
+  "document": "0001_5d0acb6c8bbbcf1c37170d09102daf9fc3c1a4afe3d83cdbf9e23323daa85f7f_clustered",
+  "ground_truth_count": 6,
+  "gliner_detected_count": 20,
+  "ocr_mapped_count": 20,
+  "ground_truth_matched_count": 5,
+  "ground_truth_match_rate": 0.8333333333333334,
+  "average_bbox_iou": 0.7296782656172791,
+  "ground_truth_comparisons": [
+    {
+      "ground_truth_text": "Allison Hill",
+      "ground_truth_type": "person",
+      "ground_truth_bbox": [
+        594,
+        133,
+        680,
+        151
+      ],
+      "predicted_text": "Allison Hill",
+      "predicted_type": "full_name",
+      "predicted_confidence": 0.9963305592536926,
+      "predicted_bbox": [
+        602.0,
+        134.0,
+        675.0,
+        152.0
+      ],
+      "iou": 0.7655768044417026
+    },
+    {
+      "ground_truth_text": "donaldgarcia@example.net",
+      "ground_truth_type": "email",
+      "ground_truth_bbox": [
+        718,
+        109,
+        927,
+        132
+      ],
+      "predicted_text": "donaldgarcia@example.net",
+      "predicted_type": "email",
+      "predicted_confidence": 0.9999817609786987,
+      "predicted_bbox": [
+        727.0,
+        111.0,
+        922.0,
+        129.0
+      ],
+      "iou": 0.7301851466611192
+    },
+    {
+      "ground_truth_text": "+1-219-560-0133",
+      "ground_truth_type": "phone_number",
+      "ground_truth_bbox": [
+        572,
+        221,
+        705,
+        239
+      ],
+      "predicted_text": "+1-219-560-0133",
+      "predicted_type": "phone_number",
+      "predicted_confidence": 0.9999722242355347,
+      "predicted_bbox": [
+        590.0,
+        215.0,
+        703.0,
+        245.0
+      ],
+      "iou": 0.5424
+    },
+    {
+      "ground_truth_text": "09 June 1999",
+      "ground_truth_type": "date_of_birth",
+      "ground_truth_bbox": [
+        807,
+        221,
+        913,
+        239
+      ],
+      "predicted_text": "09 June 1999",
+      "predicted_type": "date_of_birth",
+      "predicted_confidence": 0.999901533126831,
+      "predicted_bbox": [
+        816.0,
+        221.0,
+        907.0,
+        240.0
+      ],
+      "iou": 0.8194097048524263
+    },
+    {
+      "ground_truth_text": "79402 Peterson Drives Apt. 511",
+      "ground_truth_type": "address",
+      "ground_truth_bbox": [
+        514,
+        285,
+        758,
+        307
+      ],
+      "predicted_text": null,
+      "predicted_type": null,
+      "predicted_bbox": null,
+      "iou": 0.0
+    },
+    {
+      "ground_truth_text": "ZB615594",
+      "ground_truth_type": "passport_number",
+      "ground_truth_bbox": [
+        810,
+        309,
+        891,
+        327
+      ],
+      "predicted_text": "ZB615594",
+      "predicted_type": "passport_number",
+      "predicted_confidence": 0.9878486394882202,
+      "predicted_bbox": [
+        818.0,
+        309.0,
+        885.0,
+        328.0
+      ],
+      "iou": 0.7908196721311476
+    }
+  ],
+  "detected_entities": [
+    {
+      "text": "Allison Hill",
+      "type": "full_name",
+      "score": 0.9963305592536926
+    },
+    {
+      "text": "09 June 1999",
+      "type": "date_of_birth",
+      "score": 0.999901533126831
+    },
+    {
+      "text": "donaldgarcia@example.net",
+      "type": "email",
+      "score": 0.9999817609786987
+    },
+    {
+      "text": "+1-219-560-0133",
+      "type": "phone_number",
+      "score": 0.9999722242355347
+    },
+    {
+      "text": "ZB615594",
+      "type": "passport_number",
+      "score": 0.9878486394882202
+    },
+    {
+      "text": "September 30, 2013",
+      "type": "transaction_date",
+      "score": 0.9009038805961609
+    },
+    {
+      "text": "September 30, 2013",
+      "type": "transaction_date",
+      "score": 0.8793621063232422
+    },
+    {
+      "text": "September 30, 2013",
+      "type": "transaction_date",
+      "score": 0.8244167566299438
+    },
+    {
+      "text": "September 30, 2010",
+      "type": "transaction_date",
+      "score": 0.8039959669113159
+    },
+    {
+      "text": "September 30, 2013",
+      "type": "transaction_date",
+      "score": 0.7726998329162598
+    },
+    {
+      "text": "2012",
+      "type": "transaction_date",
+      "score": 0.7675362825393677
+    },
+    {
+      "text": "2012",
+      "type": "transaction_date",
+      "score": 0.7595186233520508
+    },
+    {
+      "text": "September 30. 2013",
+      "type": "transaction_date",
+      "score": 0.7515632510185242
+    },
+    {
+      "text": "2012",
+      "type": "transaction_date",
+      "score": 0.7213761806488037
+    },
+    {
+      "text": "2012",
+      "type": "transaction_date",
+      "score": 0.696785569190979
+    },
+    {
+      "text": "2011",
+      "type": "transaction_date",
+      "score": 0.6443922519683838
+    },
+    {
+      "text": "2012",
+      "type": "transaction_date",
+      "score": 0.635332465171814
+    },
+    {
+      "text": "2011",
+      "type": "transaction_date",
+      "score": 0.6324359774589539
+    },
+    {
+      "text": "2011",
+      "type": "transaction_date",
+      "score": 0.6238851547241211
+    },
+    {
+      "text": "2011",
+      "type": "transaction_date",
+      "score": 0.6045488715171814
+    }
+  ],
+  "mapped_predictions": [
+    {
+      "text": "Allison Hill",
+      "type": "full_name",
+      "score": 0.9963305592536926,
+      "ocr_words": [
+        "Allison",
+        "Hill"
+      ],
+      "ocr_word_boxes": [
+        [
+          602.0,
+          134.0,
+          644.0,
+          152.0
+        ],
+        [
+          658.0,
+          134.0,
+          675.0,
+          152.0
+        ]
+      ],
+      "predicted_bbox": [
+        602.0,
+        134.0,
+        675.0,
+        152.0
+      ]
+    },
+    {
+      "text": "09 June 1999",
+      "type": "date_of_birth",
+      "score": 0.999901533126831,
+      "ocr_words": [
+        "09",
+        "June",
+        "1999"
+      ],
+      "ocr_word_boxes": [
+        [
+          816.0,
+          221.0,
+          825.0,
+          240.0
+        ],
+        [
+          839.0,
+          221.0,
+          867.0,
+          240.0
+        ],
+        [
+          879.0,
+          221.0,
+          907.0,
+          240.0
+        ]
+      ],
+      "predicted_bbox": [
+        816.0,
+        221.0,
+        907.0,
+        240.0
+      ]
+    },
+    {
+      "text": "donaldgarcia@example.net",
+      "type": "email",
+      "score": 0.9999817609786987,
+      "ocr_words": [
+        "donaldgarcia",
+        "example",
+        "net"
+      ],
+      "ocr_word_boxes": [
+        [
+          727.0,
+          111.0,
+          815.0,
+          129.0
+        ],
+        [
+          836.0,
+          111.0,
+          895.0,
+          129.0
+        ],
+        [
+          906.0,
+          111.0,
+          922.0,
+          129.0
+        ]
+      ],
+      "predicted_bbox": [
+        727.0,
+        111.0,
+        922.0,
+        129.0
+      ]
+    },
+    {
+      "text": "+1-219-560-0133",
+      "type": "phone_number",
+      "score": 0.9999722242355347,
+      "ocr_words": [
+        "1-219-560-0133"
+      ],
+      "ocr_word_boxes": [
+        [
+          590.0,
+          215.0,
+          703.0,
+          245.0
+        ]
+      ],
+      "predicted_bbox": [
+        590.0,
+        215.0,
+        703.0,
+        245.0
+      ]
+    },
+    {
+      "text": "ZB615594",
+      "type": "passport_number",
+      "score": 0.9878486394882202,
+      "ocr_words": [
+        "ZB615594"
+      ],
+      "ocr_word_boxes": [
+        [
+          818.0,
+          309.0,
+          885.0,
+          328.0
+        ]
+      ],
+      "predicted_bbox": [
+        818.0,
+        309.0,
+        885.0,
+        328.0
+      ]
+    },
+    {
+      "text": "September 30, 2013",
+      "type": "transaction_date",
+      "score": 0.9009038805961609,
+      "ocr_words": [
+        "September",
+        "30",
+        "2013"
+      ],
+      "ocr_word_boxes": [
+        [
+          84.0,
+          344.0,
+          149.0,
+          354.0
+        ],
+        [
+          159.0,
+          344.0,
+          169.0,
+          354.0
+        ],
+        [
+          186.0,
+          344.0,
+          212.0,
+          354.0
+        ]
+      ],
+      "predicted_bbox": [
+        84.0,
+        344.0,
+        212.0,
+        354.0
+      ]
+    },
+    {
+      "text": "September 30, 2013",
+      "type": "transaction_date",
+      "score": 0.8793621063232422,
+      "ocr_words": [
+        "September",
+        "30",
+        "2013"
+      ],
+      "ocr_word_boxes": [
+        [
+          84.0,
+          344.0,
+          149.0,
+          354.0
+        ],
+        [
+          159.0,
+          344.0,
+          169.0,
+          354.0
+        ],
+        [
+          186.0,
+          344.0,
+          212.0,
+          354.0
+        ]
+      ],
+      "predicted_bbox": [
+        84.0,
+        344.0,
+        212.0,
+        354.0
+      ]
+    },
+    {
+      "text": "September 30, 2013",
+      "type": "transaction_date",
+      "score": 0.8244167566299438,
+      "ocr_words": [
+        "September",
+        "30",
+        "2013"
+      ],
+      "ocr_word_boxes": [
+        [
+          84.0,
+          344.0,
+          149.0,
+          354.0
+        ],
+        [
+          159.0,
+          344.0,
+          169.0,
+          354.0
+        ],
+        [
+          186.0,
+          344.0,
+          212.0,
+          354.0
+        ]
+      ],
+      "predicted_bbox": [
+        84.0,
+        344.0,
+        212.0,
+        354.0
+      ]
+    },
+    {
+      "text": "September 30, 2010",
+      "type": "transaction_date",
+      "score": 0.8039959669113159,
+      "ocr_words": [
+        "September",
+        "30",
+        "2010"
+      ],
+      "ocr_word_boxes": [
+        [
+          609.0,
+          151.0,
+          672.0,
+          164.0
+        ],
+        [
+          683.0,
+          151.0,
+          692.0,
+          164.0
+        ],
+        [
+          707.0,
+          151.0,
+          729.0,
+          164.0
+        ]
+      ],
+      "predicted_bbox": [
+        609.0,
+        151.0,
+        729.0,
+        164.0
+      ]
+    },
+    {
+      "text": "September 30, 2013",
+      "type": "transaction_date",
+      "score": 0.7726998329162598,
+      "ocr_words": [
+        "September",
+        "30",
+        "2013"
+      ],
+      "ocr_word_boxes": [
+        [
+          84.0,
+          344.0,
+          149.0,
+          354.0
+        ],
+        [
+          159.0,
+          344.0,
+          169.0,
+          354.0
+        ],
+        [
+          186.0,
+          344.0,
+          212.0,
+          354.0
+        ]
+      ],
+      "predicted_bbox": [
+        84.0,
+        344.0,
+        212.0,
+        354.0
+      ]
+    },
+    {
+      "text": "2012",
+      "type": "transaction_date",
+      "score": 0.7675362825393677,
+      "ocr_words": [
+        "2012"
+      ],
+      "ocr_word_boxes": [
+        [
+          113.0,
+          44.0,
+          138.0,
+          54.0
+        ]
+      ],
+      "predicted_bbox": [
+        113.0,
+        44.0,
+        138.0,
+        54.0
+      ]
+    },
+    {
+      "text": "2012",
+      "type": "transaction_date",
+      "score": 0.7595186233520508,
+      "ocr_words": [
+        "2012"
+      ],
+      "ocr_word_boxes": [
+        [
+          113.0,
+          44.0,
+          138.0,
+          54.0
+        ]
+      ],
+      "predicted_bbox": [
+        113.0,
+        44.0,
+        138.0,
+        54.0
+      ]
+    },
+    {
+      "text": "September 30. 2013",
+      "type": "transaction_date",
+      "score": 0.7515632510185242,
+      "ocr_words": [
+        "September",
+        "30",
+        "2013"
+      ],
+      "ocr_word_boxes": [
+        [
+          84.0,
+          344.0,
+          149.0,
+          354.0
+        ],
+        [
+          159.0,
+          344.0,
+          169.0,
+          354.0
+        ],
+        [
+          186.0,
+          344.0,
+          212.0,
+          354.0
+        ]
+      ],
+      "predicted_bbox": [
+        84.0,
+        344.0,
+        212.0,
+        354.0
+      ]
+    },
+    {
+      "text": "2012",
+      "type": "transaction_date",
+      "score": 0.7213761806488037,
+      "ocr_words": [
+        "2012"
+      ],
+      "ocr_word_boxes": [
+        [
+          113.0,
+          44.0,
+          138.0,
+          54.0
+        ]
+      ],
+      "predicted_bbox": [
+        113.0,
+        44.0,
+        138.0,
+        54.0
+      ]
+    },
+    {
+      "text": "2012",
+      "type": "transaction_date",
+      "score": 0.696785569190979,
+      "ocr_words": [
+        "2012"
+      ],
+      "ocr_word_boxes": [
+        [
+          113.0,
+          44.0,
+          138.0,
+          54.0
+        ]
+      ],
+      "predicted_bbox": [
+        113.0,
+        44.0,
+        138.0,
+        54.0
+      ]
+    },
+    {
+      "text": "2011",
+      "type": "transaction_date",
+      "score": 0.6443922519683838,
+      "ocr_words": [
+        "2011"
+      ],
+      "ocr_word_boxes": [
+        [
+          273.0,
+          158.0,
+          301.0,
+          171.0
+        ]
+      ],
+      "predicted_bbox": [
+        273.0,
+        158.0,
+        301.0,
+        171.0
+      ]
+    },
+    {
+      "text": "2012",
+      "type": "transaction_date",
+      "score": 0.635332465171814,
+      "ocr_words": [
+        "2012"
+      ],
+      "ocr_word_boxes": [
+        [
+          113.0,
+          44.0,
+          138.0,
+          54.0
+        ]
+      ],
+      "predicted_bbox": [
+        113.0,
+        44.0,
+        138.0,
+        54.0
+      ]
+    },
+    {
+      "text": "2011",
+      "type": "transaction_date",
+      "score": 0.6324359774589539,
+      "ocr_words": [
+        "2011"
+      ],
+      "ocr_word_boxes": [
+        [
+          273.0,
+          158.0,
+          301.0,
+          171.0
+        ]
+      ],
+      "predicted_bbox": [
+        273.0,
+        158.0,
+        301.0,
+        171.0
+      ]
+    },
+    {
+      "text": "2011",
+      "type": "transaction_date",
+      "score": 0.6238851547241211,
+      "ocr_words": [
+        "2011"
+      ],
+      "ocr_word_boxes": [
+        [
+          273.0,
+          158.0,
+          301.0,
+          171.0
+        ]
+      ],
+      "predicted_bbox": [
+        273.0,
+        158.0,
+        301.0,
+        171.0
+      ]
+    },
+    {
+      "text": "2011",
+      "type": "transaction_date",
+      "score": 0.6045488715171814,
+      "ocr_words": [
+        "2011"
+      ],
+      "ocr_word_boxes": [
+        [
+          273.0,
+          158.0,
+          301.0,
+          171.0
+        ]
+      ],
+      "predicted_bbox": [
+        273.0,
+        158.0,
+        301.0,
+        171.0
+      ]
+    }
+  ]
+}

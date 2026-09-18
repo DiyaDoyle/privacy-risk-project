@@ -1,0 +1,271 @@
+{
+  "lcprs_version": "2.0",
+  "document": "0007_99ec49a91523b06062803243de5eeff9bc6cf388f584523b786785e922f9691a_clustered",
+  "image_width": 1025,
+  "image_height": 1025,
+  "formula": {
+    "region_weight": 0.6,
+    "distance_weight": 0.4,
+    "distance_function": "exponential",
+    "distance_decay_ratio": 0.15
+  },
+  "number_of_usable_pii": 5,
+  "number_of_excluded_pii": 0,
+  "excluded_pii": [],
+  "standalone_risk": 9.0,
+  "pair_risk_total": 28.742272234319262,
+  "document_risk": 37.74227223431926,
+  "maximum_possible_risk": 45.0,
+  "normalized_lcprs_score": 83.87171607626502,
+  "risk_category": "Critical",
+  "governance_action": "Restrict access, protect sensitive content, and require authorization before sharing.",
+  "pii_items_used": [
+    {
+      "pii_text": "Austin Gentry",
+      "pii_type": "full_name",
+      "confidence": 0.9853379726409912,
+      "pii_bbox": [
+        616.0,
+        372.0,
+        710.0,
+        386.0
+      ],
+      "ocr_words": [
+        "Austin",
+        "Gentry"
+      ],
+      "layout_region_id": 6,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9746628403663635,
+      "layout_region_bbox": [
+        525.0177612304688,
+        327.401611328125,
+        940.7088623046875,
+        592.6361694335938
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "16 February 1960",
+      "pii_type": "date_of_birth",
+      "confidence": 0.9801669716835022,
+      "pii_bbox": [
+        757.0,
+        434.0,
+        880.0,
+        453.0
+      ],
+      "ocr_words": [
+        "16",
+        "February",
+        "1960"
+      ],
+      "layout_region_id": 6,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9746628403663635,
+      "layout_region_bbox": [
+        525.0177612304688,
+        327.401611328125,
+        940.7088623046875,
+        592.6361694335938
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "alreadyjason76@example.netAt",
+      "pii_type": "email",
+      "confidence": 0.9267030954360962,
+      "pii_bbox": [
+        702.0,
+        354.0,
+        940.0,
+        370.0
+      ],
+      "ocr_words": [
+        "alreadyjason76",
+        "example",
+        "netAt"
+      ],
+      "layout_region_id": 6,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9746628403663635,
+      "layout_region_bbox": [
+        525.0177612304688,
+        327.401611328125,
+        940.7088623046875,
+        592.6361694335938
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "724.523.8849x696xhibiting",
+      "pii_type": "phone_number",
+      "confidence": 0.9486583471298218,
+      "pii_bbox": [
+        601.0,
+        454.0,
+        799.0,
+        477.0
+      ],
+      "ocr_words": [
+        "724.523.8849x696xhibiting"
+      ],
+      "layout_region_id": 6,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9746628403663635,
+      "layout_region_bbox": [
+        525.0177612304688,
+        327.401611328125,
+        940.7088623046875,
+        592.6361694335938
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "JN018451",
+      "pii_type": "passport_number",
+      "confidence": 0.9897730946540833,
+      "pii_bbox": [
+        845.0,
+        531.0,
+        913.0,
+        555.0
+      ],
+      "ocr_words": [
+        "JN018451"
+      ],
+      "layout_region_id": 6,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9746628403663635,
+      "layout_region_bbox": [
+        525.0177612304688,
+        327.401611328125,
+        940.7088623046875,
+        592.6361694335938
+      ],
+      "mapping_method": "center_inside"
+    }
+  ],
+  "pair_results": [
+    {
+      "pii_a": "Austin Gentry",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "16 February 1960",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": true,
+      "distance_closeness": 0.46105567066653713,
+      "relationship": 0.7844222682666149,
+      "pair_risk": 2.3532668047998446
+    },
+    {
+      "pii_a": "Austin Gentry",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "alreadyjason76@example.netAt",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.4815010682430637,
+      "relationship": 0.7926004272972255,
+      "pair_risk": 1.9815010682430636
+    },
+    {
+      "pii_a": "Austin Gentry",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "724.523.8849x696xhibiting",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.6487645996432778,
+      "relationship": 0.8595058398573111,
+      "pair_risk": 2.1487645996432776
+    },
+    {
+      "pii_a": "Austin Gentry",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "JN018451",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": true,
+      "distance_closeness": 0.287282541505461,
+      "relationship": 0.7149130166021844,
+      "pair_risk": 2.8596520664087377
+    },
+    {
+      "pii_a": "16 February 1960",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "alreadyjason76@example.netAt",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.6872890137909969,
+      "relationship": 0.8749156055163987,
+      "pair_risk": 3.0622046193073955
+    },
+    {
+      "pii_a": "16 February 1960",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "724.523.8849x696xhibiting",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.5744729647684761,
+      "relationship": 0.8297891859073905,
+      "pair_risk": 2.9042621506758666
+    },
+    {
+      "pii_a": "16 February 1960",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "JN018451",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": true,
+      "distance_closeness": 0.5853416985202593,
+      "relationship": 0.8341366794081038,
+      "pair_risk": 4.170683397040519
+    },
+    {
+      "pii_a": "alreadyjason76@example.netAt",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "724.523.8849x696xhibiting",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.48080376771750805,
+      "relationship": 0.7923215070870032,
+      "pair_risk": 2.3769645212610095
+    },
+    {
+      "pii_a": "alreadyjason76@example.netAt",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "JN018451",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": true,
+      "distance_closeness": 0.41722671157461605,
+      "relationship": 0.7668906846298464,
+      "pair_risk": 3.451008080834309
+    },
+    {
+      "pii_a": "724.523.8849x696xhibiting",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "JN018451",
+      "pii_b_type": "passport_number",
+      "severity_b": 3.0,
+      "same_region": true,
+      "distance_closeness": 0.4077582922806885,
+      "relationship": 0.7631033169122754,
+      "pair_risk": 3.433964926105239
+    }
+  ]
+}

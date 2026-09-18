@@ -1,0 +1,564 @@
+{
+  "document": "0012_eacbc7b084332bbcb5683235c58e13a699d65d2792bb9c132d4bc712946c5f02_scattered",
+  "ground_truth_count": 6,
+  "gliner_detected_count": 12,
+  "ocr_mapped_count": 12,
+  "ground_truth_matched_count": 6,
+  "ground_truth_match_rate": 1.0,
+  "average_bbox_iou": 0.7630965773298978,
+  "ground_truth_comparisons": [
+    {
+      "ground_truth_text": "Aaron Bowen",
+      "ground_truth_type": "person",
+      "ground_truth_bbox": [
+        111,
+        393,
+        217,
+        411
+      ],
+      "predicted_text": "Aaron Bowen",
+      "predicted_type": "full_name",
+      "predicted_confidence": 0.9151442050933838,
+      "predicted_bbox": [
+        120.0,
+        393.0,
+        211.0,
+        414.0
+      ],
+      "iou": 0.7510316368638239
+    },
+    {
+      "ground_truth_text": "teresa28@example.org",
+      "ground_truth_type": "email",
+      "ground_truth_bbox": [
+        574,
+        139,
+        754,
+        162
+      ],
+      "predicted_text": "teresa28@example.org",
+      "predicted_type": "email",
+      "predicted_confidence": 0.9997692704200745,
+      "predicted_bbox": [
+        580.0,
+        138.0,
+        752.0,
+        164.0
+      ],
+      "iou": 0.8496563573883161
+    },
+    {
+      "ground_truth_text": "+1-948-293-2528x8095",
+      "ground_truth_type": "phone_number",
+      "ground_truth_bbox": [
+        579,
+        627,
+        757,
+        645
+      ],
+      "predicted_text": "+1-948-293-2528x8095",
+      "predicted_type": "phone_number",
+      "predicted_confidence": 0.9999715089797974,
+      "predicted_bbox": [
+        595.0,
+        628.0,
+        753.0,
+        648.0
+      ],
+      "iou": 0.7302882001087547
+    },
+    {
+      "ground_truth_text": "29 April 1958",
+      "ground_truth_type": "date_of_birth",
+      "ground_truth_bbox": [
+        145,
+        182,
+        249,
+        203
+      ],
+      "predicted_text": "29 April 1958",
+      "predicted_type": "date_of_birth",
+      "predicted_confidence": 0.9999876022338867,
+      "predicted_bbox": [
+        155.0,
+        181.0,
+        246.0,
+        202.0
+      ],
+      "iou": 0.8
+    },
+    {
+      "ground_truth_text": "3039 Christopher Oval Apt. 822",
+      "ground_truth_type": "address",
+      "ground_truth_bbox": [
+        124,
+        817,
+        365,
+        839
+      ],
+      "predicted_text": "3039 Christopher Oval Apt. 822",
+      "predicted_type": "street_address",
+      "predicted_confidence": 0.9766358733177185,
+      "predicted_bbox": [
+        132.0,
+        815.0,
+        363.0,
+        842.0
+      ],
+      "iou": 0.787052810902896
+    },
+    {
+      "ground_truth_text": "NG782489",
+      "ground_truth_type": "passport_number",
+      "ground_truth_bbox": [
+        591,
+        372,
+        676,
+        390
+      ],
+      "predicted_text": "NG782489",
+      "predicted_type": "passport_number",
+      "predicted_confidence": 0.9919964671134949,
+      "predicted_bbox": [
+        600.0,
+        369.0,
+        672.0,
+        393.0
+      ],
+      "iou": 0.6605504587155964
+    }
+  ],
+  "detected_entities": [
+    {
+      "text": "Stewart P. \"Tom\" Mitchell",
+      "type": "full_name",
+      "score": 0.957011878490448
+    },
+    {
+      "text": "Aaron Bowen",
+      "type": "full_name",
+      "score": 0.9151442050933838
+    },
+    {
+      "text": "Tom",
+      "type": "first_name",
+      "score": 0.6097283363342285
+    },
+    {
+      "text": "Tom",
+      "type": "first_name",
+      "score": 0.5611596703529358
+    },
+    {
+      "text": "Tom",
+      "type": "middle_name",
+      "score": 0.5961291790008545
+    },
+    {
+      "text": "29 April 1958",
+      "type": "date_of_birth",
+      "score": 0.9999876022338867
+    },
+    {
+      "text": "teresa28@example.org",
+      "type": "email",
+      "score": 0.9997692704200745
+    },
+    {
+      "text": "+1-948-293-2528x8095",
+      "type": "phone_number",
+      "score": 0.9999715089797974
+    },
+    {
+      "text": "3039 Christopher Oval Apt. 822",
+      "type": "street_address",
+      "score": 0.9766358733177185
+    },
+    {
+      "text": "United States",
+      "type": "country",
+      "score": 0.8958687782287598
+    },
+    {
+      "text": "NG782489",
+      "type": "passport_number",
+      "score": 0.9919964671134949
+    },
+    {
+      "text": "February 22, 2005",
+      "type": "transaction_date",
+      "score": 0.7319365739822388
+    }
+  ],
+  "mapped_predictions": [
+    {
+      "text": "Stewart P. \"Tom\" Mitchell",
+      "type": "full_name",
+      "score": 0.957011878490448,
+      "ocr_words": [
+        "Stewart",
+        "P",
+        "Tom",
+        "Mitchell"
+      ],
+      "ocr_word_boxes": [
+        [
+          727.0,
+          703.0,
+          787.0,
+          717.0
+        ],
+        [
+          806.0,
+          703.0,
+          808.0,
+          717.0
+        ],
+        [
+          837.0,
+          703.0,
+          865.0,
+          717.0
+        ],
+        [
+          897.0,
+          703.0,
+          958.0,
+          717.0
+        ]
+      ],
+      "predicted_bbox": [
+        727.0,
+        703.0,
+        958.0,
+        717.0
+      ]
+    },
+    {
+      "text": "Aaron Bowen",
+      "type": "full_name",
+      "score": 0.9151442050933838,
+      "ocr_words": [
+        "Aaron",
+        "Bowen"
+      ],
+      "ocr_word_boxes": [
+        [
+          120.0,
+          393.0,
+          155.0,
+          414.0
+        ],
+        [
+          169.0,
+          393.0,
+          211.0,
+          414.0
+        ]
+      ],
+      "predicted_bbox": [
+        120.0,
+        393.0,
+        211.0,
+        414.0
+      ]
+    },
+    {
+      "text": "Tom",
+      "type": "first_name",
+      "score": 0.6097283363342285,
+      "ocr_words": [
+        "Tom"
+      ],
+      "ocr_word_boxes": [
+        [
+          837.0,
+          703.0,
+          865.0,
+          717.0
+        ]
+      ],
+      "predicted_bbox": [
+        837.0,
+        703.0,
+        865.0,
+        717.0
+      ]
+    },
+    {
+      "text": "Tom",
+      "type": "first_name",
+      "score": 0.5611596703529358,
+      "ocr_words": [
+        "Tom"
+      ],
+      "ocr_word_boxes": [
+        [
+          837.0,
+          703.0,
+          865.0,
+          717.0
+        ]
+      ],
+      "predicted_bbox": [
+        837.0,
+        703.0,
+        865.0,
+        717.0
+      ]
+    },
+    {
+      "text": "Tom",
+      "type": "middle_name",
+      "score": 0.5961291790008545,
+      "ocr_words": [
+        "Tom"
+      ],
+      "ocr_word_boxes": [
+        [
+          837.0,
+          703.0,
+          865.0,
+          717.0
+        ]
+      ],
+      "predicted_bbox": [
+        837.0,
+        703.0,
+        865.0,
+        717.0
+      ]
+    },
+    {
+      "text": "29 April 1958",
+      "type": "date_of_birth",
+      "score": 0.9999876022338867,
+      "ocr_words": [
+        "29",
+        "April",
+        "1958"
+      ],
+      "ocr_word_boxes": [
+        [
+          155.0,
+          181.0,
+          165.0,
+          202.0
+        ],
+        [
+          176.0,
+          181.0,
+          207.0,
+          202.0
+        ],
+        [
+          214.0,
+          181.0,
+          246.0,
+          202.0
+        ]
+      ],
+      "predicted_bbox": [
+        155.0,
+        181.0,
+        246.0,
+        202.0
+      ]
+    },
+    {
+      "text": "teresa28@example.org",
+      "type": "email",
+      "score": 0.9997692704200745,
+      "ocr_words": [
+        "teresa28",
+        "example",
+        "org"
+      ],
+      "ocr_word_boxes": [
+        [
+          580.0,
+          138.0,
+          644.0,
+          164.0
+        ],
+        [
+          664.0,
+          138.0,
+          720.0,
+          164.0
+        ],
+        [
+          732.0,
+          138.0,
+          752.0,
+          164.0
+        ]
+      ],
+      "predicted_bbox": [
+        580.0,
+        138.0,
+        752.0,
+        164.0
+      ]
+    },
+    {
+      "text": "+1-948-293-2528x8095",
+      "type": "phone_number",
+      "score": 0.9999715089797974,
+      "ocr_words": [
+        "1-948-293-2528x8095"
+      ],
+      "ocr_word_boxes": [
+        [
+          595.0,
+          628.0,
+          753.0,
+          648.0
+        ]
+      ],
+      "predicted_bbox": [
+        595.0,
+        628.0,
+        753.0,
+        648.0
+      ]
+    },
+    {
+      "text": "3039 Christopher Oval Apt. 822",
+      "type": "street_address",
+      "score": 0.9766358733177185,
+      "ocr_words": [
+        "3039",
+        "Christopher",
+        "Oval",
+        "Apt",
+        "822"
+      ],
+      "ocr_word_boxes": [
+        [
+          132.0,
+          815.0,
+          164.0,
+          842.0
+        ],
+        [
+          173.0,
+          815.0,
+          255.0,
+          842.0
+        ],
+        [
+          268.0,
+          815.0,
+          295.0,
+          842.0
+        ],
+        [
+          304.0,
+          815.0,
+          327.0,
+          842.0
+        ],
+        [
+          341.0,
+          815.0,
+          363.0,
+          842.0
+        ]
+      ],
+      "predicted_bbox": [
+        132.0,
+        815.0,
+        363.0,
+        842.0
+      ]
+    },
+    {
+      "text": "United States",
+      "type": "country",
+      "score": 0.8958687782287598,
+      "ocr_words": [
+        "United",
+        "States"
+      ],
+      "ocr_word_boxes": [
+        [
+          536.0,
+          320.0,
+          581.0,
+          338.0
+        ],
+        [
+          595.0,
+          320.0,
+          642.0,
+          338.0
+        ]
+      ],
+      "predicted_bbox": [
+        536.0,
+        320.0,
+        642.0,
+        338.0
+      ]
+    },
+    {
+      "text": "NG782489",
+      "type": "passport_number",
+      "score": 0.9919964671134949,
+      "ocr_words": [
+        "NG782489"
+      ],
+      "ocr_word_boxes": [
+        [
+          600.0,
+          369.0,
+          672.0,
+          393.0
+        ]
+      ],
+      "predicted_bbox": [
+        600.0,
+        369.0,
+        672.0,
+        393.0
+      ]
+    },
+    {
+      "text": "February 22, 2005",
+      "type": "transaction_date",
+      "score": 0.7319365739822388,
+      "ocr_words": [
+        "February",
+        "22",
+        "2005"
+      ],
+      "ocr_word_boxes": [
+        [
+          70.0,
+          510.0,
+          136.0,
+          528.0
+        ],
+        [
+          154.0,
+          510.0,
+          166.0,
+          528.0
+        ],
+        [
+          187.0,
+          510.0,
+          223.0,
+          528.0
+        ]
+      ],
+      "predicted_bbox": [
+        70.0,
+        510.0,
+        223.0,
+        528.0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,966 @@
+{
+  "lcprs_version": "2.0",
+  "document": "0004_4079232a7f3a712aa8b3d905175c3017f1d3b8373e16e37bcfb87eff4c96fbc5_clustered",
+  "image_width": 1025,
+  "image_height": 1025,
+  "formula": {
+    "region_weight": 0.6,
+    "distance_weight": 0.4,
+    "distance_function": "exponential",
+    "distance_decay_ratio": 0.15
+  },
+  "number_of_usable_pii": 11,
+  "number_of_excluded_pii": 0,
+  "excluded_pii": [],
+  "standalone_risk": 16.4,
+  "pair_risk_total": 44.448970419801036,
+  "document_risk": 60.848970419801034,
+  "maximum_possible_risk": 180.4,
+  "normalized_lcprs_score": 33.73002794889193,
+  "risk_category": "Medium",
+  "governance_action": "Apply controlled access and review before sharing.",
+  "pii_items_used": [
+    {
+      "pii_text": "Joseph Marie de Maistre",
+      "pii_type": "full_name",
+      "confidence": 0.982327938079834,
+      "pii_bbox": [
+        271.0,
+        773.0,
+        425.0,
+        786.0
+      ],
+      "ocr_words": [
+        "Joseph",
+        "Marie",
+        "de",
+        "Maistre"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.980441689491272,
+      "layout_region_bbox": [
+        177.6340789794922,
+        667.94140625,
+        531.74072265625,
+        801.703125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "Dudley",
+      "pii_type": "middle_name",
+      "confidence": 0.8100600242614746,
+      "pii_bbox": [
+        620.0,
+        385.0,
+        663.0,
+        402.0
+      ],
+      "ocr_words": [
+        "Dudley"
+      ],
+      "layout_region_id": 9,
+      "layout_region_type": "chart",
+      "layout_region_score": 0.8452208042144775,
+      "layout_region_bbox": [
+        469.69415283203125,
+        345.2558898925781,
+        899.4132080078125,
+        601.0447387695312
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "Marie",
+      "pii_type": "middle_name",
+      "confidence": 0.627289354801178,
+      "pii_bbox": [
+        323.0,
+        773.0,
+        352.0,
+        786.0
+      ],
+      "ocr_words": [
+        "Marie"
+      ],
+      "layout_region_id": 3,
+      "layout_region_type": "text",
+      "layout_region_score": 0.980441689491272,
+      "layout_region_bbox": [
+        177.6340789794922,
+        667.94140625,
+        531.74072265625,
+        801.703125
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "21 December 1993",
+      "pii_type": "date_of_birth",
+      "confidence": 0.9992714524269104,
+      "pii_bbox": [
+        697.0,
+        449.0,
+        830.0,
+        466.0
+      ],
+      "ocr_words": [
+        "21",
+        "December",
+        "1993"
+      ],
+      "layout_region_id": 9,
+      "layout_region_type": "chart",
+      "layout_region_score": 0.8452208042144775,
+      "layout_region_bbox": [
+        469.69415283203125,
+        345.2558898925781,
+        899.4132080078125,
+        601.0447387695312
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "July 1, 2002",
+      "pii_type": "date_of_birth",
+      "confidence": 0.9419311285018921,
+      "pii_bbox": [
+        285.0,
+        458.0,
+        359.0,
+        471.0
+      ],
+      "ocr_words": [
+        "July",
+        "1",
+        "2002"
+      ],
+      "layout_region_id": 1,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9817258715629578,
+      "layout_region_bbox": [
+        177.23001098632812,
+        440.0828552246094,
+        448.2047119140625,
+        645.0283813476562
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "smiller@example.net",
+      "pii_type": "email",
+      "confidence": 0.9994764924049377,
+      "pii_bbox": [
+        696.0,
+        365.0,
+        849.0,
+        382.0
+      ],
+      "ocr_words": [
+        "smiller",
+        "example",
+        "net"
+      ],
+      "layout_region_id": 9,
+      "layout_region_type": "chart",
+      "layout_region_score": 0.8452208042144775,
+      "layout_region_bbox": [
+        469.69415283203125,
+        345.2558898925781,
+        899.4132080078125,
+        601.0447387695312
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "+1-659-931-0341x316",
+      "pii_type": "phone_number",
+      "confidence": 0.9999949932098389,
+      "pii_bbox": [
+        500.0,
+        449.0,
+        645.0,
+        463.0
+      ],
+      "ocr_words": [
+        "1-659-931-0341x316"
+      ],
+      "layout_region_id": 9,
+      "layout_region_type": "chart",
+      "layout_region_score": 0.8452208042144775,
+      "layout_region_bbox": [
+        469.69415283203125,
+        345.2558898925781,
+        899.4132080078125,
+        601.0447387695312
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "50 64",
+      "pii_type": "phone_number",
+      "confidence": 0.975898265838623,
+      "pii_bbox": [
+        495.0,
+        427.0,
+        516.0,
+        437.0
+      ],
+      "ocr_words": [
+        "50",
+        "64"
+      ],
+      "layout_region_id": 9,
+      "layout_region_type": "chart",
+      "layout_region_score": 0.8452208042144775,
+      "layout_region_bbox": [
+        469.69415283203125,
+        345.2558898925781,
+        899.4132080078125,
+        601.0447387695312
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "55341 Amanda Gardens Apt. 764",
+      "pii_type": "street_address",
+      "confidence": 0.9666867852210999,
+      "pii_bbox": [
+        491.0,
+        532.0,
+        730.0,
+        549.0
+      ],
+      "ocr_words": [
+        "55341",
+        "Amanda",
+        "Gardens",
+        "Apt",
+        "764"
+      ],
+      "layout_region_id": 9,
+      "layout_region_type": "chart",
+      "layout_region_score": 0.8452208042144775,
+      "layout_region_bbox": [
+        469.69415283203125,
+        345.2558898925781,
+        899.4132080078125,
+        601.0447387695312
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "New Orleans",
+      "pii_type": "city",
+      "confidence": 0.8199304342269897,
+      "pii_bbox": [
+        650.0,
+        807.0,
+        720.0,
+        817.0
+      ],
+      "ocr_words": [
+        "New",
+        "Orleans"
+      ],
+      "layout_region_id": 0,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9839718341827393,
+      "layout_region_bbox": [
+        547.6602783203125,
+        752.8860473632812,
+        901.1813354492188,
+        921.0667724609375
+      ],
+      "mapping_method": "center_inside"
+    },
+    {
+      "pii_text": "IBERIABANK Corporation",
+      "pii_type": "iban",
+      "confidence": 0.9479120373725891,
+      "pii_bbox": [
+        746.0,
+        109.0,
+        900.0,
+        122.0
+      ],
+      "ocr_words": [
+        "IBERIABANK",
+        "Corporation"
+      ],
+      "layout_region_id": 6,
+      "layout_region_type": "text",
+      "layout_region_score": 0.9688766002655029,
+      "layout_region_bbox": [
+        547.9794921875,
+        91.2017822265625,
+        901.0841064453125,
+        155.879150390625
+      ],
+      "mapping_method": "center_inside"
+    }
+  ],
+  "pair_results": [
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "Dudley",
+      "pii_b_type": "middle_name",
+      "severity_b": 0.8,
+      "same_region": false,
+      "distance_closeness": 0.1075137133016209,
+      "relationship": 0.043005485320648365,
+      "pair_risk": 0.07740987357716705
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "Marie",
+      "pii_b_type": "middle_name",
+      "severity_b": 0.8,
+      "same_region": true,
+      "distance_closeness": 0.9528572094854877,
+      "relationship": 0.9811428837941951,
+      "pair_risk": 1.7660571908295513
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "21 December 1993",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": false,
+      "distance_closeness": 0.08913780101160779,
+      "relationship": 0.035655120404643116,
+      "pair_risk": 0.10696536121392936
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "July 1, 2002",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": false,
+      "distance_closeness": 0.2337196233080389,
+      "relationship": 0.09348784932321556,
+      "pair_risk": 0.2804635479696467
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "smiller@example.net",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.06710592028066409,
+      "relationship": 0.026842368112265636,
+      "pair_risk": 0.06710592028066409
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "+1-659-931-0341x316",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.16349682716033317,
+      "relationship": 0.06539873086413327,
+      "pair_risk": 0.16349682716033317
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "50 64",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.17296488431019524,
+      "relationship": 0.0691859537240781,
+      "pair_risk": 0.17296488431019524
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "55341 Amanda Gardens Apt. 764",
+      "pii_b_type": "street_address",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.19540442566770128,
+      "relationship": 0.07816177026708052,
+      "pair_risk": 0.19540442566770128
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "New Orleans",
+      "pii_b_type": "city",
+      "severity_b": 0.8,
+      "same_region": false,
+      "distance_closeness": 0.2107512458706965,
+      "relationship": 0.0843004983482786,
+      "pair_risk": 0.1517408970269015
+    },
+    {
+      "pii_a": "Joseph Marie de Maistre",
+      "pii_a_type": "full_name",
+      "severity_a": 1.0,
+      "pii_b": "IBERIABANK Corporation",
+      "pii_b_type": "iban",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.023407157381816347,
+      "relationship": 0.00936286295272654,
+      "pair_risk": 0.03745145181090616
+    },
+    {
+      "pii_a": "Dudley",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "Marie",
+      "pii_b_type": "middle_name",
+      "severity_b": 0.8,
+      "same_region": false,
+      "distance_closeness": 0.10438259888693403,
+      "relationship": 0.041753039554773615,
+      "pair_risk": 0.06680486328763778
+    },
+    {
+      "pii_a": "Dudley",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "21 December 1993",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": true,
+      "distance_closeness": 0.5306757395665483,
+      "relationship": 0.8122702958266194,
+      "pair_risk": 2.274356828314534
+    },
+    {
+      "pii_a": "Dudley",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "July 1, 2002",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": false,
+      "distance_closeness": 0.22196252132788755,
+      "relationship": 0.08878500853115502,
+      "pair_risk": 0.24859802388723404
+    },
+    {
+      "pii_a": "Dudley",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "smiller@example.net",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.5436448980445459,
+      "relationship": 0.8174579592178184,
+      "pair_risk": 1.880153306200982
+    },
+    {
+      "pii_a": "Dudley",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "+1-659-931-0341x316",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.6517042755992516,
+      "relationship": 0.8606817102397006,
+      "pair_risk": 1.9795679335513112
+    },
+    {
+      "pii_a": "Dudley",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "50 64",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.5220182399248375,
+      "relationship": 0.8088072959699351,
+      "pair_risk": 1.8602567807308505
+    },
+    {
+      "pii_a": "Dudley",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "55341 Amanda Gardens Apt. 764",
+      "pii_b_type": "street_address",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.5011085388447002,
+      "relationship": 0.8004434155378801,
+      "pair_risk": 1.8410198557371242
+    },
+    {
+      "pii_a": "Dudley",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "New Orleans",
+      "pii_b_type": "city",
+      "severity_b": 0.8,
+      "same_region": false,
+      "distance_closeness": 0.14441277468672015,
+      "relationship": 0.05776510987468806,
+      "pair_risk": 0.09242417579950091
+    },
+    {
+      "pii_a": "Dudley",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "IBERIABANK Corporation",
+      "pii_b_type": "iban",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.21720659565953612,
+      "relationship": 0.08688263826381445,
+      "pair_risk": 0.3301540254024949
+    },
+    {
+      "pii_a": "Marie",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "21 December 1993",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": false,
+      "distance_closeness": 0.08578425465362809,
+      "relationship": 0.03431370186145124,
+      "pair_risk": 0.09607836521206346
+    },
+    {
+      "pii_a": "Marie",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "July 1, 2002",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": false,
+      "distance_closeness": 0.23446255902280977,
+      "relationship": 0.09378502360912391,
+      "pair_risk": 0.2625980661055469
+    },
+    {
+      "pii_a": "Marie",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "smiller@example.net",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.06479123916837869,
+      "relationship": 0.025916495667351477,
+      "pair_risk": 0.059607940034908394
+    },
+    {
+      "pii_a": "Marie",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "+1-659-931-0341x316",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.158988788275379,
+      "relationship": 0.0635955153101516,
+      "pair_risk": 0.14626968521334868
+    },
+    {
+      "pii_a": "Marie",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "50 64",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.16945860358181858,
+      "relationship": 0.06778344143272744,
+      "pair_risk": 0.15590191529527309
+    },
+    {
+      "pii_a": "Marie",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "55341 Amanda Gardens Apt. 764",
+      "pii_b_type": "street_address",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.18849046596765226,
+      "relationship": 0.07539618638706092,
+      "pair_risk": 0.1734112286902401
+    },
+    {
+      "pii_a": "Marie",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "New Orleans",
+      "pii_b_type": "city",
+      "severity_b": 0.8,
+      "same_region": false,
+      "distance_closeness": 0.2008592880027075,
+      "relationship": 0.08034371520108301,
+      "pair_risk": 0.1285499443217328
+    },
+    {
+      "pii_a": "Marie",
+      "pii_a_type": "middle_name",
+      "severity_a": 0.8,
+      "pii_b": "IBERIABANK Corporation",
+      "pii_b_type": "iban",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.022754020910857167,
+      "relationship": 0.009101608364342867,
+      "pair_risk": 0.034586111784502896
+    },
+    {
+      "pii_a": "21 December 1993",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "July 1, 2002",
+      "pii_b_type": "date_of_birth",
+      "severity_b": 2.0,
+      "same_region": false,
+      "distance_closeness": 0.13123785184277031,
+      "relationship": 0.05249514073710813,
+      "pair_risk": 0.2099805629484325
+    },
+    {
+      "pii_a": "21 December 1993",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "smiller@example.net",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.6780509582669716,
+      "relationship": 0.8712203833067886,
+      "pair_risk": 3.0492713415737605
+    },
+    {
+      "pii_a": "21 December 1993",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "+1-659-931-0341x316",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.41542666810652257,
+      "relationship": 0.766170667242609,
+      "pair_risk": 2.6815973353491316
+    },
+    {
+      "pii_a": "21 December 1993",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "50 64",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.303509849806352,
+      "relationship": 0.7214039399225408,
+      "pair_risk": 2.5249137897288927
+    },
+    {
+      "pii_a": "21 December 1993",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "55341 Amanda Gardens Apt. 764",
+      "pii_b_type": "street_address",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.4490915065916974,
+      "relationship": 0.779636602636679,
+      "pair_risk": 2.7287281092283764
+    },
+    {
+      "pii_a": "21 December 1993",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "New Orleans",
+      "pii_b_type": "city",
+      "severity_b": 0.8,
+      "same_region": false,
+      "distance_closeness": 0.18827265475726415,
+      "relationship": 0.07530906190290566,
+      "pair_risk": 0.21086537332813585
+    },
+    {
+      "pii_a": "21 December 1993",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "IBERIABANK Corporation",
+      "pii_b_type": "iban",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.2026028023404455,
+      "relationship": 0.08104112093617821,
+      "pair_risk": 0.40520560468089106
+    },
+    {
+      "pii_a": "July 1, 2002",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "smiller@example.net",
+      "pii_b_type": "email",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.1207869139594796,
+      "relationship": 0.048314765583791844,
+      "pair_risk": 0.16910167954327146
+    },
+    {
+      "pii_a": "July 1, 2002",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "+1-659-931-0341x316",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.3157736226163956,
+      "relationship": 0.12630944904655825,
+      "pair_risk": 0.44208307166295385
+    },
+    {
+      "pii_a": "July 1, 2002",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "50 64",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.42440661579491057,
+      "relationship": 0.16976264631796423,
+      "pair_risk": 0.5941692621128748
+    },
+    {
+      "pii_a": "July 1, 2002",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "55341 Amanda Gardens Apt. 764",
+      "pii_b_type": "street_address",
+      "severity_b": 1.5,
+      "same_region": false,
+      "distance_closeness": 0.25357450003480847,
+      "relationship": 0.10142980001392339,
+      "pair_risk": 0.35500430004873185
+    },
+    {
+      "pii_a": "July 1, 2002",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "New Orleans",
+      "pii_b_type": "city",
+      "severity_b": 0.8,
+      "same_region": false,
+      "distance_closeness": 0.09915025373393403,
+      "relationship": 0.039660101493573616,
+      "pair_risk": 0.11104828418200612
+    },
+    {
+      "pii_a": "July 1, 2002",
+      "pii_a_type": "date_of_birth",
+      "severity_a": 2.0,
+      "pii_b": "IBERIABANK Corporation",
+      "pii_b_type": "iban",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.06032088494508024,
+      "relationship": 0.024128353978032098,
+      "pair_risk": 0.12064176989016048
+    },
+    {
+      "pii_a": "smiller@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "+1-659-931-0341x316",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.36972452798847133,
+      "relationship": 0.7478898111953886,
+      "pair_risk": 2.2436694335861658
+    },
+    {
+      "pii_a": "smiller@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "50 64",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.2844835378395156,
+      "relationship": 0.7137934151358062,
+      "pair_risk": 2.1413802454074187
+    },
+    {
+      "pii_a": "smiller@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "55341 Amanda Gardens Apt. 764",
+      "pii_b_type": "street_address",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.3429940257796253,
+      "relationship": 0.73719761031185,
+      "pair_risk": 2.21159283093555
+    },
+    {
+      "pii_a": "smiller@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "New Orleans",
+      "pii_b_type": "city",
+      "severity_b": 0.8,
+      "same_region": false,
+      "distance_closeness": 0.12790727319476106,
+      "relationship": 0.05116290927790443,
+      "pair_risk": 0.11767469133918018
+    },
+    {
+      "pii_a": "smiller@example.net",
+      "pii_a_type": "email",
+      "severity_a": 1.5,
+      "pii_b": "IBERIABANK Corporation",
+      "pii_b_type": "iban",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.2984728771094342,
+      "relationship": 0.11938915084377369,
+      "pair_risk": 0.5372511787969816
+    },
+    {
+      "pii_a": "+1-659-931-0341x316",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "50 64",
+      "pii_b_type": "phone_number",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.720860063264026,
+      "relationship": 0.8883440253056103,
+      "pair_risk": 2.665032075916831
+    },
+    {
+      "pii_a": "+1-659-931-0341x316",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "55341 Amanda Gardens Apt. 764",
+      "pii_b_type": "street_address",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.6530449326331482,
+      "relationship": 0.8612179730532592,
+      "pair_risk": 2.5836539191597776
+    },
+    {
+      "pii_a": "+1-659-931-0341x316",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "New Orleans",
+      "pii_b_type": "city",
+      "severity_b": 0.8,
+      "same_region": false,
+      "distance_closeness": 0.17959073514102036,
+      "relationship": 0.07183629405640815,
+      "pair_risk": 0.16522347632973874
+    },
+    {
+      "pii_a": "+1-659-931-0341x316",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "IBERIABANK Corporation",
+      "pii_b_type": "iban",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.14311468239234287,
+      "relationship": 0.05724587295693715,
+      "pair_risk": 0.25760642830621716
+    },
+    {
+      "pii_a": "50 64",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "55341 Amanda Gardens Apt. 764",
+      "pii_b_type": "street_address",
+      "severity_b": 1.5,
+      "same_region": true,
+      "distance_closeness": 0.499372867485841,
+      "relationship": 0.7997491469943364,
+      "pair_risk": 2.399247440983009
+    },
+    {
+      "pii_a": "50 64",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "New Orleans",
+      "pii_b_type": "city",
+      "severity_b": 0.8,
+      "same_region": false,
+      "distance_closeness": 0.14474028526728333,
+      "relationship": 0.05789611410691334,
+      "pair_risk": 0.13316106244590067
+    },
+    {
+      "pii_a": "50 64",
+      "pii_a_type": "phone_number",
+      "severity_a": 1.5,
+      "pii_b": "IBERIABANK Corporation",
+      "pii_b_type": "iban",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.12722588089982004,
+      "relationship": 0.05089035235992802,
+      "pair_risk": 0.22900658561967607
+    },
+    {
+      "pii_a": "55341 Amanda Gardens Apt. 764",
+      "pii_a_type": "street_address",
+      "severity_a": 1.5,
+      "pii_b": "New Orleans",
+      "pii_b_type": "city",
+      "severity_b": 0.8,
+      "same_region": false,
+      "distance_closeness": 0.2739517753794216,
+      "relationship": 0.10958071015176865,
+      "pair_risk": 0.25203563334906787
+    },
+    {
+      "pii_a": "55341 Amanda Gardens Apt. 764",
+      "pii_a_type": "street_address",
+      "severity_a": 1.5,
+      "pii_b": "IBERIABANK Corporation",
+      "pii_b_type": "iban",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.1124424402832569,
+      "relationship": 0.04497697611330276,
+      "pair_risk": 0.2023963925098624
+    },
+    {
+      "pii_a": "New Orleans",
+      "pii_a_type": "city",
+      "severity_a": 0.8,
+      "pii_b": "IBERIABANK Corporation",
+      "pii_b_type": "iban",
+      "severity_b": 3.0,
+      "same_region": false,
+      "distance_closeness": 0.038177046987997544,
+      "relationship": 0.015270818795199018,
+      "pair_risk": 0.05802911142175626
+    }
+  ]
+}
