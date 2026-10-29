@@ -1,7 +1,9 @@
 import io
+import json
 import re
 import tempfile
 import textwrap
+import zipfile
 from pathlib import Path
 
 import streamlit as st
@@ -23,12 +25,12 @@ from phase2_run_models import (
     union_box,
     extract_layout,
     map_to_layout,
-    run_lcprs,
     final_image,
     GLINER_MODEL,
     GLINER_THRESHOLD,
     LAYOUT_MODEL,
 )
+import lcprs_v2 as lcprs
 
 
 # Render Markdown/HTML without Python indentation turning HTML into a code block.
@@ -287,7 +289,10 @@ def load_pages(data, filename):
 
 @st.cache_resource(show_spinner=False)
 def load_config():
-    return load_configuration()
+    config = load_configuration()
+    # Validate the v3 formula/config used by process_new_document.py.
+    lcprs.validate_configuration()
+    return config
 
 
 @st.cache_resource(show_spinner=False)
@@ -727,6 +732,7 @@ if analyze_clicked:
                 )
 
                 predictions = []
+                unmapped_entities = []
 
                 for entity in detected:
 
@@ -740,6 +746,13 @@ if analyze_clicked:
                     )
 
                     if box is None:
+                        # Keep an audit record and show a coverage warning below.
+                        # These detections cannot be included in spatial scoring or masking.
+                        unmapped_entities.append({
+                            "pii_type": entity.get("type", "unknown"),
+                            "confidence": entity.get("score"),
+                            "reason": "Could not match detected text to OCR word boxes",
+                        })
                         continue
 
                     predictions.append(
@@ -892,12 +905,18 @@ if analyze_clicked:
 
                 width, height = page.size
 
-                risk = run_lcprs(
+                risk = lcprs.calculate_lcprs(
                     mappings,
                     width,
                     height,
-                    config,
                 )
+                # Keep the current UI keys, but source the score from the same
+                # LCPRS v3 implementation as process_new_document.py.
+                risk["normalized_lcprs_score"] = risk["score"]
+                risk["number_of_usable_pii"] = len(mappings)
+                risk["number_of_excluded_pii"] = len(unmapped_entities)
+                risk["unmapped_detections"] = unmapped_entities
+                risk["detected_entity_count"] = len(detected)
 
                 progress.progress(
                     90,
@@ -948,6 +967,7 @@ if analyze_clicked:
                         "regions": regions,
                         "document_elements": document_elements,
                         "qr_count": len(qr_boxes),
+                        "unmapped_entities": unmapped_entities,
                     }
                 )
 
@@ -985,22 +1005,19 @@ if analyze_clicked:
     page_scores = [
         result["risk"]["normalized_lcprs_score"]
         for result in results
+        if result["risk"]["normalized_lcprs_score"] is not None
     ]
 
-    average_score = (
-        sum(page_scores) /
-        len(page_scores)
-    )
-
-    highest_score = max(
-        page_scores
-    )
-
+    average_score = (sum(page_scores) / len(page_scores)) if page_scores else None
+    highest_score = max(page_scores) if page_scores else None
+    scored_results = [
+        result for result in results
+        if result["risk"]["normalized_lcprs_score"] is not None
+    ]
     highest_result = max(
-        results,
-        key=lambda result:
-        result["risk"]["normalized_lcprs_score"],
-    )
+        scored_results,
+        key=lambda result: result["risk"]["normalized_lcprs_score"],
+    ) if scored_results else None
 
     total_pii = sum(
         result["risk"]["number_of_usable_pii"]
@@ -1013,13 +1030,187 @@ if analyze_clicked:
     <b>Document:</b> {uploaded_file.name}<br>
     <b>Pages analyzed:</b> {len(results)}<br>
     <b>Total usable PII detections:</b> {total_pii}<br>
-    <b>Average page LCPRS:</b> {average_score:.2f}/100<br>
-    <b>Highest page score:</b> {highest_score:.2f}/100
-    &nbsp; (Page {highest_result["page"]})
+    <b>Average page LCPRS:</b> {f"{average_score:.2f}/100" if average_score is not None else "N/A (no PII scored)"}<br>
+    <b>Highest page score:</b> {f"{highest_score:.2f}/100" if highest_score is not None else "N/A (no PII scored)"}
+    {f'&nbsp; (Page {highest_result["page"]})' if highest_result else ''}
 </div>
 """,
         unsafe_allow_html=True,
     )
+
+    # ========================================================
+    # DOWNLOADABLE MASKED PDF + AUDIT PACKAGE
+    # ========================================================
+
+    st.divider()
+    md("## Downloads")
+
+    masking_config = config.get("masking", {})
+    if not masking_config.get("enabled", True):
+        st.warning("Masking is disabled in config/lcprs_config.json. No masked PDF will be generated.")
+        masking_block_reason = "Masking disabled in configuration."
+    else:
+        masking_block_reason = None
+
+    # A masked PDF is only offered when every detected entity has a usable
+    # page box. This avoids implying complete redaction when known detections
+    # could not be located.
+    any_unmapped = any(result.get("unmapped_entities") for result in results)
+    if any_unmapped:
+        masking_block_reason = (
+            "At least one detected PII entity could not be matched to an OCR bounding box. "
+            "Review the audit report; masked PDF generation is blocked to avoid claiming complete masking."
+        )
+
+    masked_pages = []
+    audit_pages = []
+    page_report_items = []
+
+    from PIL import ImageDraw
+
+    padding = int(masking_config.get("bbox_padding_pixels", 2))
+    fill_color = tuple(masking_config.get("fill_color", [0, 0, 0]))
+
+    for result in results:
+        page_number = result["page"]
+        source_page = pages[page_number - 1]
+        mappings = result["mappings"]
+        invalid_boxes = []
+        masked = source_page.copy().convert("RGB")
+        draw = ImageDraw.Draw(masked)
+        masked_count = 0
+        masked_types = {}
+
+        for index, item in enumerate(mappings):
+            bbox = item.get("pii_bbox")
+            try:
+                if not isinstance(bbox, (list, tuple)) or len(bbox) != 4:
+                    raise ValueError("missing or malformed bbox")
+                x1, y1, x2, y2 = [float(v) for v in bbox]
+                if not all(np.isfinite(v) for v in (x1, y1, x2, y2)) or x2 <= x1 or y2 <= y1:
+                    raise ValueError("invalid bbox coordinates")
+                left = max(0, min(masked.width, int(x1) - padding))
+                top = max(0, min(masked.height, int(y1) - padding))
+                right = max(0, min(masked.width, int(x2 + padding + 0.999)))
+                bottom = max(0, min(masked.height, int(y2 + padding + 0.999)))
+                if right <= left or bottom <= top:
+                    raise ValueError("bbox outside page bounds")
+                draw.rectangle([left, top, right, bottom], fill=fill_color)
+                masked_count += 1
+                pii_type = str(item.get("pii_type", "unknown"))
+                masked_types[pii_type] = masked_types.get(pii_type, 0) + 1
+            except (TypeError, ValueError, OverflowError):
+                invalid_boxes.append(index)
+
+        audit_pages.append({
+            "page": page_number,
+            "source_file": uploaded_file.name,
+            "detector_entities_found": result["risk"].get("detected_entity_count", len(mappings) + len(result.get("unmapped_entities", []))),
+            "entities_mapped_to_boxes": len(mappings),
+            "entities_without_boxes": [
+                {"pii_type": item.get("pii_type", "unknown"), "confidence": item.get("confidence"), "reason": item.get("reason")}
+                for item in result.get("unmapped_entities", [])
+            ],
+            "entities_masked": masked_count,
+            "entities_with_invalid_bbox": len(invalid_boxes),
+            "masked_types": masked_types,
+            "masking_method": "Opaque rectangles on rasterized page; original PDF text objects are not copied.",
+            "masking_complete_for_detected_entities": (
+                not result.get("unmapped_entities") and not invalid_boxes and masked_count == len(mappings)
+            ),
+        })
+
+        page_report_items.append({
+            "page": page_number,
+            "lcprs_score": result["risk"].get("normalized_lcprs_score"),
+            "risk_category": result["risk"].get("risk_category"),
+            "detected_pii_count": result["risk"].get("detected_entity_count", len(mappings)),
+            "mapped_pii_count": len(mappings),
+            "unmapped_pii_count": len(result.get("unmapped_entities", [])),
+            "layout_regions_detected": len(result.get("regions", [])),
+            "document_elements_detected": [x.get("label") for x in result.get("document_elements", [])],
+        })
+        masked_pages.append(masked)
+
+    if any(audit["entities_with_invalid_bbox"] for audit in audit_pages):
+        masking_block_reason = "One or more PII bounding boxes were invalid. Masked PDF generation is blocked."
+
+    summary_report = {
+        "application": "Layout-Contextual Privacy Risk Assessment",
+        "source_file": uploaded_file.name,
+        "pages_analyzed": len(results),
+        "average_page_lcprs_score": average_score,
+        "highest_page_lcprs_score": highest_score,
+        "highest_risk_page": highest_result["page"] if highest_result else None,
+        "total_mapped_pii_entities": total_pii,
+        "total_unmapped_detections": sum(len(r.get("unmapped_entities", [])) for r in results),
+        "pages": page_report_items,
+        "limitations": [
+            "PII detection may miss sensitive information or produce false positives.",
+            "The LCPRS score is a proposed risk estimate and is not proof of complete privacy protection.",
+            "Review every page of the masked PDF before sharing externally.",
+        ],
+    }
+
+    audit_package = io.BytesIO()
+    with zipfile.ZipFile(audit_package, "w", compression=zipfile.ZIP_DEFLATED) as archive:
+        archive.writestr("document_report.json", json.dumps(summary_report, indent=2, ensure_ascii=False))
+        archive.writestr("masking_audit.json", json.dumps({
+            "source_file": uploaded_file.name,
+            "masking_block_reason": masking_block_reason,
+            "pages": audit_pages,
+        }, indent=2, ensure_ascii=False))
+        for audit in audit_pages:
+            archive.writestr(
+                f"audit/page_{audit['page']:04d}_masking_audit.json",
+                json.dumps(audit, indent=2, ensure_ascii=False),
+            )
+
+    col_pdf, col_audit = st.columns(2)
+    with col_pdf:
+        if masking_block_reason:
+            st.warning(masking_block_reason)
+            st.download_button(
+                "Download analysis report + audit ZIP",
+                data=audit_package.getvalue(),
+                file_name=f"{Path(uploaded_file.name).stem}_analysis_audit.zip",
+                mime="application/zip",
+                use_container_width=True,
+            )
+        else:
+            pdf_buffer = io.BytesIO()
+            masked_pages[0].save(
+                pdf_buffer,
+                format="PDF",
+                save_all=True,
+                append_images=masked_pages[1:],
+                resolution=150.0,
+            )
+            st.download_button(
+                "Download masked PDF",
+                data=pdf_buffer.getvalue(),
+                file_name=f"{Path(uploaded_file.name).stem}_masked.pdf",
+                mime="application/pdf",
+                use_container_width=True,
+            )
+    with col_audit:
+        st.download_button(
+            "Download audit report (JSON)",
+            data=json.dumps({
+                "document_report": summary_report,
+                "masking_audit": {
+                    "source_file": uploaded_file.name,
+                    "masking_block_reason": masking_block_reason,
+                    "pages": audit_pages,
+                },
+            }, indent=2, ensure_ascii=False).encode("utf-8"),
+            file_name=f"{Path(uploaded_file.name).stem}_audit_report.json",
+            mime="application/json",
+            use_container_width=True,
+        )
+
+    if not masking_block_reason:
+        st.success("Masked PDF and audit report are ready. Review the masked pages before sharing the document.")
 
     # ========================================================
     # PAGE RESULTS
@@ -1042,6 +1233,13 @@ if analyze_clicked:
             for item in mappings
         )
 
+        if result.get("unmapped_entities"):
+            st.warning(
+                f'{len(result["unmapped_entities"])} detected PII item(s) '
+                "could not be matched to OCR boxes and were excluded from LCPRS. "
+                "Review this page manually; the score may underestimate risk."
+            )
+
         c1, c2, c3, c4 = st.columns(4)
 
         with c1:
@@ -1052,7 +1250,7 @@ if analyze_clicked:
         LCPRS Score
     </div>
     <div class="metric-value">
-        {risk["normalized_lcprs_score"]:.2f}
+        {f"{risk['normalized_lcprs_score']:.2f}" if risk["normalized_lcprs_score"] is not None else "N/A"}
     </div>
 </div>
 """,
@@ -1163,12 +1361,27 @@ if analyze_clicked:
             st.write(
                 f"**LCPRS score:** "
                 f'{risk["normalized_lcprs_score"]:.2f}/100'
+                if risk["normalized_lcprs_score"] is not None
+                else "N/A — no PII items were scored"
             )
 
             st.write(
                 f"**Risk category:** "
                 f'{risk["risk_category"]}'
             )
+            st.write(f"**Item risk:** {risk.get('item_risk', 0.0):.4f}")
+            st.write(f"**Pairwise risk:** {risk.get('pairwise_risk', 0.0):.4f}")
+            st.write(f"**Raw risk:** {risk.get('raw_risk', 0.0):.4f}")
+            st.write(
+                f"**Visibility defaults used:** "
+                f"{risk.get('visibility_assumption_count', 0)}"
+            )
+            if result.get("unmapped_entities"):
+                st.write("**PII detections not scored due to missing OCR boxes:**")
+                st.write([
+                    {"PII Type": item.get("pii_type"), "Reason": item.get("reason")}
+                    for item in result["unmapped_entities"]
+                ])
 
             if result.get("document_elements"):
                 st.write("**Document elements detected:**")

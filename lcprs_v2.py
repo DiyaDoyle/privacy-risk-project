@@ -1,1163 +1,494 @@
+
+"""
+LCPRS v3: Layout-Contextual Privacy Risk Score
+
+Item-level foundation:
+    Sensitivity x visibility, motivated by published privacy-scoring work.
+
+Proposed extension:
+    Pairwise PII risk using layout-region co-membership and spatial proximity.
+
+Important:
+    The complete LCPRS equation is a proposed model, not an equation
+    claimed to have been copied from one paper.
+    Parameters are read from config/lcprs_config.json.
+"""
+
 import json
 import math
-from pathlib import Path
 from itertools import combinations
+from pathlib import Path
 
-from PIL import Image
+ROOT = Path(__file__).resolve().parent
+CONFIG_PATH = ROOT / "config" / "lcprs_config.json"
 
+def load_config():
+    if not CONFIG_PATH.exists():
+        raise FileNotFoundError(f"Configuration not found: {CONFIG_PATH}")
 
-# ============================================================
-# LCPRS V2
-# Layout-Contextual Privacy Risk Scoring
-#
-# The algorithm is parameterized entirely through
-# config/lcprs_config.json.
-# ============================================================
-
-
-# ============================================================
-# LOAD CONFIGURATION
-# ============================================================
-
-CONFIG_PATH = Path(
-    "config/lcprs_config.json"
-)
+    with open(CONFIG_PATH, "r", encoding="utf-8-sig") as file:
+        return json.load(file)
 
 
-with open(
-    CONFIG_PATH,
-    "r",
-    encoding="utf-8"
-) as file:
-
-    CONFIG = json.load(file)
-
-
-# ============================================================
-# CONFIGURATION
-# ============================================================
+CONFIG = load_config()
 
 PATHS = CONFIG["paths"]
-
 FORMULA = CONFIG["formula"]
-
+NORMALIZATION = CONFIG["normalization"]
 SEVERITY = CONFIG["severity"]
-
 THRESHOLDS = CONFIG["risk_thresholds"]
-
 GOVERNANCE_ACTIONS = CONFIG["governance_actions"]
 
+STAGE2_DIR = ROOT / PATHS["stage2_results"]
+IMAGE_DIR = ROOT / PATHS["document_images"]
+OUTPUT_DIR = ROOT / PATHS["output_results"]
 
-STAGE2_DIR = Path(
-    PATHS["stage2_results"]
-)
-
-IMAGE_DIR = Path(
-    PATHS["document_images"]
-)
-
-OUTPUT_DIR = Path(
-    PATHS["output_results"]
-)
-
-OUTPUT_DIR.mkdir(
-    parents=True,
-    exist_ok=True
-)
-
-
-# ============================================================
-# VALIDATE CONFIGURATION
-# ============================================================
 
 def validate_configuration():
-
-    region_weight = FORMULA[
-        "region_weight"
-    ]
-
-    distance_weight = FORMULA[
-        "distance_weight"
-    ]
-
-    if region_weight < 0:
-        raise ValueError(
-            "region_weight cannot be negative."
-        )
-
-    if distance_weight < 0:
-        raise ValueError(
-            "distance_weight cannot be negative."
-        )
-
-    if (
-        region_weight +
-        distance_weight
-    ) <= 0:
-
-        raise ValueError(
-            "At least one LCPRS relationship weight "
-            "must be greater than zero."
-        )
-
-    distance_function = FORMULA[
-        "distance_function"
-    ]
-
-    supported_functions = {
-        "exponential",
-        "linear"
-    }
-
-    if distance_function not in supported_functions:
-
-        raise ValueError(
-            f"Unsupported distance function: "
-            f"{distance_function}. "
-            f"Supported values: "
-            f"{sorted(supported_functions)}"
-        )
-
-    decay_ratio = FORMULA[
-        "distance_decay_ratio"
-    ]
-
-    if decay_ratio <= 0:
-
-        raise ValueError(
-            "distance_decay_ratio must be greater than zero."
-        )
-
-    required_categories = {
-        "low",
-        "medium",
-        "high"
-    }
-
-    missing_thresholds = (
-        required_categories
-        -
-        set(THRESHOLDS.keys())
+    required_paths = (
+        "stage2_results",
+        "document_images",
+        "output_results",
     )
+    for key in required_paths:
+        if key not in PATHS:
+            raise ValueError(f"Missing paths.{key}")
 
-    if missing_thresholds:
+    if not SEVERITY:
+        raise ValueError("The severity configuration is empty.")
 
+    severity_values = {}
+    for label, raw_value in SEVERITY.items():
+        value = float(raw_value)
+        if not math.isfinite(value) or value < 0:
+            raise ValueError(f"Invalid severity for {label}: {raw_value}")
+        severity_values[label] = value
+
+    if max(severity_values.values()) <= 0:
+        raise ValueError("At least one configured severity must be positive.")
+
+    for key in ("region_weight", "distance_weight"):
+        if key not in FORMULA:
+            raise ValueError(f"Missing formula.{key}")
+        value = float(FORMULA[key])
+        if not math.isfinite(value) or not 0 <= value <= 1:
+            raise ValueError(f"formula.{key} must be between 0 and 1.")
+
+    region_weight = float(FORMULA["region_weight"])
+    distance_weight = float(FORMULA["distance_weight"])
+
+    if not math.isclose(
+        region_weight + distance_weight, 1.0, rel_tol=0, abs_tol=1e-9
+    ):
         raise ValueError(
-            "Missing risk thresholds: "
-            f"{sorted(missing_thresholds)}"
+            "region_weight + distance_weight must equal 1."
         )
 
-    required_actions = {
-        "Low",
-        "Medium",
-        "High",
-        "Critical"
-    }
-
-    missing_actions = (
-        required_actions
-        -
-        set(GOVERNANCE_ACTIONS.keys())
-    )
-
-    if missing_actions:
-
+    if FORMULA.get("distance_function") != "exponential":
         raise ValueError(
-            "Missing governance actions: "
-            f"{sorted(missing_actions)}"
+            "This implementation requires distance_function='exponential'."
         )
 
+    decay = float(FORMULA["distance_decay_ratio"])
+    if not math.isfinite(decay) or decay <= 0:
+        raise ValueError("distance_decay_ratio must be positive.")
 
-validate_configuration()
+    kappa = float(NORMALIZATION["scale_kappa"])
+    if not math.isfinite(kappa) or kappa <= 0:
+        raise ValueError("normalization.scale_kappa must be positive.")
 
+    for key in ("low", "medium", "high"):
+        if key not in THRESHOLDS:
+            raise ValueError(f"Missing risk_thresholds.{key}")
+        value = float(THRESHOLDS[key])
+        if not math.isfinite(value) or not 0 <= value <= 100:
+            raise ValueError(f"Threshold {key} must be between 0 and 100.")
 
-# ============================================================
-# PII SEVERITY
-# ============================================================
+    if not (
+        float(THRESHOLDS["low"])
+        < float(THRESHOLDS["medium"])
+        < float(THRESHOLDS["high"])
+    ):
+        raise ValueError("Thresholds must satisfy low < medium < high.")
+
+    for category in ("Low", "Medium", "High", "Critical"):
+        if category not in GOVERNANCE_ACTIONS:
+            raise ValueError(f"Missing governance action for {category}.")
+
 
 def get_severity(pii_type):
-
     if pii_type not in SEVERITY:
-
         raise ValueError(
-            f"PII type '{pii_type}' has no configured "
-            f"severity value."
+            f"Unknown PII type {pii_type!r}. Add an evidence-based severity "
+            "mapping to config/lcprs_config.json; no value was guessed."
         )
-
-    severity = float(
-        SEVERITY[pii_type]
-    )
-
-    if severity < 0:
-
-        raise ValueError(
-            f"Negative severity configured for "
-            f"PII type '{pii_type}'."
-        )
-
-    return severity
+    return float(SEVERITY[pii_type])
 
 
-# ============================================================
-# BOUNDING BOX CENTER
-# ============================================================
-
-def get_box_center(box):
-
-    if not box or len(box) != 4:
-
-        raise ValueError(
-            f"Invalid bounding box: {box}"
-        )
-
-    x1, y1, x2, y2 = (
-        float(value)
-        for value in box
-    )
-
-    return (
-        (x1 + x2) / 2.0,
-        (y1 + y2) / 2.0
-    )
+def get_sensitivity(pii_type):
+    maximum = max(float(value) for value in SEVERITY.values())
+    return get_severity(pii_type) / maximum
 
 
-# ============================================================
-# PHYSICAL PAGE DISTANCE
-# ============================================================
-
-def calculate_distance(
-    box_a,
-    box_b
-):
-
-    ax, ay = get_box_center(
-        box_a
-    )
-
-    bx, by = get_box_center(
-        box_b
-    )
-
-    return math.sqrt(
-        (ax - bx) ** 2
-        +
-        (ay - by) ** 2
-    )
-
-
-# ============================================================
-# PAGE-POSITION CLOSENESS
-# ============================================================
-
-def calculate_position_closeness(
-    box_a,
-    box_b,
-    image_width,
-    image_height
-):
+def get_visibility(item):
     """
-    Converts physical page distance into
-    a normalized closeness value in [0, 1].
-
-    1 = very close
-    0 = very far
-
-    The mathematical form is selected from configuration.
+    Use an explicit item visibility value if available.
+    Otherwise use 1.0 as a transparent assumption, not a measured value.
     """
+    raw_value = item.get("visibility")
+    source = "item"
 
-    distance = calculate_distance(
-        box_a,
-        box_b
-    )
+    if raw_value is None:
+        raw_value = 1.0
+        source = "assumed_default"
 
-    page_diagonal = math.sqrt(
-        image_width ** 2
-        +
-        image_height ** 2
-    )
+    value = float(raw_value)
+    if not math.isfinite(value) or not 0 <= value <= 1:
+        raise ValueError(f"Visibility must be in [0, 1], got {raw_value!r}")
 
-    if page_diagonal <= 0:
-
-        raise ValueError(
-            "Image dimensions must be positive."
-        )
-
-    normalized_distance = (
-        distance /
-        page_diagonal
-    )
-
-    distance_function = FORMULA[
-        "distance_function"
-    ]
-
-    decay_ratio = FORMULA[
-        "distance_decay_ratio"
-    ]
-
-    # --------------------------------------------------------
-    # Exponential distance decay
-    # --------------------------------------------------------
-
-    if distance_function == "exponential":
-
-        closeness = math.exp(
-            -normalized_distance /
-            decay_ratio
-        )
-
-    # --------------------------------------------------------
-    # Linear distance decay
-    # --------------------------------------------------------
-
-    elif distance_function == "linear":
-
-        closeness = (
-            1.0 -
-            normalized_distance
-        )
-
-    else:
-
-        raise ValueError(
-            f"Unsupported distance function: "
-            f"{distance_function}"
-        )
-
-    return max(
-        0.0,
-        min(
-            1.0,
-            closeness
-        )
-    )
+    return value, source
 
 
-# ============================================================
-# LAYOUT RELATIONSHIP
-# ============================================================
+def bbox_center(bbox):
+    x1, y1, x2, y2 = (float(value) for value in bbox)
+    return (x1 + x2) / 2.0, (y1 + y2) / 2.0
 
-def calculate_relationship(
-    pii_a,
-    pii_b,
-    image_width,
-    image_height
-):
-    """
-    LCPRS relationship:
 
-    Relationship(A,B)
-    =
-    W_region * same_region
-    +
-    W_dist * page_position_closeness
-    """
+def normalized_distance(item_a, item_b, width, height):
+    if width <= 0 or height <= 0:
+        raise ValueError("Page dimensions must be positive.")
 
-    region_a = pii_a.get(
-        "layout_region_id"
-    )
+    ax, ay = bbox_center(item_a["pii_bbox"])
+    bx, by = bbox_center(item_b["pii_bbox"])
 
-    region_b = pii_b.get(
-        "layout_region_id"
-    )
+    page_diagonal = math.hypot(width, height)
+    center_distance = math.hypot(ax - bx, ay - by)
+
+    return center_distance / page_diagonal
+
+
+def layout_linkage(item_a, item_b, width, height):
+    region_a = item_a.get("layout_region_id")
+    region_b = item_b.get("layout_region_id")
 
     same_region = (
-
         region_a is not None
-
-        and
-
-        region_b is not None
-
-        and
-
-        region_a == region_b
+        and region_b is not None
+        and region_a == region_b
     )
+    region_cue = 1.0 if same_region else 0.0
 
-    same_region_value = (
+    distance = normalized_distance(item_a, item_b, width, height)
+    decay = float(FORMULA["distance_decay_ratio"])
+    proximity_cue = math.exp(-distance / decay)
 
-        1.0
-        if same_region
-        else 0.0
-    )
+    region_weight = float(FORMULA["region_weight"])
+    distance_weight = float(FORMULA["distance_weight"])
 
-    closeness = (
-        calculate_position_closeness(
-            pii_a["pii_bbox"],
-            pii_b["pii_bbox"],
-            image_width,
-            image_height
-        )
-    )
-
-    relationship = (
-
-        FORMULA["region_weight"]
-        *
-        same_region_value
-
-    ) + (
-
-        FORMULA["distance_weight"]
-        *
-        closeness
+    linkage = (
+        region_weight * region_cue
+        + distance_weight * proximity_cue
     )
 
     return {
-
-        "same_region":
-            same_region,
-
-        "same_region_value":
-            same_region_value,
-
-        "distance_closeness":
-            closeness,
-
-        "relationship":
-            relationship
+        "same_region": same_region,
+        "normalized_distance": distance,
+        "region_cue": region_cue,
+        "proximity_cue": proximity_cue,
+        "linkage_score": max(0.0, min(1.0, linkage)),
     }
 
 
-# ============================================================
-# PAIR RISK
-# ============================================================
-
-def calculate_pair_risk(
-    pii_a,
-    pii_b,
-    image_width,
-    image_height
-):
-    """
-    PairRisk(A,B)
-    =
-    (SeverityA + SeverityB)
-    *
-    Relationship(A,B)
-    """
-
-    severity_a = get_severity(
-        pii_a["pii_type"]
-    )
-
-    severity_b = get_severity(
-        pii_b["pii_type"]
-    )
-
-    relationship_data = (
-        calculate_relationship(
-            pii_a,
-            pii_b,
-            image_width,
-            image_height
-        )
-    )
-
-    pair_risk = (
-
-        severity_a
-        +
-        severity_b
-
-    ) * relationship_data[
-        "relationship"
-    ]
-
-    return {
-
-        "pii_a":
-            pii_a["pii_text"],
-
-        "pii_a_type":
-            pii_a["pii_type"],
-
-        "severity_a":
-            severity_a,
-
-        "pii_b":
-            pii_b["pii_text"],
-
-        "pii_b_type":
-            pii_b["pii_type"],
-
-        "severity_b":
-            severity_b,
-
-        "same_region":
-            relationship_data[
-                "same_region"
-            ],
-
-        "distance_closeness":
-            relationship_data[
-                "distance_closeness"
-            ],
-
-        "relationship":
-            relationship_data[
-                "relationship"
-            ],
-
-        "pair_risk":
-            pair_risk
-    }
-
-
-# ============================================================
-# MAXIMUM POSSIBLE RISK
-# ============================================================
-
-def calculate_maximum_possible_risk(
-    pii_items
-):
-    """
-    Calculates the theoretical maximum for
-    this document's PII composition.
-
-    This is used only for normalization.
-
-    Maximum relationship occurs when:
-
-        same_region = 1
-        closeness = 1
-    """
-
-    maximum_relationship = (
-
-        FORMULA["region_weight"]
-        +
-        FORMULA["distance_weight"]
-    )
-
-    standalone_maximum = sum(
-
-        get_severity(
-            item["pii_type"]
-        )
-
-        for item in pii_items
-    )
-
-    pair_maximum = 0.0
-
-    for pii_a, pii_b in combinations(
-        pii_items,
-        2
-    ):
-
-        severity_sum = (
-
-            get_severity(
-                pii_a["pii_type"]
-            )
-
-            +
-
-            get_severity(
-                pii_b["pii_type"]
-            )
-        )
-
-        pair_maximum += (
-            severity_sum
-            *
-            maximum_relationship
-        )
-
-    return (
-        standalone_maximum
-        +
-        pair_maximum
-    )
-
-
-# ============================================================
-# RISK CATEGORY
-# ============================================================
-
-def determine_risk_category(
-    normalized_score
-):
-
-    if normalized_score < THRESHOLDS[
-        "low"
-    ]:
-
+def determine_risk_category(score):
+    if score <= float(THRESHOLDS["low"]):
         return "Low"
-
-    if normalized_score < THRESHOLDS[
-        "medium"
-    ]:
-
+    if score <= float(THRESHOLDS["medium"]):
         return "Medium"
-
-    if normalized_score < THRESHOLDS[
-        "high"
-    ]:
-
+    if score <= float(THRESHOLDS["high"]):
         return "High"
-
     return "Critical"
 
 
-# ============================================================
-# GOVERNANCE ACTION
-# ============================================================
-
-def get_governance_action(
-    category
-):
-
-    if category not in GOVERNANCE_ACTIONS:
-
-        raise ValueError(
-            f"No governance action configured "
-            f"for category '{category}'."
-        )
-
-    return GOVERNANCE_ACTIONS[
-        category
-    ]
-
-
-# ============================================================
-# GET IMAGE DIMENSIONS
-# ============================================================
-
-def get_image_dimensions(
-    document_name,
-    stage2_data
-):
-    """
-    Uses dimensions stored in Stage 2 if available.
-
-    Otherwise opens the corresponding document image.
-
-    No image dimensions are assumed.
-    """
-
-    width = stage2_data.get(
-        "image_width"
-    )
-
-    height = stage2_data.get(
-        "image_height"
-    )
-
-    if width is not None and height is not None:
-
-        width = float(width)
-        height = float(height)
-
-        if width > 0 and height > 0:
-
-            return width, height
-
-    image_path = (
-        IMAGE_DIR /
-        f"{document_name}.png"
-    )
-
-    if not image_path.exists():
-
-        raise FileNotFoundError(
-            f"Cannot determine dimensions for "
-            f"'{document_name}'. "
-            f"Expected image: {image_path}"
-        )
-
-    with Image.open(
-        image_path
-    ) as image:
-
-        width, height = image.size
-
-    return (
-        float(width),
-        float(height)
-    )
-
-
-# ============================================================
-# PROCESS ONE DOCUMENT
-# ============================================================
-
-def process_document(
-    stage2_file
-):
-
-    document_name = (
-        stage2_file.stem
-        .replace(
-            "_layout",
-            ""
-        )
-    )
-
-    print("\n" + "=" * 70)
-
-    print(
-        f"PROCESSING {document_name}"
-    )
-
-    print("=" * 70)
-
-    # --------------------------------------------------------
-    # Load Stage 2
-    # --------------------------------------------------------
-
-    with open(
-        stage2_file,
-        "r",
-        encoding="utf-8"
-    ) as file:
-
-        stage2_data = json.load(
-            file
-        )
-
-    pii_mappings = stage2_data.get(
-        "pii_mappings"
-    )
-
-    if pii_mappings is None:
-
-        raise ValueError(
-            f"{stage2_file.name} does not contain "
-            f"'pii_mappings'."
-        )
-
-    # --------------------------------------------------------
-    # Keep every PII item that has a valid bounding box.
-    #
-    # An unmatched layout region does NOT mean the PII
-    # disappears from LCPRS. It can still participate in
-    # physical-distance relationships.
-    # --------------------------------------------------------
-
-    valid_pii = []
-
-    for item in pii_mappings:
-
-        bbox = item.get(
-            "pii_bbox"
-        )
-
-        pii_type = item.get(
-            "pii_type"
-        )
-
-        pii_text = item.get(
-            "pii_text"
-        )
-
-        if bbox is None:
-
-            continue
-
-        if not pii_type:
-
-            raise ValueError(
-                f"Missing PII type in "
-                f"{stage2_file.name}"
-            )
-
-        if not pii_text:
-
-            raise ValueError(
-                f"Missing PII text in "
-                f"{stage2_file.name}"
-            )
-
-        # Validate that severity exists.
-        get_severity(
-            pii_type
-        )
-
-        valid_pii.append(
-            item
-        )
-
-    print(
-        f"PII items available : "
-        f"{len(valid_pii)}"
-    )
-
-    # --------------------------------------------------------
-    # Image dimensions
-    # --------------------------------------------------------
-
-    image_width, image_height = (
-        get_image_dimensions(
-            document_name,
-            stage2_data
-        )
-    )
-
-    print(
-        f"Image dimensions    : "
-        f"{image_width:.0f} x "
-        f"{image_height:.0f}"
-    )
-
-    # --------------------------------------------------------
-    # Standalone severity contribution
-    # --------------------------------------------------------
-
-    standalone_risk = sum(
-
-        get_severity(
-            item["pii_type"]
-        )
-
-        for item in valid_pii
-    )
-
-    # --------------------------------------------------------
-    # Pair risks
-    # --------------------------------------------------------
-
-    pair_results = []
-
-    for pii_a, pii_b in combinations(
-        valid_pii,
-        2
-    ):
-
-        pair_result = (
-            calculate_pair_risk(
-                pii_a,
-                pii_b,
-                image_width,
-                image_height
-            )
-        )
-
-        pair_results.append(
-            pair_result
-        )
-
-    pair_risk_total = sum(
-
-        item["pair_risk"]
-
-        for item in pair_results
-    )
-
-    # --------------------------------------------------------
-    # Document risk
-    # --------------------------------------------------------
-
-    document_risk = (
-
-        standalone_risk
-        +
-        pair_risk_total
-    )
-
-    # --------------------------------------------------------
-    # Normalization
-    # --------------------------------------------------------
-
-    maximum_possible_risk = (
-        calculate_maximum_possible_risk(
-            valid_pii
-        )
-    )
-
-    if maximum_possible_risk > 0:
-
-        normalized_score = (
-
-            document_risk
-            /
-            maximum_possible_risk
-
-        ) * 100.0
-
-    else:
-
-        normalized_score = 0.0
-
-    normalized_score = max(
-        0.0,
-        min(
-            100.0,
-            normalized_score
-        )
-    )
-
-    # --------------------------------------------------------
-    # Risk category
-    # --------------------------------------------------------
-
-    category = (
-        determine_risk_category(
-            normalized_score
-        )
-    )
-
-    # --------------------------------------------------------
-    # Governance recommendation
-    # --------------------------------------------------------
-
-    governance = (
-        get_governance_action(
-            category
-        )
-    )
-
-    # --------------------------------------------------------
-    # Output
-    # --------------------------------------------------------
-
-    result = {
-
-        "lcprs_version":
-            "2.0",
-
-        "document":
-            document_name,
-
-        "image_width":
-            image_width,
-
-        "image_height":
-            image_height,
-
-        "formula": {
-
-            "region_weight":
-                FORMULA[
-                    "region_weight"
-                ],
-
-            "distance_weight":
-                FORMULA[
-                    "distance_weight"
-                ],
-
-            "distance_function":
-                FORMULA[
-                    "distance_function"
-                ],
-
-            "distance_decay_ratio":
-                FORMULA[
-                    "distance_decay_ratio"
-                ]
-        },
-
-        "number_of_pii":
-            len(valid_pii),
-
-        "standalone_risk":
-            standalone_risk,
-
-        "pair_risk_total":
-            pair_risk_total,
-
-        "document_risk":
-            document_risk,
-
-        "maximum_possible_risk":
-            maximum_possible_risk,
-
-        "normalized_lcprs_score":
-            normalized_score,
-
-        "risk_category":
-            category,
-
-        "governance_action":
-            governance,
-
-        "pii_items":
-            valid_pii,
-
-        "pair_results":
-            pair_results
+def calculate_lcprs(items, width, height):
+    if not items:
+        return {
+            "score": None,
+            "risk_category": "No PII detected",
+            "governance_action": (
+                "Review detection coverage. No detections do not prove "
+                "that the document contains no sensitive information."
+            ),
+            "item_risk": 0.0,
+            "pairwise_risk": 0.0,
+            "raw_risk": 0.0,
+            "item_details": [],
+            "pair_details": [],
+            "visibility_assumption_count": 0,
+        }
+
+    item_details = []
+    prepared = []
+
+    for item in items:
+        pii_type = item["pii_type"]
+        sensitivity = get_sensitivity(pii_type)
+        visibility, visibility_source = get_visibility(item)
+        exposure = sensitivity * visibility
+
+        prepared.append({
+            "item": item,
+            "sensitivity": sensitivity,
+            "visibility": visibility,
+            "exposure": exposure,
+        })
+
+        item_details.append({
+            "pii_type": pii_type,
+            "pii_text": item.get("pii_text", ""),
+            "severity": get_severity(pii_type),
+            "normalized_sensitivity": sensitivity,
+            "visibility": visibility,
+            "visibility_source": visibility_source,
+            "item_risk_contribution": exposure,
+            "layout_region_id": item.get("layout_region_id"),
+        })
+
+    # R_item = sum(beta_i * V_i)
+    item_risk = sum(entry["exposure"] for entry in prepared)
+
+    # R_pair = sum over unique pairs of (beta_i*V_i + beta_j*V_j) * L_ij
+    pairwise_risk = 0.0
+    pair_details = []
+
+    for left, right in combinations(prepared, 2):
+        item_a = left["item"]
+        item_b = right["item"]
+
+        linkage = layout_linkage(item_a, item_b, width, height)
+        pair_contribution = (
+            left["exposure"] + right["exposure"]
+        ) * linkage["linkage_score"]
+
+        pairwise_risk += pair_contribution
+
+        pair_details.append({
+            "pii_a": item_a.get("pii_text", ""),
+            "pii_type_a": item_a["pii_type"],
+            "pii_b": item_b.get("pii_text", ""),
+            "pii_type_b": item_b["pii_type"],
+            **linkage,
+            "pair_risk_contribution": pair_contribution,
+        })
+
+    raw_risk = item_risk + pairwise_risk
+    kappa = float(NORMALIZATION["scale_kappa"])
+
+    # LCPRS = 100 * (1 - exp(-R_raw / kappa))
+    score = 100.0 * (1.0 - math.exp(-raw_risk / kappa))
+    score = max(0.0, min(100.0, score))
+
+    category = determine_risk_category(score)
+
+    return {
+        "score": score,
+        "risk_category": category,
+        "governance_action": GOVERNANCE_ACTIONS[category],
+        "item_risk": item_risk,
+        "pairwise_risk": pairwise_risk,
+        "raw_risk": raw_risk,
+        "item_details": item_details,
+        "pair_details": pair_details,
+        "visibility_assumption_count": sum(
+            detail["visibility_source"] == "assumed_default"
+            for detail in item_details
+        ),
     }
 
-    output_file = (
 
-        OUTPUT_DIR
-        /
-        f"{document_name}_lcprs.json"
+def get_image_dimensions(document_name, stage2_data):
+    width = stage2_data.get("image_width")
+    height = stage2_data.get("image_height")
+
+    if width is not None and height is not None:
+        width, height = float(width), float(height)
+        if (
+            math.isfinite(width)
+            and math.isfinite(height)
+            and width > 0
+            and height > 0
+        ):
+            return width, height
+
+    image_path = IMAGE_DIR / f"{document_name}.png"
+    if image_path.exists():
+        from PIL import Image
+
+        with Image.open(image_path) as image:
+            return float(image.width), float(image.height)
+
+    raise ValueError(
+        f"Missing valid image dimensions for {document_name}; "
+        "no corresponding image was found."
     )
 
-    with open(
-        output_file,
-        "w",
-        encoding="utf-8"
-    ) as file:
 
-        json.dump(
-            result,
-            file,
-            indent=2,
-            ensure_ascii=False
+def process_document(stage2_file):
+    document_name = stage2_file.stem.removesuffix("_layout")
+
+    with open(stage2_file, "r", encoding="utf-8-sig") as file:
+        stage2_data = json.load(file)
+
+    mappings = stage2_data.get("pii_mappings")
+    if mappings is None:
+        raise ValueError(
+            f"{stage2_file.name} does not contain 'pii_mappings'."
         )
 
-    # --------------------------------------------------------
-    # Terminal summary
-    # --------------------------------------------------------
+    valid_items = []
+    skipped_missing_bbox = 0
 
-    print(
-        f"Standalone risk    : "
-        f"{standalone_risk:.4f}"
+    for index, item in enumerate(mappings):
+        if not isinstance(item, dict):
+            raise ValueError(f"Mapping {index} is not a JSON object.")
+
+        bbox = item.get("pii_bbox")
+        if bbox is None:
+            skipped_missing_bbox += 1
+            continue
+
+        if not item.get("pii_type"):
+            raise ValueError(f"Mapping {index} has no pii_type.")
+
+        if not isinstance(bbox, (list, tuple)) or len(bbox) != 4:
+            raise ValueError(f"Invalid bbox in mapping {index}: {bbox!r}")
+
+        coordinates = [float(value) for value in bbox]
+        if not all(math.isfinite(value) for value in coordinates):
+            raise ValueError(f"Non-finite bbox in mapping {index}.")
+
+        x1, y1, x2, y2 = coordinates
+        if x2 < x1 or y2 < y1:
+            raise ValueError(f"Invalid bbox coordinate order: {bbox!r}")
+
+        # Store validated numeric coordinates for consistent calculations.
+        item = dict(item)
+        item["pii_bbox"] = coordinates
+
+        # Fail instead of inventing a severity for unknown PII labels.
+        get_severity(item["pii_type"])
+        valid_items.append(item)
+
+    width, height = get_image_dimensions(document_name, stage2_data)
+    result = calculate_lcprs(valid_items, width, height)
+
+    output = {
+        "lcprs_version": "3.0-proposed-layout-pairwise",
+        "document": document_name,
+        "image_width": width,
+        "image_height": height,
+        "formula": {
+            "item_risk": "sum(beta_i * V_i)",
+            "pairwise_risk": (
+                "sum_{i<j}((beta_i*V_i + beta_j*V_j) * L_ij)"
+            ),
+            "linkage": (
+                "region_weight*c_region + distance_weight*c_prox"
+            ),
+            "distance": "exp(-normalized_distance/distance_decay_ratio)",
+            "final_score": "100*(1-exp(-raw_risk/scale_kappa))",
+        },
+        "research_status": (
+            "Sensitivity-visibility is motivated by published privacy-scoring "
+            "work. Pairwise layout linkage and final score scaling are proposed "
+            "model components requiring empirical validation."
+        ),
+        "parameters": {
+            "region_weight": float(FORMULA["region_weight"]),
+            "distance_weight": float(FORMULA["distance_weight"]),
+            "distance_function": FORMULA["distance_function"],
+            "distance_decay_ratio": float(FORMULA["distance_decay_ratio"]),
+            "scale_kappa": float(NORMALIZATION["scale_kappa"]),
+        },
+        "number_of_pii": len(valid_items),
+        "number_skipped_missing_bbox": skipped_missing_bbox,
+        "layout_mapping_coverage": stage2_data.get(
+            "layout_mapping_coverage"
+        ),
+        "normalized_lcprs_score": result["score"],
+        "risk_category": result["risk_category"],
+        "governance_action": result["governance_action"],
+        "item_risk": result["item_risk"],
+        "pairwise_risk": result["pairwise_risk"],
+        "raw_risk": result["raw_risk"],
+        "visibility_assumption_count": result[
+            "visibility_assumption_count"
+        ],
+        "item_details": result["item_details"],
+        "pair_details": result["pair_details"],
+    }
+
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    output_path = OUTPUT_DIR / f"{document_name}_lcprs.json"
+
+    with open(output_path, "w", encoding="utf-8") as file:
+        json.dump(output, file, indent=2, ensure_ascii=False, allow_nan=False)
+
+    score_text = (
+        "No PII scored"
+        if result["score"] is None
+        else f"{result['score']:.2f}/100"
     )
 
     print(
-        f"Pair risk total    : "
-        f"{pair_risk_total:.4f}"
+        f"{document_name}: PII={len(valid_items)}, "
+        f"score={score_text}, category={result['risk_category']}"
     )
+    print(f"Saved: {output_path}")
 
-    print(
-        f"Document risk      : "
-        f"{document_risk:.4f}"
-    )
+    if result["visibility_assumption_count"]:
+        print(
+            "WARNING: Visibility defaulted to 1.0 for "
+            f"{result['visibility_assumption_count']} entities. "
+            "This is an assumption, not a measured visibility value."
+        )
 
-    print(
-        f"Maximum possible   : "
-        f"{maximum_possible_risk:.4f}"
-    )
+    return output
 
-    print(
-        f"LCPRS score        : "
-        f"{normalized_score:.2f} / 100"
-    )
-
-    print(
-        f"Risk category      : "
-        f"{category}"
-    )
-
-    print(
-        f"Governance action  : "
-        f"{governance}"
-    )
-
-    print(
-        f"Saved              : "
-        f"{output_file}"
-    )
-
-
-# ============================================================
-# MAIN
-# ============================================================
 
 def main():
+    validate_configuration()
 
-    print("=" * 70)
-    print(
-        "LCPRS V2 - "
-        "LAYOUT-CONTEXTUAL PRIVACY RISK SCORING"
-    )
-    print("=" * 70)
+    if not STAGE2_DIR.exists():
+        raise FileNotFoundError(f"Stage 2 folder not found: {STAGE2_DIR}")
 
-    print(
-        "\nConfiguration loaded successfully."
-    )
-
-    print(
-        f"Region weight       : "
-        f"{FORMULA['region_weight']}"
-    )
-
-    print(
-        f"Distance weight     : "
-        f"{FORMULA['distance_weight']}"
-    )
-
-    print(
-        f"Distance function   : "
-        f"{FORMULA['distance_function']}"
-    )
-
-    print(
-        f"Distance parameter  : "
-        f"{FORMULA['distance_decay_ratio']}"
-    )
-
-    stage2_files = sorted(
-        STAGE2_DIR.glob(
-            "*_layout.json"
-        )
-    )
-
-    if not stage2_files:
-
+    files = sorted(STAGE2_DIR.glob("*_layout.json"))
+    if not files:
         raise FileNotFoundError(
-            "No Stage 2 result files found in "
-            f"{STAGE2_DIR}"
+            f"No *_layout.json files found in {STAGE2_DIR}"
         )
+
+    print("LCPRS v3 — proposed layout-aware pairwise model")
+    print(f"Input : {STAGE2_DIR}")
+    print(f"Output: {OUTPUT_DIR}")
 
     errors = []
+    succeeded = 0
 
-    for stage2_file in stage2_files:
-
+    for path in files:
         try:
+            process_document(path)
+            succeeded += 1
+        except Exception as exc:
+            print(f"ERROR {path.name}: {exc}")
+            errors.append((path.name, str(exc)))
 
-            process_document(
-                stage2_file
-            )
-
-        except Exception as error:
-
-            print(
-                "\nERROR processing "
-                f"{stage2_file.name}: "
-                f"{error}"
-            )
-
-            errors.append(
-                (
-                    stage2_file.name,
-                    str(error)
-                )
-            )
-
-    # --------------------------------------------------------
-    # Final summary
-    # --------------------------------------------------------
-
-    print("\n" + "=" * 70)
-    print(
-        "LCPRS V2 PROCESSING COMPLETED"
-    )
-    print("=" * 70)
-
-    print(
-        "\nResults saved in:"
-    )
-
-    print(
-        OUTPUT_DIR
-    )
+    print(f"\nCompleted: {succeeded}/{len(files)} documents.")
+    print(f"Results: {OUTPUT_DIR}")
 
     if errors:
-
-        print(
-            f"\nDocuments with errors: "
-            f"{len(errors)}"
-        )
-
-        for name, error in errors:
-
-            print(
-                f"  {name}: {error}"
-            )
-
+        print(f"Failed documents: {len(errors)}")
         raise SystemExit(1)
-
-    print(
-        "\nAll documents processed successfully."
-    )
 
 
 if __name__ == "__main__":
-
     main()
