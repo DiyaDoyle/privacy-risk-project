@@ -1,7 +1,40 @@
+
+# Python virtual environment
 .venv/
+venv/
+env/
+
+# Python cache files
 __pycache__/
-*.pyc
+*.py[cod]
+
+# IDE settings
 .idea/
+.vscode/
+
+# Local environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Generated synthetic documents
 synthetic_docs/
+
+# Generated image files (not source documentation)
 *.png
 *.jpg
+*.jpeg
+
+# Local backups
+app_before_matching_fix.py
+app_working_backup.py
+config/lcprs_config.backup.json
+
+# Generated evaluation outputs
+evaluation/new_document_results/
+evaluation/phase2_results/
+
+# Temporary files
+*.tmp
+*.log
+.DS_Store
