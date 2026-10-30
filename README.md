@@ -1,136 +1,139 @@
-\# AI-Driven Intelligent Document Governance Framework with Layout-Aware Privacy Analysis
+# AI-Driven Intelligent Document Governance Framework with Layout-Aware Privacy Analysis
 
-
-
-\## Overview
-
-
+## Overview
 
 This project presents an AI-driven document governance framework that combines document layout analysis, OCR-based text extraction, sensitive information detection, and layout-aware privacy risk assessment.
 
-
-
 The framework investigates how the spatial relationships between sensitive entities in a document can support privacy risk analysis and governance recommendations.
 
+## Key Features
 
+- Document layout analysis
+- OCR-based text extraction
+- Personally Identifiable Information (PII) detection
+- Layout-aware privacy risk scoring using LCPRS
+- Structured JSON outputs for analysis and evaluation
+- Evaluation datasets, ground-truth annotations, and result summaries
 
-\## Key Features
+## Technology Stack
 
+- Python
+- PaddleOCR
+- Document layout analysis models
+- Sensitive information detection models
+- JSON-based intermediate outputs
+- Streamlit for the application interface
 
+## Project Structure
 
-\- Document layout analysis
+```text
+privacy-risk-project/
+├── app.py
+├── config/
+│   ├── lcprs_config.json
+│   └── pii_labels.json
+├── evaluation/
+│   ├── dataset/
+│   ├── integrated_results/
+│   ├── lcprs_results/
+│   ├── phase2_results/
+│   ├── stage1_ground_truth/
+│   ├── stage1_results/
+│   └── stage2_results/
+├── layout_mapping.py
+├── lcprs_v2.py
+├── phase2_run_models.py
+├── pipeline.py
+├── process_new_document.py
+├── stage1_mapping.py
+├── requirements.txt
+└── packages.txt
+```
 
-\- OCR-based text extraction
+*Note: This shows the main project files and directories. Additional scripts, archived experiments, and evaluation outputs may also be present.*
 
-\- Personally identifiable information (PII) detection
+## Installation and Setup
 
-\- Layout-aware privacy risk scoring using LCPRS
+### Prerequisites
 
-\- Structured JSON outputs for analysis and evaluation
+- Python
+- Git
+- Required dependencies for document layout analysis, OCR, and sensitive information detection
 
-\- Evaluation datasets, ground-truth annotations, and result summaries
+### 1. Clone the Repository
 
+```bash
+git clone https://github.com/DiyaDoyle/privacy-risk-project.git
+cd privacy-risk-project
+```
 
+### 2. Create a Virtual Environment
 
-\## Technology Stack
+```bash
+python -m venv .venv
+```
 
+### 3. Activate the Virtual Environment
 
+For Windows PowerShell:
 
-\- Python
+```powershell
+.venv\Scripts\Activate.ps1
+```
 
-\- PaddleOCR and document layout analysis models
+### 4. Install Dependencies
 
-\- Sensitive information detection models
+```bash
+python -m pip install -r requirements.txt
+```
 
-\- JSON-based intermediate outputs
+### 5. Run the Application
 
-\- Streamlit for the application interface
+If all required dependencies and models are configured, launch the Streamlit interface:
 
+```bash
+streamlit run app.py
+```
 
+## Evaluation
 
-\## Project Structure
+The `evaluation/` directory contains resources used to assess the framework, including:
 
+- Dataset generation scripts
+- Document annotations and ground-truth data
+- Stage-wise processing results
+- LCPRS risk assessment outputs
+- Phase-wise evaluation results and summaries
 
+These resources support the experimental evaluation of layout-aware privacy risk assessment.
 
-\- `app.py` — application interface
+## Research Objective
 
-\- `config/` — configuration files and PII labels
-
-\- `evaluation/` — evaluation datasets, annotations, scripts, and results
-
-\- `layout\_mapping.py` — document layout mapping
-
-\- `lcprs\_v2.py` — LCPRS risk assessment logic
-
-\- `pipeline.py` — processing pipeline
-
-\- `phase2\_run\_models.py` — Phase 2 evaluation workflow
-
-\- `process\_new\_document.py` — document processing workflow
-
-\- `stage1\_mapping.py` — Stage 1 mapping
-
-\- `requirements.txt` — Python dependencies
-
-\- `packages.txt` — additional package configuration
-
-
-
-\## Setup
-
-
-
-1\. Clone this repository.
-
-2\. Create and activate a Python virtual environment.
-
-3\. Install the dependencies:
-
-
-
-&#x20;  ```bash
-
-&#x20;  pip install -r requirements.txt
-
-&#x20;  ```
-
-
-
-4\. Review the configuration files in `config/`.
-
-5\. Run the application locally:
-
-
-
-&#x20;  ```bash
-
-&#x20;  streamlit run app.py
-
-&#x20;  ```
-
-
-
-\## Evaluation
-
-
-
-The `evaluation/` directory contains dataset-generation scripts, annotations, ground-truth data, and evaluation outputs used to assess the framework. Consult the relevant scripts and result summaries for the evaluation workflow.
-
-
-
-\## Research Focus
-
-
+**Research Question:**
 
 Can layout-aware document analysis improve the accuracy and effectiveness of privacy-aware document governance compared with conventional OCR-based document processing?
 
+The project investigates whether document structure and spatial relationships can provide useful contextual information for privacy risk assessment beyond text extraction alone.
 
+## Expected Outcomes
 
-\## Disclaimer
+- Automated extraction and analysis of document content
+- Identification of potentially sensitive information
+- Layout-aware contextual privacy risk assessment
+- Structured risk analysis outputs
+- Experimental evaluation of the proposed framework
 
+## Limitations
 
+- Results depend on document quality, OCR extraction, layout detection, and sensitive information recognition.
+- Risk scores are estimates and should be validated against annotated datasets.
+- The framework is intended to support, not replace, professional privacy and compliance review.
 
-This project is intended for academic research and experimentation. Risk scores and governance recommendations should be validated before being used in real-world privacy decisions.
+## Disclaimer
 
+This project is developed for academic research and experimentation. Privacy risk scores and governance recommendations should be validated before being used in real-world privacy or compliance decisions.
 
+## Author
+
+**Diya Mareeza Doyle**
 
